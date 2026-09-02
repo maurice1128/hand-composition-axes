@@ -1,0 +1,47 @@
+granularity=oakink_class: 17 cells, 45.3 trajectories per cell
+data/bundles/oakink.npz: 770 trajectories
+holding out 4 compositions
+
+ seed  budget  swapped   held  covered  per comp  status
+--------------------------------------------------------------
+    0      64       58      4        4      8.00  ok
+    0     256      187      4        4     23.50  ok
+
+    1      64       62      4        3     10.67  TOO THIN
+    1     256      168      4        3     11.33  TOO THIN
+
+    2      64       57      4        4      8.00  ok
+    2     256      156      4        4     32.00  ok
+
+    3      64       59      4        4      8.00  ok
+    3     256      138      4        4     32.00  ok
+
+    4      64       60      4        4      7.50  ok
+    4     256      176      4        4      7.50  ok
+
+    5      64       60      4        3     10.67  TOO THIN
+    5     256      181      4        3     37.33  TOO THIN
+
+    6      64       60      4        3     10.67  TOO THIN
+    6     256      180      4        3     11.00  TOO THIN
+
+    7      64       62      4        4      7.00  ok
+    7     256      172      4        4      7.00  ok
+
+    8      64       59      4        4      8.00  ok
+    8     256      181      4        4     32.00  ok
+
+    9      64       64      4        4      8.00  ok
+    9     256      184      4        4     19.75  ok
+
+   10      64       61      4        4      8.00  ok
+   10     256      189      4        4     25.25  ok
+
+   11      64       56      4        4      8.00  ok
+   11     256      184      4        4     24.00  ok
+
+--------------------------------------------------------------
+ARTEFACT RISK: 6 of 24 rows fail, and depth is adequate (7.00 examples per covered composition) but breadth is not, some rows reaching only 3 of the held compositions.
+The informed model is barely more informed than the naive one there, so
+a zero penalty says nothing about compositional generalisation. Fix by
+holding out FEWER compositions and swapping in MORE trajectories each.

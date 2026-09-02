@@ -1,0 +1,13 @@
+data/bundles/dexycb.npz: 499 trajectories
+holding out 4 compositions
+
+ seed  budget  swapped   held  covered  per comp  status
+--------------------------------------------------------------
+   12      64       55      4        2      2.00  TOO THIN
+   12     256      122      4        2      2.00  TOO THIN
+
+--------------------------------------------------------------
+ARTEFACT RISK: the informed model sees only 2.00 example(s) per held
+composition on average. It is barely more informed than the naive model, so a
+zero penalty says nothing about compositional generalisation. Fix by holding
+out FEWER compositions and swapping in MORE trajectories per composition.

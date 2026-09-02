@@ -1,0 +1,189 @@
+{
+  "args": {
+    "bundle": "data/bundles/grab.npz",
+    "out": "runs/grab_shape",
+    "budgets": [
+      256
+    ],
+    "kinds": [
+      "perframe",
+      "modular"
+    ],
+    "held_compositions": 6,
+    "min_chains": 5,
+    "min_per_composition": 5,
+    "epochs": 120,
+    "window": 32,
+    "stride": 32,
+    "batch_size": 256,
+    "lr": 0.001,
+    "latent_dim": 12,
+    "hidden": 256,
+    "n_primitives": 12,
+    "granularity": "shape",
+    "seed": 0,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ],
+    "fresh": true
+  },
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+  ],
+  "results": [
+    {
+      "kind": "perframe",
+      "budget": 256,
+      "seed": 0,
+      "naive": {
+        "mse_target": 0.026528456223250077,
+        "n_train": 256,
+        "seconds": 276.8,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.027841766576632763,
+        "n_train": 256,
+        "seconds": 286.7,
+        "n_parameters": 2283059
+      },
+      "penalty": -0.0013133103533826858
+    },
+    {
+      "kind": "modular",
+      "budget": 256,
+      "seed": 0,
+      "naive": {
+        "mse_target": 0.059497836002275595,
+        "n_train": 256,
+        "seconds": 322.8,
+        "n_parameters": 2295727,
+        "primitives_used": 12.0
+      },
+      "informed": {
+        "mse_target": 0.04334323227766846,
+        "n_train": 256,
+        "seconds": 319.6,
+        "n_parameters": 2295727,
+        "primitives_used": 12.0
+      },
+      "penalty": 0.016154603724607135
+    },
+    {
+      "kind": "perframe",
+      "budget": 256,
+      "seed": 1,
+      "naive": {
+        "mse_target": 0.029224846984819478,
+        "n_train": 256,
+        "seconds": 245.0,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.03369254051286979,
+        "n_train": 256,
+        "seconds": 248.6,
+        "n_parameters": 2283059
+      },
+      "penalty": -0.00446769352805031
+    },
+    {
+      "kind": "modular",
+      "budget": 256,
+      "seed": 1,
+      "naive": {
+        "mse_target": 0.03332668199993612,
+        "n_train": 256,
+        "seconds": 219.1,
+        "n_parameters": 2295727,
+        "primitives_used": 12.0
+      },
+      "informed": {
+        "mse_target": 0.039762982652014216,
+        "n_train": 256,
+        "seconds": 214.2,
+        "n_parameters": 2295727,
+        "primitives_used": 12.0
+      },
+      "penalty": -0.006436300652078099
+    }
+  ]
+}

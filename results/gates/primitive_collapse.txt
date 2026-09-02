@@ -1,0 +1,27 @@
+primitive collapse, derived from stored training histories
+scope: every K=12 modular model in the sweeps Table II reports
+metric: final-epoch val_primitives_used (the gate's own quantity)
+
+  models examined      733
+  minimum              9.732 of 12
+  below 11.0            16
+  those, by sweep      {'oakink2_paired_v2': 16}
+
+  lowest ten:
+       9.732  oakink2_paired_v2/s10_modular_b256_informed
+       9.932  oakink2_paired_v2/s3_modular_b256_naive
+      10.075  oakink2_paired_v2/s4_modular_b256_informed
+      10.082  oakink2_paired_v2/s3_modular_b256_informed
+      10.150  oakink2_paired_v2/s11_modular_b256_informed
+      10.365  oakink2_paired_v2/s7_modular_b256_naive
+      10.375  oakink2_paired_v2/s8_modular_b256_informed
+      10.578  oakink2_paired_v2/s1_modular_b256_naive
+      10.580  oakink2_paired_v2/s2_modular_b256_naive
+      10.741  oakink2_paired_v2/s11_modular_b256_naive
+
+----------------------------------------------------------
+PASS: no bank collapsed. The lowest model still spreads its windows
+over 9.7 of 12 primitives.
+
+This is a report, not the gate. `check_primitive_collapse.py` is the
+gate, and it has to pass before a sweep, not after it.

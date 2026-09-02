@@ -1,0 +1,92 @@
+{
+  "split": {
+    "n_transitions_total": 81,
+    "n_transitions_held_out": 12,
+    "held_out_transitions": [
+      "edge_pinch_drag->hook",
+      "edge_pinch_drag->open_flat",
+      "edge_pinch_drag->power_cylindrical",
+      "hook->palm_smooth",
+      "lateral_key->hook",
+      "lateral_key->palm_smooth",
+      "palm_smooth->edge_pinch_drag",
+      "power_cylindrical->edge_pinch_drag",
+      "power_cylindrical->power_spherical",
+      "power_spherical->power_cylindrical",
+      "precision_pinch->hook",
+      "tripod->hook"
+    ],
+    "n_train": 1202,
+    "n_test_seen": 211,
+    "n_test_unseen": 1587
+  },
+  "args": {
+    "bundle": "data/bundles/synthetic_big.npz",
+    "out": "runs/data_efficiency_v1",
+    "fracs": [
+      0.0625,
+      0.125,
+      0.25,
+      0.5,
+      1.0
+    ],
+    "epochs": 150,
+    "window": 32,
+    "stride": 4,
+    "batch_size": 256,
+    "lr": 0.001,
+    "latent_dim": 12,
+    "hidden": 256,
+    "n_primitives": 12,
+    "holdout_frac": 0.15,
+    "seed": 0,
+    "fresh": true,
+    "quick": false
+  },
+  "results": [
+    {
+      "kind": "monolithic",
+      "frac": 0.0625,
+      "n_train_traj": 75,
+      "n_train_windows": 3061,
+      "n_parameters": 2283059,
+      "epochs": 150,
+      "seconds": 77.0,
+      "best_val": 0.3189626932144165,
+      "mse_test_seen": 0.14977547075023478,
+      "mse_test_unseen": 0.16167566822124588,
+      "compositional_gap": 0.011900197471011092,
+      "compositional_ratio": 1.0794535808260342
+    },
+    {
+      "kind": "modular",
+      "frac": 0.0625,
+      "n_train_traj": 75,
+      "n_train_windows": 3061,
+      "n_parameters": 2295727,
+      "epochs": 150,
+      "seconds": 92.0,
+      "best_val": 0.15977366268634796,
+      "mse_test_seen": 0.15040519697260477,
+      "mse_test_unseen": 0.16194256491186265,
+      "compositional_gap": 0.011537367939257887,
+      "compositional_ratio": 1.0767085723863608,
+      "primitives_used": 1.0,
+      "switches_per_window": 0.0
+    },
+    {
+      "kind": "monolithic",
+      "frac": 0.125,
+      "n_train_traj": 150,
+      "n_train_windows": 6552,
+      "n_parameters": 2283059,
+      "epochs": 150,
+      "seconds": 122.2,
+      "best_val": 0.32024988532066345,
+      "mse_test_seen": 0.1468954029739398,
+      "mse_test_unseen": 0.1607048434857629,
+      "compositional_gap": 0.01380944051182309,
+      "compositional_ratio": 1.0940086635268838
+    }
+  ]
+}

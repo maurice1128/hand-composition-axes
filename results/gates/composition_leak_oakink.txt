@@ -1,0 +1,10 @@
+﻿data/bundles/oakink.npz  granularity=category  budget=256
+ seed  target  naive leak  informed leak  status
+--------------------------------------------------------
+    0      72       0.0%          0.0%  ok
+    1     108       0.0%          0.0%  ok
+    2     118       0.0%          0.0%  ok
+    3     130       0.0%          0.0%  ok
+    4      60       0.0%          0.0%  ok
+--------------------------------------------------------
+PASS: no target trajectory's fine composition appears in either training set.

@@ -1,0 +1,46 @@
+data/bundles/dexycb_shape.npz: 499 trajectories
+holding out 4 compositions
+
+ seed  budget  swapped   held  covered  per comp  status
+--------------------------------------------------------------
+    0      64       58      4        2      6.50  TOO THIN
+    0     256      135      4        2      6.50  TOO THIN
+
+    1      64       50      4        1      9.00  TOO THIN
+    1     256      118      4        1      9.00  TOO THIN
+
+    2      64       53      4        2      5.50  TOO THIN
+    2     256      128      4        2      5.50  TOO THIN
+
+    3      64       57      4        1      5.00  TOO THIN
+    3     256      127      4        1      5.00  TOO THIN
+
+    4      64       56      4        2      6.00  TOO THIN
+    4     256      128      4        2      6.00  TOO THIN
+
+    5      64       59      4        1     16.00  TOO THIN
+    5     256      115      4        1     16.00  TOO THIN
+
+    6      64       57      4        1      9.00  TOO THIN
+    6     256      112      4        1      9.00  TOO THIN
+
+    7      64       58      4        2      6.00  TOO THIN
+    7     256      117      4        2      6.00  TOO THIN
+
+    8      64       59      4        2      9.00  TOO THIN
+    8     256      124      4        2      9.00  TOO THIN
+
+    9      64       59      4        2      8.50  TOO THIN
+    9     256      137      4        2      8.50  TOO THIN
+
+   10      64       57      4        2      7.50  TOO THIN
+   10     256      112      4        2      7.50  TOO THIN
+
+   11      64       56      4        1     14.00  TOO THIN
+   11     256      129      4        1     14.00  TOO THIN
+
+--------------------------------------------------------------
+ARTEFACT RISK: 24 of 24 rows fail, and depth is adequate (5.00 examples per covered composition) but breadth is not, some rows reaching only 1 of the held compositions.
+The informed model is barely more informed than the naive one there, so
+a zero penalty says nothing about compositional generalisation. Fix by
+holding out FEWER compositions and swapping in MORE trajectories each.

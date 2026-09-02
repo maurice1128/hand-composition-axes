@@ -1,0 +1,513 @@
+{
+  "args": {
+    "bundle": "data/bundles/dexycb_shape.npz",
+    "out": "runs/dexycb_paired_v2",
+    "budgets": [
+      256
+    ],
+    "kinds": [
+      "perframe",
+      "modular"
+    ],
+    "held_compositions": 4,
+    "min_chains": 1,
+    "min_per_composition": 6,
+    "epochs": 120,
+    "window": 32,
+    "stride": 4,
+    "batch_size": 256,
+    "lr": 0.001,
+    "latent_dim": 12,
+    "hidden": 256,
+    "n_primitives": 12,
+    "granularity": "fine",
+    "seed": 0,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "fresh": true
+  },
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "results": [
+    {
+      "kind": "perframe",
+      "budget": 256,
+      "seed": 0,
+      "naive": {
+        "mse_target": 0.020620556230898257,
+        "n_train": 256,
+        "seconds": 64.5,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.020584512639928748,
+        "n_train": 256,
+        "seconds": 57.1,
+        "n_parameters": 2283059
+      },
+      "penalty": 3.604359096950893e-05
+    },
+    {
+      "kind": "modular",
+      "budget": 256,
+      "seed": 0,
+      "naive": {
+        "mse_target": 0.022059071505511247,
+        "n_train": 256,
+        "seconds": 62.1,
+        "n_parameters": 2295727,
+        "primitives_used": 12.0
+      },
+      "informed": {
+        "mse_target": 0.03950349666454174,
+        "n_train": 256,
+        "seconds": 50.4,
+        "n_parameters": 2295727,
+        "primitives_used": 12.0
+      },
+      "penalty": -0.017444425159030493
+    },
+    {
+      "kind": "perframe",
+      "budget": 256,
+      "seed": 1,
+      "naive": {
+        "mse_target": 0.02292923506168898,
+        "n_train": 256,
+        "seconds": 50.9,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.022647584605420757,
+        "n_train": 256,
+        "seconds": 49.1,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.00028165045626822247
+    },
+    {
+      "kind": "modular",
+      "budget": 256,
+      "seed": 1,
+      "naive": {
+        "mse_target": 0.025883321408872253,
+        "n_train": 256,
+        "seconds": 49.1,
+        "n_parameters": 2295727,
+        "primitives_used": 12.0
+      },
+      "informed": {
+        "mse_target": 0.024988207042726696,
+        "n_train": 256,
+        "seconds": 49.9,
+        "n_parameters": 2295727,
+        "primitives_used": 12.0
+      },
+      "penalty": 0.0008951143661455573
+    },
+    {
+      "kind": "perframe",
+      "budget": 256,
+      "seed": 2,
+      "naive": {
+        "mse_target": 0.024965674788863572,
+        "n_train": 256,
+        "seconds": 48.2,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.026325922960426375,
+        "n_train": 256,
+        "seconds": 47.8,
+        "n_parameters": 2283059
+      },
+      "penalty": -0.0013602481715628036
+    },
+    {
+      "kind": "modular",
+      "budget": 256,
+      "seed": 2,
+      "naive": {
+        "mse_target": 0.027608990436873704,
+        "n_train": 256,
+        "seconds": 49.1,
+        "n_parameters": 2295727,
+        "primitives_used": 12.0
+      },
+      "informed": {
+        "mse_target": 0.025962426183748895,
+        "n_train": 256,
+        "seconds": 49.0,
+        "n_parameters": 2295727,
+        "primitives_used": 12.0
+      },
+      "penalty": 0.001646564253124809
+    },
+    {
+      "kind": "perframe",
+      "budget": 256,
+      "seed": 3,
+      "naive": {
+        "mse_target": 0.021326528315530544,
+        "n_train": 256,
+        "seconds": 46.5,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.021380534538855918,
+        "n_train": 256,
+        "seconds": 47.0,
+        "n_parameters": 2283059
+      },
+      "penalty": -5.400622332537436e-05
+    },
+    {
+      "kind": "modular",
+      "budget": 256,
+      "seed": 3,
+      "naive": {
+        "mse_target": 0.037112233305928374,
+        "n_train": 256,
+        "seconds": 47.9,
+        "n_parameters": 2295727,
+        "primitives_used": 12.0
+      },
+      "informed": {
+        "mse_target": 0.027571778691392337,
+        "n_train": 256,
+        "seconds": 49.0,
+        "n_parameters": 2295727,
+        "primitives_used": 12.0
+      },
+      "penalty": 0.009540454614536037
+    },
+    {
+      "kind": "perframe",
+      "budget": 256,
+      "seed": 4,
+      "naive": {
+        "mse_target": 0.02096131339905754,
+        "n_train": 256,
+        "seconds": 52.8,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.020950289125795718,
+        "n_train": 256,
+        "seconds": 49.7,
+        "n_parameters": 2283059
+      },
+      "penalty": 1.102427326182126e-05
+    },
+    {
+      "kind": "modular",
+      "budget": 256,
+      "seed": 4,
+      "naive": {
+        "mse_target": 0.02561805765464823,
+        "n_train": 256,
+        "seconds": 50.6,
+        "n_parameters": 2295727,
+        "primitives_used": 12.0
+      },
+      "informed": {
+        "mse_target": 0.021447751887891657,
+        "n_train": 256,
+        "seconds": 48.5,
+        "n_parameters": 2295727,
+        "primitives_used": 12.0
+      },
+      "penalty": 0.004170305766756574
+    },
+    {
+      "kind": "perframe",
+      "budget": 256,
+      "seed": 5,
+      "naive": {
+        "mse_target": 0.019820051373175857,
+        "n_train": 256,
+        "seconds": 50.2,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.019789575114273508,
+        "n_train": 256,
+        "seconds": 47.7,
+        "n_parameters": 2283059
+      },
+      "penalty": 3.047625890234898e-05
+    },
+    {
+      "kind": "modular",
+      "budget": 256,
+      "seed": 5,
+      "naive": {
+        "mse_target": 0.023786095619868098,
+        "n_train": 256,
+        "seconds": 50.7,
+        "n_parameters": 2295727,
+        "primitives_used": 12.0
+      },
+      "informed": {
+        "mse_target": 0.02076025562299706,
+        "n_train": 256,
+        "seconds": 53.8,
+        "n_parameters": 2295727,
+        "primitives_used": 12.0
+      },
+      "penalty": 0.0030258399968710395
+    },
+    {
+      "kind": "perframe",
+      "budget": 256,
+      "seed": 6,
+      "naive": {
+        "mse_target": 0.016528443671089393,
+        "n_train": 256,
+        "seconds": 47.9,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.016517028443987083,
+        "n_train": 256,
+        "seconds": 48.9,
+        "n_parameters": 2283059
+      },
+      "penalty": 1.141522710230991e-05
+    },
+    {
+      "kind": "modular",
+      "budget": 256,
+      "seed": 6,
+      "naive": {
+        "mse_target": 0.03216336097246335,
+        "n_train": 256,
+        "seconds": 47.5,
+        "n_parameters": 2295727,
+        "primitives_used": 12.0
+      },
+      "informed": {
+        "mse_target": 0.021866376444620233,
+        "n_train": 256,
+        "seconds": 50.6,
+        "n_parameters": 2295727,
+        "primitives_used": 12.0
+      },
+      "penalty": 0.010296984527843115
+    },
+    {
+      "kind": "perframe",
+      "budget": 256,
+      "seed": 7,
+      "naive": {
+        "mse_target": 0.020553355937724834,
+        "n_train": 256,
+        "seconds": 49.5,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.020015498897334835,
+        "n_train": 256,
+        "seconds": 49.9,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.0005378570403899996
+    },
+    {
+      "kind": "modular",
+      "budget": 256,
+      "seed": 7,
+      "naive": {
+        "mse_target": 0.022120421355193085,
+        "n_train": 256,
+        "seconds": 50.3,
+        "n_parameters": 2295727,
+        "primitives_used": 12.0
+      },
+      "informed": {
+        "mse_target": 0.023614755502572884,
+        "n_train": 256,
+        "seconds": 49.3,
+        "n_parameters": 2295727,
+        "primitives_used": 12.0
+      },
+      "penalty": -0.0014943341473797993
+    },
+    {
+      "kind": "perframe",
+      "budget": 256,
+      "seed": 8,
+      "naive": {
+        "mse_target": 0.0267889888852385,
+        "n_train": 256,
+        "seconds": 50.3,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.02725733585645469,
+        "n_train": 256,
+        "seconds": 48.6,
+        "n_parameters": 2283059
+      },
+      "penalty": -0.00046834697121618876
+    },
+    {
+      "kind": "modular",
+      "budget": 256,
+      "seed": 8,
+      "naive": {
+        "mse_target": 0.03505165194287712,
+        "n_train": 256,
+        "seconds": 49.1,
+        "n_parameters": 2295727,
+        "primitives_used": 12.0
+      },
+      "informed": {
+        "mse_target": 0.03018310138718091,
+        "n_train": 256,
+        "seconds": 48.6,
+        "n_parameters": 2295727,
+        "primitives_used": 12.0
+      },
+      "penalty": 0.0048685505556962105
+    },
+    {
+      "kind": "perframe",
+      "budget": 256,
+      "seed": 9,
+      "naive": {
+        "mse_target": 0.02127379921550301,
+        "n_train": 256,
+        "seconds": 49.1,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.020132914135351728,
+        "n_train": 256,
+        "seconds": 49.7,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.0011408850801512826
+    },
+    {
+      "kind": "modular",
+      "budget": 256,
+      "seed": 9,
+      "naive": {
+        "mse_target": 0.023290258465391216,
+        "n_train": 256,
+        "seconds": 48.4,
+        "n_parameters": 2295727,
+        "primitives_used": 12.0
+      },
+      "informed": {
+        "mse_target": 0.026733180087824864,
+        "n_train": 256,
+        "seconds": 49.3,
+        "n_parameters": 2295727,
+        "primitives_used": 12.0
+      },
+      "penalty": -0.003442921622433648
+    },
+    {
+      "kind": "perframe",
+      "budget": 256,
+      "seed": 10,
+      "naive": {
+        "mse_target": 0.028506330368093368,
+        "n_train": 256,
+        "seconds": 47.8,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.026891066169096565,
+        "n_train": 256,
+        "seconds": 50.1,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.0016152641989968033
+    },
+    {
+      "kind": "modular",
+      "budget": 256,
+      "seed": 10,
+      "naive": {
+        "mse_target": 0.030990067555848197,
+        "n_train": 256,
+        "seconds": 51.8,
+        "n_parameters": 2295727,
+        "primitives_used": 12.0
+      },
+      "informed": {
+        "mse_target": 0.031137447164516257,
+        "n_train": 256,
+        "seconds": 50.3,
+        "n_parameters": 2295727,
+        "primitives_used": 12.0
+      },
+      "penalty": -0.00014737960866805996
+    },
+    {
+      "kind": "perframe",
+      "budget": 256,
+      "seed": 11,
+      "naive": {
+        "mse_target": 0.02654953829964325,
+        "n_train": 256,
+        "seconds": 47.8,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.02507691008611746,
+        "n_train": 256,
+        "seconds": 47.3,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.0014726282135257875
+    },
+    {
+      "kind": "modular",
+      "budget": 256,
+      "seed": 11,
+      "naive": {
+        "mse_target": 0.028362165621625697,
+        "n_train": 256,
+        "seconds": 50.1,
+        "n_parameters": 2295727,
+        "primitives_used": 12.0
+      },
+      "informed": {
+        "mse_target": 0.0418289239705955,
+        "n_train": 256,
+        "seconds": 48.1,
+        "n_parameters": 2295727,
+        "primitives_used": 12.0
+      },
+      "penalty": -0.0134667583489698
+    }
+  ]
+}

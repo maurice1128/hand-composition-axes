@@ -1,0 +1,413 @@
+﻿anno_preview: 627 sequences
+
+=== scene_01__A001++seq__07bb164dc3d3873d6389__2023-04-27-20-45-29.pkl ===
+top-level keys: ['cam_def', 'cam_extr', 'cam_intr', 'cam_selection', 'frame_id_list', 'mocap_frame_id_list', 'obj_list', 'obj_transf', 'raw_mano', 'raw_smplx']
+
+  cam_def: (suppressed, 4 entries)
+  cam_extr: (suppressed, 4 entries)
+  cam_intr: (suppressed, 4 entries)
+  cam_selection: (suppressed, 4 entries)
+  frame_id_list: (suppressed, 2610 entries)
+  mocap_frame_id_list: (suppressed, 10449 entries)
+  obj_list: list(7) first: str 'O02@0017@00001'
+  obj_transf: (suppressed, 7 entries)
+  raw_mano: dict(10449)
+    0: dict(6)
+      'rh__pose_coeffs': tensor(1, 16, 4) float32
+      'lh__pose_coeffs': tensor(1, 16, 4) float32
+      'rh__tsl': tensor(1, 3) float32
+      'lh__tsl': tensor(1, 3) float32
+      'rh__betas': tensor(1, 10) float32
+      'lh__betas': tensor(1, 10) float32
+    1: dict(6)
+      'rh__pose_coeffs': tensor(1, 16, 4) float32
+      'lh__pose_coeffs': tensor(1, 16, 4) float32
+      'rh__tsl': tensor(1, 3) float32
+      'lh__tsl': tensor(1, 3) float32
+      'rh__betas': tensor(1, 10) float32
+      'lh__betas': tensor(1, 10) float32
+    2: dict(6)
+      'rh__pose_coeffs': tensor(1, 16, 4) float32
+      'lh__pose_coeffs': tensor(1, 16, 4) float32
+      'rh__tsl': tensor(1, 3) float32
+      'lh__tsl': tensor(1, 3) float32
+      'rh__betas': tensor(1, 10) float32
+      'lh__betas': tensor(1, 10) float32
+    3: dict(6)
+      'rh__pose_coeffs': tensor(1, 16, 4) float32
+      'lh__pose_coeffs': tensor(1, 16, 4) float32
+      'rh__tsl': tensor(1, 3) float32
+      'lh__tsl': tensor(1, 3) float32
+      'rh__betas': tensor(1, 10) float32
+      'lh__betas': tensor(1, 10) float32
+    4: dict(6)
+      'rh__pose_coeffs': tensor(1, 16, 4) float32
+      'lh__pose_coeffs': tensor(1, 16, 4) float32
+      'rh__tsl': tensor(1, 3) float32
+      'lh__tsl': tensor(1, 3) float32
+      'rh__betas': tensor(1, 10) float32
+      'lh__betas': tensor(1, 10) float32
+    5: dict(6)
+      'rh__pose_coeffs': tensor(1, 16, 4) float32
+      'lh__pose_coeffs': tensor(1, 16, 4) float32
+      'rh__tsl': tensor(1, 3) float32
+      'lh__tsl': tensor(1, 3) float32
+      'rh__betas': tensor(1, 10) float32
+      'lh__betas': tensor(1, 10) float32
+    6: dict(6)
+      'rh__pose_coeffs': tensor(1, 16, 4) float32
+      'lh__pose_coeffs': tensor(1, 16, 4) float32
+      'rh__tsl': tensor(1, 3) float32
+      'lh__tsl': tensor(1, 3) float32
+      'rh__betas': tensor(1, 10) float32
+      'lh__betas': tensor(1, 10) float32
+    7: dict(6)
+      'rh__pose_coeffs': tensor(1, 16, 4) float32
+      'lh__pose_coeffs': tensor(1, 16, 4) float32
+      'rh__tsl': tensor(1, 3) float32
+      'lh__tsl': tensor(1, 3) float32
+      'rh__betas': tensor(1, 10) float32
+      'lh__betas': tensor(1, 10) float32
+    8: dict(6)
+      'rh__pose_coeffs': tensor(1, 16, 4) float32
+      'lh__pose_coeffs': tensor(1, 16, 4) float32
+      'rh__tsl': tensor(1, 3) float32
+      'lh__tsl': tensor(1, 3) float32
+      'rh__betas': tensor(1, 10) float32
+      'lh__betas': tensor(1, 10) float32
+    9: dict(6)
+      'rh__pose_coeffs': tensor(1, 16, 4) float32
+      'lh__pose_coeffs': tensor(1, 16, 4) float32
+      'rh__tsl': tensor(1, 3) float32
+      'lh__tsl': tensor(1, 3) float32
+      'rh__betas': tensor(1, 10) float32
+      'lh__betas': tensor(1, 10) float32
+    10: dict(6)
+      'rh__pose_coeffs': tensor(1, 16, 4) float32
+      'lh__pose_coeffs': tensor(1, 16, 4) float32
+      'rh__tsl': tensor(1, 3) float32
+      'lh__tsl': tensor(1, 3) float32
+      'rh__betas': tensor(1, 10) float32
+      'lh__betas': tensor(1, 10) float32
+    11: dict(6)
+      'rh__pose_coeffs': tensor(1, 16, 4) float32
+      'lh__pose_coeffs': tensor(1, 16, 4) float32
+      'rh__tsl': tensor(1, 3) float32
+      'lh__tsl': tensor(1, 3) float32
+      'rh__betas': tensor(1, 10) float32
+      'lh__betas': tensor(1, 10) float32
+    12: dict(6)
+      'rh__pose_coeffs': tensor(1, 16, 4) float32
+      'lh__pose_coeffs': tensor(1, 16, 4) float32
+      'rh__tsl': tensor(1, 3) float32
+      'lh__tsl': tensor(1, 3) float32
+      'rh__betas': tensor(1, 10) float32
+      'lh__betas': tensor(1, 10) float32
+    13: dict(6)
+      'rh__pose_coeffs': tensor(1, 16, 4) float32
+      'lh__pose_coeffs': tensor(1, 16, 4) float32
+      'rh__tsl': tensor(1, 3) float32
+      'lh__tsl': tensor(1, 3) float32
+      'rh__betas': tensor(1, 10) float32
+      'lh__betas': tensor(1, 10) float32
+    ... 10435 more keys
+  raw_smplx: dict(10449)
+    0: dict(10)
+      'body_shape': tensor(1, 300) float32
+      'expr_shape': tensor(1, 10) float32
+      'jaw_pose': tensor(1, 1, 4) float32
+      'leye_pose': tensor(1, 1, 4) float32
+      'reye_pose': tensor(1, 1, 4) float32
+      'world_rot': tensor(1, 4) float32
+      'world_tsl': tensor(1, 3) float32
+      'body_pose': tensor(1, 21, 4) float32
+      'left_hand_pose': tensor(1, 15, 4) float32
+      'right_hand_pose': tensor(1, 15, 4) float32
+    1: dict(10)
+      'body_shape': tensor(1, 300) float32
+      'expr_shape': tensor(1, 10) float32
+      'jaw_pose': tensor(1, 1, 4) float32
+      'leye_pose': tensor(1, 1, 4) float32
+      'reye_pose': tensor(1, 1, 4) float32
+      'world_rot': tensor(1, 4) float32
+      'world_tsl': tensor(1, 3) float32
+      'body_pose': tensor(1, 21, 4) float32
+      'left_hand_pose': tensor(1, 15, 4) float32
+      'right_hand_pose': tensor(1, 15, 4) float32
+    2: dict(10)
+      'body_shape': tensor(1, 300) float32
+      'expr_shape': tensor(1, 10) float32
+      'jaw_pose': tensor(1, 1, 4) float32
+      'leye_pose': tensor(1, 1, 4) float32
+      'reye_pose': tensor(1, 1, 4) float32
+      'world_rot': tensor(1, 4) float32
+      'world_tsl': tensor(1, 3) float32
+      'body_pose': tensor(1, 21, 4) float32
+      'left_hand_pose': tensor(1, 15, 4) float32
+      'right_hand_pose': tensor(1, 15, 4) float32
+    3: dict(10)
+      'body_shape': tensor(1, 300) float32
+      'expr_shape': tensor(1, 10) float32
+      'jaw_pose': tensor(1, 1, 4) float32
+      'leye_pose': tensor(1, 1, 4) float32
+      'reye_pose': tensor(1, 1, 4) float32
+      'world_rot': tensor(1, 4) float32
+      'world_tsl': tensor(1, 3) float32
+      'body_pose': tensor(1, 21, 4) float32
+      'left_hand_pose': tensor(1, 15, 4) float32
+      'right_hand_pose': tensor(1, 15, 4) float32
+    4: dict(10)
+      'body_shape': tensor(1, 300) float32
+      'expr_shape': tensor(1, 10) float32
+      'jaw_pose': tensor(1, 1, 4) float32
+      'leye_pose': tensor(1, 1, 4) float32
+      'reye_pose': tensor(1, 1, 4) float32
+      'world_rot': tensor(1, 4) float32
+      'world_tsl': tensor(1, 3) float32
+      'body_pose': tensor(1, 21, 4) float32
+      'left_hand_pose': tensor(1, 15, 4) float32
+      'right_hand_pose': tensor(1, 15, 4) float32
+    5: dict(10)
+      'body_shape': tensor(1, 300) float32
+      'expr_shape': tensor(1, 10) float32
+      'jaw_pose': tensor(1, 1, 4) float32
+      'leye_pose': tensor(1, 1, 4) float32
+      'reye_pose': tensor(1, 1, 4) float32
+      'world_rot': tensor(1, 4) float32
+      'world_tsl': tensor(1, 3) float32
+      'body_pose': tensor(1, 21, 4) float32
+      'left_hand_pose': tensor(1, 15, 4) float32
+      'right_hand_pose': tensor(1, 15, 4) float32
+    6: dict(10)
+      'body_shape': tensor(1, 300) float32
+      'expr_shape': tensor(1, 10) float32
+      'jaw_pose': tensor(1, 1, 4) float32
+      'leye_pose': tensor(1, 1, 4) float32
+      'reye_pose': tensor(1, 1, 4) float32
+      'world_rot': tensor(1, 4) float32
+      'world_tsl': tensor(1, 3) float32
+      'body_pose': tensor(1, 21, 4) float32
+      'left_hand_pose': tensor(1, 15, 4) float32
+      'right_hand_pose': tensor(1, 15, 4) float32
+    7: dict(10)
+      'body_shape': tensor(1, 300) float32
+      'expr_shape': tensor(1, 10) float32
+      'jaw_pose': tensor(1, 1, 4) float32
+      'leye_pose': tensor(1, 1, 4) float32
+      'reye_pose': tensor(1, 1, 4) float32
+      'world_rot': tensor(1, 4) float32
+      'world_tsl': tensor(1, 3) float32
+      'body_pose': tensor(1, 21, 4) float32
+      'left_hand_pose': tensor(1, 15, 4) float32
+      'right_hand_pose': tensor(1, 15, 4) float32
+    8: dict(10)
+      'body_shape': tensor(1, 300) float32
+      'expr_shape': tensor(1, 10) float32
+      'jaw_pose': tensor(1, 1, 4) float32
+      'leye_pose': tensor(1, 1, 4) float32
+      'reye_pose': tensor(1, 1, 4) float32
+      'world_rot': tensor(1, 4) float32
+      'world_tsl': tensor(1, 3) float32
+      'body_pose': tensor(1, 21, 4) float32
+      'left_hand_pose': tensor(1, 15, 4) float32
+      'right_hand_pose': tensor(1, 15, 4) float32
+    9: dict(10)
+      'body_shape': tensor(1, 300) float32
+      'expr_shape': tensor(1, 10) float32
+      'jaw_pose': tensor(1, 1, 4) float32
+      'leye_pose': tensor(1, 1, 4) float32
+      'reye_pose': tensor(1, 1, 4) float32
+      'world_rot': tensor(1, 4) float32
+      'world_tsl': tensor(1, 3) float32
+      'body_pose': tensor(1, 21, 4) float32
+      'left_hand_pose': tensor(1, 15, 4) float32
+      'right_hand_pose': tensor(1, 15, 4) float32
+    10: dict(10)
+      'body_shape': tensor(1, 300) float32
+      'expr_shape': tensor(1, 10) float32
+      'jaw_pose': tensor(1, 1, 4) float32
+      'leye_pose': tensor(1, 1, 4) float32
+      'reye_pose': tensor(1, 1, 4) float32
+      'world_rot': tensor(1, 4) float32
+      'world_tsl': tensor(1, 3) float32
+      'body_pose': tensor(1, 21, 4) float32
+      'left_hand_pose': tensor(1, 15, 4) float32
+      'right_hand_pose': tensor(1, 15, 4) float32
+    11: dict(10)
+      'body_shape': tensor(1, 300) float32
+      'expr_shape': tensor(1, 10) float32
+      'jaw_pose': tensor(1, 1, 4) float32
+      'leye_pose': tensor(1, 1, 4) float32
+      'reye_pose': tensor(1, 1, 4) float32
+      'world_rot': tensor(1, 4) float32
+      'world_tsl': tensor(1, 3) float32
+      'body_pose': tensor(1, 21, 4) float32
+      'left_hand_pose': tensor(1, 15, 4) float32
+      'right_hand_pose': tensor(1, 15, 4) float32
+    12: dict(10)
+      'body_shape': tensor(1, 300) float32
+      'expr_shape': tensor(1, 10) float32
+      'jaw_pose': tensor(1, 1, 4) float32
+      'leye_pose': tensor(1, 1, 4) float32
+      'reye_pose': tensor(1, 1, 4) float32
+      'world_rot': tensor(1, 4) float32
+      'world_tsl': tensor(1, 3) float32
+      'body_pose': tensor(1, 21, 4) float32
+      'left_hand_pose': tensor(1, 15, 4) float32
+      'right_hand_pose': tensor(1, 15, 4) float32
+    13: dict(10)
+      'body_shape': tensor(1, 300) float32
+      'expr_shape': tensor(1, 10) float32
+      'jaw_pose': tensor(1, 1, 4) float32
+      'leye_pose': tensor(1, 1, 4) float32
+      'reye_pose': tensor(1, 1, 4) float32
+      'world_rot': tensor(1, 4) float32
+      'world_tsl': tensor(1, 3) float32
+      'body_pose': tensor(1, 21, 4) float32
+      'left_hand_pose': tensor(1, 15, 4) float32
+      'right_hand_pose': tensor(1, 15, 4) float32
+    ... 10435 more keys
+
+=== program directory: D:\datasets\oakink2\program\program ===
+  desc_info                     dir  627 entries
+  initial_condition_info        dir  167 entries
+  pdg                           dir  627 entries
+  program_info                  dir  627 entries
+  task_target.json             file  1 entries
+
+  task_target.json: dict with 627 entries
+    'scene_01__A001/seq__9e46184387ba83f60895__2023-04-27-18-43-58': "Cap the bottle."
+    'scene_01__A001/seq__b29ee6fc3a226cd716ec__2023-04-27-19-39-19': "Scoop honey and pour juice into the bowl."
+    'scene_01__A001/seq__5ad66440a8b11dd306f3__2023-04-27-19-41-45': "Scoop drinks and grip ice cubes into the bowl."
+
+  --- desc_info/  (627 files) ---
+    scene_01__A001++seq__07bb164dc3d3873d6389__2023-04-27-20-45-29.json
+      {
+        "(None, (966, 5954))": {
+          "seg_desc": "Grip the content with the tongs from the plate to another plate.",
+          "seg_desc_zh": "\u7528\u5939\u5b50\u5c06\u5185\u5bb9\u4ece\u789f\u5b50\u5939\u5230\u53e6\u4e00\u4e2a\u789f\u5b50\u3002"
+        },
+        "(None, (6130, 7331))": {
+          "seg_desc": "Rearrange the white fruit knife from one position to another position.",
+          "seg_desc_zh": "\u5c06\u767d\u8272\u6c34\u679c\u5200\u4ece\u4e00\u4e2a\u4f4d\u7f6e\u79fb\u52a8\u5230\u53e6\u4e00\u4e2a\u4f4d\u7f6e\u3002"
+        },
+        "(None, (7815, 8720))": {
+          "seg_desc": "Take the spoon outside tool rack.",
+          "seg_desc_zh": "\u5c06\u8c03\u7fb9\u62ff\u51fa\u5de5\u5177\u67b6\u3002"
+        },
+        "(None, (8976, 9784))": {
+          "seg_desc": "Take the fork outside tool rack.",
+          "seg_desc_zh": "\u5c06\u53c9\u5b50\u62ff\u51fa\u5de5\u5177\u67b6\u3002"
+        }
+      }
+    scene_01__A001++seq__083f7a577484ba7929a9__2023-04-27-19-25-24.json
+      {
+        "((1431, 4025), (1431, 4025))": {
+          "seg_desc": "Cut the bread with the orange cleaver knife.",
+          "seg_desc_zh": "\u7528\u6a59\u8272\u83dc\u5200\u5207\u9762\u5305\u3002"
+        }
+      }
+
+  --- program_info/  (627 files) ---
+    scene_01__A001++seq__07bb164dc3d3873d6389__2023-04-27-20-45-29.json
+      {
+        "(None, (966, 5954))": {
+          "primitive": "grip",
+          "obj_list": [
+            "O02@0032@00001",
+            "O02@0032@00002"
+          ],
+          "interaction_mode": "rh_main",
+          "primitive_lh": null,
+          "primitive_rh": "grip",
+          "obj_list_lh": null,
+          "obj_list_rh": [
+            "O02@0032@00001",
+            "O02@0032@00002"
+          ]
+        },
+        "(None, (6130, 7331))": {
+          "primitive": "rearrange",
+          "obj_list": [
+            "O02@0020@00001"
+          ],
+          "interaction_mode": "rh_main",
+          "primitive_lh": null,
+          "primitive_rh": "rearrange",
+          "obj_list_lh": null,
+          "obj_list_rh": [
+            "O02@0020@00001"
+          ]
+        },
+        "(None, (7815, 8720))": {
+          "primitive": "take_outside",
+          "obj_list": [
+            "O02@0030@00002"
+          ],
+          "interaction_mode": "rh_main",
+          "primitive_lh": null,
+          "primitive_rh": "take_outside",
+          "obj_list_lh": null,
+          "obj_list_rh": [
+            "O02@0030@00002"
+          ]
+        },
+        "(None, (8976
+    scene_01__A001++seq__083f7a577484ba7929a9__2023-04-27-19-25-24.json
+      {
+        "((1431, 4025), (1431, 4025))": {
+          "primitive": "cut",
+          "obj_list": [
+            "O02@0094@00004",
+            "S20005"
+          ],
+          "interaction_mode": "rh_main",
+          "primitive_lh": "hold",
+          "primitive_rh": "cut",
+          "obj_list_lh": [
+            "O02@0094@00004"
+          ],
+          "obj_list_rh": [
+            "S20005"
+          ]
+        }
+      }
+
+  --- pdg/  (627 files) ---
+    scene_01__A001++seq__07bb164dc3d3873d6389__2023-04-27-20-45-29.json
+      {
+        "id_map": {
+          "(None, (966, 5954))": 0,
+          "(None, (7815, 8720))": 1,
+          "(None, (8976, 9784))": 2
+        },
+        "v": [
+          0,
+          1,
+          2
+        ],
+        "e": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      }
+    scene_01__A001++seq__083f7a577484ba7929a9__2023-04-27-19-25-24.json
+      {
+        "id_map": {
+          "((1431, 4025), (1431, 4025))": 0
+        },
+        "v": [
+          0
+        ],
+        "e": []
+      }
+
+=== sequence axes ===
+  scenes  : 4  {'scene_01': 252, 'scene_02': 214, 'scene_03': 142, 'scene_04': 19}
+  subjects: 9  {'A001': 88, 'A003': 101, 'A004': 117, 'A005': 75, 'A007': 122, 'A008': 61, 'O001': 28, 'A002': 29}

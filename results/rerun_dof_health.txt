@@ -1,0 +1,54 @@
+
+dexycb.npz  (31,651 frames)
+  pinky_mcp_abd        range used 100.0%   PINNED 49% (lo 49% / hi 0%)
+  thumb_cmc_abd        range used 40.4%   PINNED 44% (lo 44% / hi 0%)
+  thumb_mcp_abd        range used 100.0%   PINNED 33% (lo 24% / hi 9%)
+  wrist_tz             range used  0.0%   DEAD sd=0.0000
+  FAIL: 4 of 27 DOF unusable. Anything measured on this bundle is measured on 23 DOF.
+
+dexycb_shape.npz  (31,651 frames)
+  pinky_mcp_abd        range used 100.0%   PINNED 49% (lo 49% / hi 0%)
+  thumb_cmc_abd        range used 40.4%   PINNED 44% (lo 44% / hi 0%)
+  thumb_mcp_abd        range used 100.0%   PINNED 33% (lo 24% / hi 9%)
+  wrist_tz             range used  0.0%   DEAD sd=0.0000
+  FAIL: 4 of 27 DOF unusable. Anything measured on this bundle is measured on 23 DOF.
+
+grab.npz  (319,228 frames)
+  thumb_cmc_flex       range used 74.2%   PINNED 63% (lo 63% / hi 0%)
+  pinky_mcp_abd        range used 100.0%   PINNED 47% (lo 3% / hi 44%)
+  thumb_mcp_abd        range used 100.0%   PINNED 40% (lo 27% / hi 13%)
+  thumb_cmc_abd        range used 61.0%   PINNED 35% (lo 35% / hi 0%)
+  pinky_dip_flex       range used 100.0%   PINNED 28% (lo 28% / hi 0%)
+  wrist_tz             range used 32.3%   DEAD sd=0.0041
+  FAIL: 6 of 27 DOF unusable. Anything measured on this bundle is measured on 21 DOF.
+
+oakink.npz  (77,803 frames)
+  pinky_mcp_abd        range used 49.4%   PINNED 58% (lo 58% / hi 0%)
+  FAIL: 1 of 27 DOF unusable. Anything measured on this bundle is measured on 26 DOF.
+
+oakink2.npz  (569,093 frames)
+  thumb_cmc_abd        range used 100.0%   PINNED 30% (lo 28% / hi 2%)
+  pinky_mcp_abd        range used 100.0%   PINNED 29% (lo 0% / hi 29%)
+  thumb_mcp_abd        range used 100.0%   PINNED 29% (lo 14% / hi 14%)
+  thumb_mcp_flex       range used 100.0%   PINNED 27% (lo 27% / hi 0%)
+  FAIL: 4 of 27 DOF unusable. Anything measured on this bundle is measured on 23 DOF.
+
+synth_hard.npz  (635,547 frames)
+  wrist_ty             range used 100.0%   PINNED 47% (lo 23% / hi 23%)
+  wrist_tz             range used 100.0%   PINNED 47% (lo 23% / hi 23%)
+  wrist_tx             range used 100.0%   PINNED 46% (lo 23% / hi 23%)
+  FAIL: 3 of 27 DOF unusable. Anything measured on this bundle is measured on 24 DOF.
+
+synthetic.npz  (107,934 frames)
+  wrist_tx             range used 100.0%   PINNED 47% (lo 23% / hi 23%)
+  wrist_tz             range used 100.0%   PINNED 46% (lo 23% / hi 23%)
+  wrist_ty             range used 100.0%   PINNED 46% (lo 23% / hi 23%)
+  FAIL: 3 of 27 DOF unusable. Anything measured on this bundle is measured on 24 DOF.
+
+synthetic_big.npz  (634,294 frames)
+  wrist_tx             range used 100.0%   PINNED 46% (lo 23% / hi 23%)
+  wrist_tz             range used 100.0%   PINNED 46% (lo 23% / hi 23%)
+  wrist_ty             range used 100.0%   PINNED 46% (lo 23% / hi 23%)
+  FAIL: 3 of 27 DOF unusable. Anything measured on this bundle is measured on 24 DOF.
+
+At least one bundle has a dead or pinned DOF. Fix the retargeting, do not widen the limits -- the limits are anatomy.

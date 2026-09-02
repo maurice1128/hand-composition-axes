@@ -1,0 +1,23 @@
+{
+  "run_dir": "runs/bricks_s4",
+  "n_per_arm": 4,
+  "seen": {
+    "penetrating_mean": 1.0,
+    "per_clip": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "unseen": {
+    "penetrating_mean": 1.0,
+    "per_clip": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "p_penetration": NaN
+}

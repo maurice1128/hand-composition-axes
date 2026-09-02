@@ -1,0 +1,22 @@
+{
+  "runs/oakbricks_s1": {
+    "n_poses": 27,
+    "mesh_rate": 0.0,
+    "capsule_rate": 0.9752604166666666
+  },
+  "runs/oakbricks_s2": {
+    "n_poses": 27,
+    "mesh_rate": 0.14814814814814814,
+    "capsule_rate": 0.6720377604166666
+  },
+  "runs/bricks_s1": {
+    "n_poses": 27,
+    "mesh_rate": 0.037037037037037035,
+    "capsule_rate": 0.0029296875
+  },
+  "runs/bricks_s2": {
+    "n_poses": 27,
+    "mesh_rate": 0.0,
+    "capsule_rate": 0.03271484375
+  }
+}

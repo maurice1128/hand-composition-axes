@@ -1,0 +1,117 @@
+{
+  "margins": {
+    "retention_pp": 0.1,
+    "abduction_deg": 1.0,
+    "penetration_pp": 0.05
+  },
+  "retention": {
+    "easy": {
+      "seen": 0.8688524590163934,
+      "unseen": 0.8360655737704918,
+      "n_seen": 122,
+      "n_unseen": 122,
+      "difference": 0.032786885245901565,
+      "tost_p": 0.06919642196096219
+    },
+    "medium": {
+      "seen": 0.2786885245901639,
+      "unseen": 0.29508196721311475,
+      "n_seen": 122,
+      "n_unseen": 122,
+      "difference": -0.016393442622950838,
+      "tost_p": 0.07438091152993215
+    },
+    "hard": {
+      "seen": 0.03278688524590164,
+      "unseen": 0.0,
+      "n_seen": 122,
+      "n_unseen": 122,
+      "difference": 0.03278688524590164,
+      "tost_p": 1.5302829851597934e-05
+    }
+  },
+  "retargeting": {
+    "robot_transfer": {
+      "abduction": {
+        "difference": -0.4993206521739131,
+        "tost_p": 0.26255304193839973,
+        "n_seen": 23,
+        "n_unseen": 23
+      },
+      "penetration": {
+        "difference": 0.009510869565217392,
+        "tost_p": 4.242583172460257e-05,
+        "n_seen": 23,
+        "n_unseen": 23
+      }
+    },
+    "robot_transfer_s1": {
+      "abduction": {
+        "difference": 0.10608552631578949,
+        "tost_p": 0.011513927506079349,
+        "n_seen": 19,
+        "n_unseen": 19
+      },
+      "penetration": {
+        "difference": 0.013157894736842105,
+        "tost_p": 0.018712106140845584,
+        "n_seen": 19,
+        "n_unseen": 19
+      }
+    },
+    "robot_transfer_s2": {
+      "abduction": {
+        "difference": 0.10394021739130435,
+        "tost_p": 3.960280674267164e-09,
+        "n_seen": 23,
+        "n_unseen": 23
+      },
+      "penetration": {
+        "difference": 0.0,
+        "tost_p": NaN,
+        "n_seen": 23,
+        "n_unseen": 23
+      }
+    },
+    "robot_transfer_s3": {
+      "abduction": {
+        "difference": -1.3171875000000006,
+        "tost_p": 0.6942440045576576,
+        "n_seen": 40,
+        "n_unseen": 40
+      },
+      "penetration": {
+        "difference": -0.00078125,
+        "tost_p": 5.903163294624626e-69,
+        "n_seen": 40,
+        "n_unseen": 40
+      }
+    },
+    "robot_transfer_s4": {
+      "abduction": {
+        "difference": 0.0,
+        "tost_p": NaN,
+        "n_seen": 60,
+        "n_unseen": 60
+      },
+      "penetration": {
+        "difference": 0.0,
+        "tost_p": NaN,
+        "n_seen": 60,
+        "n_unseen": 60
+      }
+    }
+  },
+  "pooled": {
+    "abduction": {
+      "n_per_arm": 165,
+      "difference": -0.3622159090909087,
+      "tost_p": 0.008093082763578618
+    },
+    "penetration": {
+      "n_per_arm": 165,
+      "difference": 0.002651515151515152,
+      "tost_p": 8.311428912558612e-58
+    }
+  }
+}

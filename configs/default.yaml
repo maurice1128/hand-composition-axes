@@ -1,0 +1,73 @@
+# CareDex Phase 1-2 defaults.
+# Override anything from the command line:  --set train.epochs=400 model.latent_dim=16
+
+data:
+  # synthetic | dexycb | oakink   (the latter two raise with download
+  # instructions until the datasets arrive -- see docs/DATASETS.md)
+  source: synthetic
+  root: null
+  cache: data/bundles/synthetic.npz
+  fps: 30.0
+
+  synthetic:
+    n_trajectories: 512
+    seg_frames: [25, 60]
+    segments_per_traj: [3, 7]
+    # Rank of the pose-noise subspace. With 9 primitives this makes the
+    # expected intrinsic dimensionality 8 + 6 = 14 of 21 articulated DOF.
+    noise_rank: 6
+    noise_deg: 7.0
+    sensor_noise_deg: 0.4
+    # Per-ordered-pair via-point detour. 0 = plain interpolation between
+    # primitives, which carries NO compositional difficulty: a model that saw
+    # both endpoints separately reconstructs the transition anyway. Set > 0 to
+    # make transitions genuinely unlearnable from their endpoints — required
+    # if this bundle is to serve as a positive control for compositional
+    # generalisation. See docs/EXPERIMENT_MODULARITY.md flaw 5.
+    transition_via_deg: 0.0
+    seed: 0
+
+loader:
+  window: 32           # ~1.07 s at 30 fps: one grasp transition
+  stride: 2
+  batch_size: 256
+  val_frac: 0.1
+  test_frac: 0.1
+  split_seed: 0
+  num_workers: 0       # >0 is slower on Windows for a dataset this small
+
+eigengrasp:
+  articulated_only: true
+  variance_target: 0.95
+  out: runs/eigengrasp/basis.npz
+
+model:
+  latent_dim: 12
+  hidden_dim: 256
+  n_layers: 2
+  dropout: 0.0
+  bounded_output: true
+  condition_on_initial: true
+  beta: 1.0
+  free_bits: 0.02
+  smoothness_weight: 0.1
+
+train:
+  epochs: 200
+  lr: 1.0e-3
+  weight_decay: 0.0
+  grad_clip: 1.0
+  kl_warmup_epochs: 20
+  lr_min_factor: 0.05
+  save_every: 10
+  log_every: 0
+  patience: 0
+  amp: true
+  seed: 0
+
+run_dir: runs/prior
+
+validate:
+  n_samples: 512
+  temperature: 1.0
+  seed: 0

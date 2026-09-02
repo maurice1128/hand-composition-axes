@@ -1,0 +1,28 @@
+data/bundles/oakink.npz: 770 trajectories
+
+ seed      set     n      len   variance     delta    range
+------------------------------------------------------------
+    0     seen    91    100.9    0.05624   0.07795   0.6717
+    0   unseen   161     94.7    0.05280   0.06630   0.6507
+            -> unseen variance is -6.1% vs seen
+
+    1     seen    93    100.3    0.05184   0.06704   0.6558
+    1   unseen   146    110.4    0.05739   0.09801   0.6931
+            -> unseen variance is +10.7% vs seen
+
+    2     seen    92     93.4    0.05451   0.06338   0.6561
+    2   unseen   155    113.6    0.05586   0.09557   0.6803
+            -> unseen variance is +2.5% vs seen
+
+    3     seen    93    105.2    0.05416   0.07427   0.6574
+    3   unseen   150    107.8    0.05468   0.08730   0.6807
+            -> unseen variance is +0.9% vs seen
+
+    4     seen    91    101.5    0.05503   0.08274   0.6730
+    4   unseen   158    101.6    0.05436   0.07761   0.6593
+            -> unseen variance is -1.2% vs seen
+
+------------------------------------------------------------
+mean relative variance difference across 5 seeds: +1.4%
+
+Balanced enough for the unpaired gap to be interpretable.

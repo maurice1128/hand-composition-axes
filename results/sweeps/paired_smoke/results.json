@@ -1,0 +1,68 @@
+{
+  "split_sizes": {
+    "held_compositions": 60,
+    "target": 70,
+    "naive_pool": 631,
+    "informed_extra": 69
+  },
+  "args": {
+    "bundle": "data/bundles/oakink.npz",
+    "out": "runs/paired_smoke",
+    "budgets": [
+      32
+    ],
+    "kinds": [
+      "perframe",
+      "modular"
+    ],
+    "held_compositions": 60,
+    "epochs": 8,
+    "window": 32,
+    "stride": 4,
+    "batch_size": 256,
+    "lr": 0.001,
+    "latent_dim": 12,
+    "hidden": 256,
+    "n_primitives": 12,
+    "seed": 0,
+    "fresh": true
+  },
+  "results": [
+    {
+      "kind": "perframe",
+      "budget": 32,
+      "naive": {
+        "mse_target": 0.0884284587821575,
+        "n_train": 32,
+        "seconds": 1.9,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.0876348512914675,
+        "n_train": 32,
+        "seconds": 1.2,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.0007936074906900042
+    },
+    {
+      "kind": "modular",
+      "budget": 32,
+      "naive": {
+        "mse_target": 0.08714348378807607,
+        "n_train": 32,
+        "seconds": 1.5,
+        "n_parameters": 2295727,
+        "primitives_used": 12.0
+      },
+      "informed": {
+        "mse_target": 0.08873128409337516,
+        "n_train": 32,
+        "seconds": 1.5,
+        "n_parameters": 2295727,
+        "primitives_used": 12.0
+      },
+      "penalty": -0.0015878003052990919
+    }
+  ]
+}

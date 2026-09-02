@@ -1,0 +1,99 @@
+﻿627 sequences with primitive annotation
+
+=== primitives (rh) ===
+distinct: 67   total segments: 2185
+  hold               338
+  rearrange          235
+  place_inside       104
+  take_outside        85
+  pour_in_lab         74
+  press_button        65
+  scoop               60
+  pour                48
+  ignite_alcohol_lamp    48
+  cut                 45
+  place_on_test_tube_rack    45
+  close_gate          43
+  remove_lid          41
+  put_on_lid          41
+  open_gate           38
+  screw               37
+  grip                36
+  stir                35
+  unscrew             35
+  put_off_alcohol_lamp    34
+  stir_experiment_substances    32
+  heat_test_tube      32
+  hold_test_tube      30
+  brush_whiteboard    28
+  remove_from_test_tube_rack    28
+  shake_lab_container    26
+  uncap_alcohol_lamp    25
+  heat_beaker         24
+  pull_out_drawer     23
+  plug_in_power_plug    22
+  place_test_tube_on_rack_with_holder    22
+  write_on_whiteboard    21
+  push_in_drawer      21
+  scrape              20
+  insert_usb          20
+  write_on_paper      20
+  remove_power_plug    19
+  cap                 18
+  assemble            17
+  remove_usb          17
+  wipe                16
+  uncap               16
+  place_asbestos_mesh    16
+  close_laptop_lid    15
+  spread              14
+  insert_pencil       14
+  staple_paper_together    14
+  remove_pencil       13
+  shear_paper         13
+  put_flower_into_vase    12
+  remove_test_tube    11
+  trigger_lever       10
+  open_laptop_lid     10
+  flip_open_tooth_paste_cap     9
+  flip_close_tooth_paste_cap     9
+  place_onto           7
+  insert_lightbulb     7
+  remove_lightbulb     5
+  use_mouse            4
+  sharpen_pencil       4
+  use_gamecontroller     3
+  use_keyboard         3
+  swap                 2
+  remove_test_tube_from_rack_with_holder     2
+  squeeze_tooth_paste     2
+  close_book           1
+  open_book            1
+
+=== sequence structure ===
+  sequences with >1 primitive segment: 353 / 627 (56%)
+  segments per sequence: min 0  median 2  max 23
+  segment length (mocap frames): min 28  median 725  max 8202
+
+=== transitions (the composition axis) ===
+  distinct ordered transitions: 391
+  possible given 67 primitives: 4489
+  sequences per transition: min 1  median 2  max 34
+  transitions occurring in >= 6 sequences: 66 / 391
+
+  most common:
+    hold -> hold             34 sequences
+    hold_test_tube -> heat_test_tube   26 sequences
+    rearrange -> hold             25 sequences
+    uncap_alcohol_lamp -> ignite_alcohol_lamp   25 sequences
+    rearrange -> rearrange        24 sequences
+    hold -> rearrange        23 sequences
+    place_inside -> close_gate       22 sequences
+    close_gate -> press_button     21 sequences
+    open_gate -> take_outside     20 sequences
+    take_outside -> close_gate       20 sequences
+    hold -> write_on_whiteboard   19 sequences
+    hold -> pour_in_lab      19 sequences
+
+  mean sequences per transition: 3.78
+  FEASIBLE: 66 transitions have >= 6 sequences, enough to split into target and informed sets.
