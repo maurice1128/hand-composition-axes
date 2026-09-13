@@ -272,15 +272,16 @@ def convert(md: str) -> str:
             while i + 1 < len(lines) and not block[-1].rstrip().endswith("}"):
                 i += 1
                 block.append(lines[i])
-            m_fig = re.match(r"^!\[(.*)\]\((figures/[^)]+)\)\{#(fig:[\w-]+)\}$",
+            m_fig = re.match(r"^!\[(.*)\]\((figures/[^)]+)\)\{#(fig:[\w-]+)( wide)?\}$",
                              " ".join(" ".join(block).split()))
             if not m_fig:
                 raise SystemExit("malformed figure block: " + " ".join(block)[:70])
-            cap, path, key = m_fig.groups()
-            out += [r"\begin{figure}[t]", r"\centering",
-                    r"\includegraphics[width=\columnwidth]{" + path + "}",
+            cap, path, key, wide = m_fig.groups()
+            env, width = ("figure*", r"0.85\textwidth") if wide else ("figure", r"\columnwidth")
+            out += [r"\begin{" + env + "}[t]", r"\centering",
+                    r"\includegraphics[width=" + width + "]{" + path + "}",
                     r"\caption{" + inline(cap) + "}",
-                    r"\label{" + key + "}", r"\end{figure}"]
+                    r"\label{" + key + "}", r"\end{" + env + "}"]
             FIGURES.append(key)
             i += 1
             continue
@@ -447,10 +448,13 @@ because its sweep could not have measured what it claimed (\S{}V-B).}
 \label{fig:screen}
 \end{figure}
 """
-    tail = tail.replace(r"\section{Results}", fig + "\n" + r"\section{Results}", 1)
-    if r"\ref{fig:screen}" not in tail:
-        raise SystemExit("the figure is emitted but nothing refers to it; "
-                         "write \"Fig. 1\" into the manuscript or drop the float")
+    # The scatter float is injected only for manuscripts that still carry it
+    # (the v3/v4 revisions replaced it with Table III).
+    if "fig:screen" in md:
+        tail = tail.replace(r"\section{Results}", fig + "\n" + r"\section{Results}", 1)
+        if r"\ref{fig:screen}" not in tail:
+            raise SystemExit("the figure is emitted but nothing refers to it; "
+                             "write \"Fig. 1\" into the manuscript or drop the float")
 
     tex = (PREAMBLE % {"title": title}) + head + tail + "\n\\end{document}\n"
     out = ROOT / args.out

@@ -68,16 +68,24 @@ def build(kind: str, cfg: dict, window: int):
                 smoothness_weight=m.get("smoothness_weight", 0.1),
                 consistency_weight=m.get("consistency_weight", 0.0),
                 consistency_contexts=m.get("consistency_contexts", 4),
+                # Gumbel temperature: 1.0 reproduces every bank in runs/. Higher
+                # values train the decoder on soft mixtures of primitives, so a
+                # policy's mixture weights become a continuous control channel.
+                gumbel_tau=m.get("gumbel_tau", 1.0),
             )
         )
-    raise ValueError(f"unknown model {kind!r}; expected 'monolithic' or 'modular'")
+    if kind == "keyframe":
+        from caredex.models.keyframe_prior import KeyframeConfig, KeyframePrior
+        keys = KeyframeConfig.__dataclass_fields__.keys()
+        return KeyframePrior(KeyframeConfig(window=window, **{k: v for k, v in m.items() if k in keys and k != "window"}))
+    raise ValueError(f"unknown model {kind!r}; expected 'monolithic', 'modular' or 'keyframe'")
 
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--config", default=None)
     ap.add_argument("--set", dest="overrides", nargs="*", default=[])
-    ap.add_argument("--model", choices=("monolithic", "modular"), default="monolithic")
+    ap.add_argument("--model", choices=("monolithic", "modular", "keyframe"), default="monolithic")
     ap.add_argument("--bundle", default=None)
     ap.add_argument("--run-dir", default=None)
     ap.add_argument("--fresh", action="store_true", help="ignore any existing checkpoint")

@@ -78,16 +78,14 @@ AXES = [
 
 
 def derive(labels: list[str], mode: str) -> list[str]:
-    """Coarse labels, including the GRAB intent-class axes the sweeps never used."""
-    if mode.startswith("grab_"):
-        from caredex.data.grab import GRAB_SHAPE_CLASS, intent_class
+    """Coarse labels, delegating to the experiment's own definition.
 
-        out = []
-        for lab in labels:
-            left, _, right = lab.partition("->")
-            group = GRAB_SHAPE_CLASS[left] if "shape" in mode else left
-            out.append(f"{group}->{intent_class(right)}")
-        return out
+    This used to carry a second copy of the GRAB intent-class rule, because the
+    sweep could not run those axes and only the screen needed them. Two
+    definitions of one axis is how a screen and an experiment end up scoring
+    different things without either being wrong, so the rule now lives in
+    ``coarsen_labels`` and this is a pass-through.
+    """
     return coarsen_labels(labels, mode)
 
 

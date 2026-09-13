@@ -107,3 +107,24 @@ Before any sweep, run `scripts/check_primitive_collapse.py`. A result of `primit
   year   = {2026}
 }
 ```
+
+## Post-submission sweeps (2026-09-12)
+
+Two axes with non-positive interaction excess were swept after the first
+submission under protocols written before the sweeps started
+(`results/preregistration/`): GRAB shape × intent class and OakInk2 scene ×
+verb, forty seeds each, leak gate 0.0% on both arms. Both are significant
+against zero (*p* = 0.021, 0.015) and both are indistinguishable from the
+zero-truth `pc_easy` control (Welch *p* = 0.60, 0.96), as is OakInk2's
+transition axis (*p* = 0.79); the OakInk-Image axes with interaction sit ten
+standard errors above that control. So "carries difficulty" is read against the
+control, not against zero, and the necessity direction holds on three axes
+across two datasets. The pre-registration declared the test against zero; the
+comparison against the control was adopted after both results were seen, and
+the record says so. Four further non-positive-excess axes cannot be split
+leak-free at all (`scripts/screen_oakink2_axes.py` documents why).
+
+`experiment_paired_composition.py` now resumes a sweep row by row (scored
+models discard their checkpoints, so a restart used to retrain finished seeds
+and overwrite `results.json`), and it accepts the `grab_*_intentclass` and
+`oakink2_*` granularities the screen scores.

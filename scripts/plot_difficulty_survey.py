@@ -65,6 +65,8 @@ SOURCES = [
     ("synthetic\nvia-point", "runs/pc_hard", "perframe", "modular", False),
     ("synthetic\ninterpolated", "runs/pc_easy", "perframe", "modular", False),
     ("OakInk2\nannotated primitives", "runs/oakink2_paired_v2", "perframe", "modular", True),
+    ("GRAB\nshape x intent class", "runs/grab_shapeclass", "perframe", "modular", True),
+    ("OakInk2\nscene x verb", "runs/oakink2_scene_verb", "perframe", "modular", True),
     ("DexYCB\nsubject->shape", "runs/dexycb_paired_v2", "perframe", "modular", True),
 ]
 

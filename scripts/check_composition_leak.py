@@ -37,7 +37,10 @@ from experiment_paired_composition import (  # noqa: E402
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--bundle", default="data/bundles/oakink.npz")
-    ap.add_argument("--granularity", choices=("fine", "category", "shape", "oakink_category", "oakink_class", "oakink_attr", "left", "right"), default="category")
+    ap.add_argument("--granularity", choices=("fine", "category", "shape", "grab_shape_intentclass",
+                 "grab_object_intentclass", "oakink_category", "oakink_class",
+                 "oakink_attr", "oakink2_scene_primitive", "oakink2_subject_primitive",
+                 "oakink2_scene_verb", "oakink2_subject_verb", "left", "right"), default="category")
     ap.add_argument("--held-compositions", type=int, default=5)
     ap.add_argument("--min-per-composition", type=int, default=8)
     ap.add_argument("--min-chains", type=int, default=4)

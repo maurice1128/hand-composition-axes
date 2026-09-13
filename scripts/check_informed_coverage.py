@@ -40,7 +40,12 @@ def main() -> int:
     ap.add_argument("--min-examples", type=float, default=3.0)
     ap.add_argument("--min-per-composition", type=int, default=4)
     ap.add_argument("--min-chains", type=int, default=4)
-    ap.add_argument("--granularity", choices=("fine", "category", "shape", "oakink_category", "oakink_class", "oakink_attr", "left", "right"), default="fine")
+    ap.add_argument("--granularity",
+                    choices=("fine", "category", "shape", "grab_shape_intentclass",
+                 "grab_object_intentclass", "oakink_category", "oakink_class",
+                 "oakink_attr", "oakink2_scene_primitive", "oakink2_subject_primitive",
+                 "oakink2_scene_verb", "oakink2_subject_verb", "left", "right"),
+                    default="fine")
     args = ap.parse_args()
 
     bundle = TrajectoryBundle.load(args.bundle)

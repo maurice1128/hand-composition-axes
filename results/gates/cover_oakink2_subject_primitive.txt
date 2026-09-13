@@ -1,0 +1,91 @@
+granularity=oakink2_subject_primitive: 240 cells, 2.5 trajectories per cell
+data/bundles/oakink2_subject_primitive.npz: 609 trajectories
+holding out 5 compositions
+
+ seed  budget  swapped   held  covered  per comp  status
+--------------------------------------------------------------
+    0     256      148      5        5      2.80  TOO THIN
+
+    1     256      148      5        5      4.80  ok
+
+    2     256      158      5        5      3.60  ok
+
+    3     256      149      5        5      3.80  ok
+
+    4     256      150      5        5      3.40  ok
+
+    5     256      150      5        5      2.60  TOO THIN
+
+    6     256      148      5        5      4.60  ok
+
+    7     256      155      5        5      3.00  ok
+
+    8     256      139      5        5      4.00  ok
+
+    9     256      156      5        5      2.60  TOO THIN
+
+   10     256      148      5        5      3.80  ok
+
+   11     256      152      5        5      2.60  TOO THIN
+
+   12     256      162      5        4      3.25  TOO THIN
+
+   13     256      151      5        4      4.25  TOO THIN
+
+   14     256      152      5        5      2.60  TOO THIN
+
+   15     256      145      5        5      2.60  TOO THIN
+
+   16     256      151      5        5      3.20  ok
+
+   17     256      152      5        5      3.20  ok
+
+   18     256      158      5        5      4.20  ok
+
+   19     256      148      5        5      4.20  ok
+
+   20     256      150      5        5      2.60  TOO THIN
+
+   21     256      141      5        5      3.40  ok
+
+   22     256      150      5        5      5.20  ok
+
+   23     256      154      5        5      4.80  ok
+
+   24     256      148      5        5      3.80  ok
+
+   25     256      155      5        5      2.60  TOO THIN
+
+   26     256      150      5        5      3.60  ok
+
+   27     256      156      5        5      3.00  ok
+
+   28     256      144      5        5      3.40  ok
+
+   29     256      140      5        5      4.20  ok
+
+   30     256      150      5        5      4.20  ok
+
+   31     256      156      5        5      3.00  ok
+
+   32     256      146      5        5      3.60  ok
+
+   33     256      142      5        5      3.80  ok
+
+   34     256      151      5        5      2.40  TOO THIN
+
+   35     256      148      5        5      3.00  ok
+
+   36     256      147      5        5      4.60  ok
+
+   37     256      147      5        4      3.00  TOO THIN
+
+   38     256      155      5        5      2.80  TOO THIN
+
+   39     256      150      5        5      4.60  ok
+
+--------------------------------------------------------------
+ARTEFACT RISK: 13 of 40 rows fail, and the informed model sees only 2.40 example(s) per held composition on average.
+The informed model is barely more informed than the naive one there, so
+a zero penalty says nothing about compositional generalisation. Fix by
+holding out FEWER compositions and swapping in MORE trajectories each.

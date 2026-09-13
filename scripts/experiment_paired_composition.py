@@ -81,6 +81,23 @@ def coarsen_labels(labels: list[str], mode: str) -> list[str]:
     The last is the most grasp-relevant: what a hand must do with an object is
     closer to its affordance than to its name.
 
+    ``grab_shape_intentclass`` and ``grab_object_intentclass`` coarsen the right
+    side as well, replacing GRAB's fine intent with its four documented intent
+    classes (:func:`caredex.data.grab.intent_class`). They exist because the
+    screen scores them and the sweep could not run them: an axis the screen can
+    rank but the experiment cannot measure is a gap between the two, and the
+    necessity direction needs exactly these non-positive-interaction axes.
+
+    ``oakink2_<left>_<right>`` crosses a provenance factor of OakInk2 (``scene``
+    or ``subject``) with a content factor (the chain's first ``primitive`` or the
+    task sentence's leading ``verb``). OakInk2's labels are primitive chains and
+    carry neither scene nor subject, so ``screen_oakink2_axes.py --build`` writes
+    bundles whose labels are ``<chain>@<scene>@<subject>@<verb>``. The fine label
+    is that whole string, so two trajectories are near-duplicates only when the
+    same chain was performed in the same scene by the same subject, and the
+    coarse label is built from the suffix. Plain ``oakink2.npz`` has no suffix and
+    these modes refuse it rather than quietly building a one-cell-per-label axis.
+
     ``shape`` is the GRAB equivalent: object name -> grasp-relevant shape class
     (:data:`caredex.data.grab.GRAB_SHAPE_CLASS`). GRAB object ids are words, so
     the leading-letter trick would put ``apple`` and ``airplane`` in one cell.
@@ -98,6 +115,31 @@ def coarsen_labels(labels: list[str], mode: str) -> list[str]:
                 f"granularity='shape' is GRAB-specific and {len(unknown)} object ids are "
                 f"not in GRAB_SHAPE_CLASS: {sorted(unknown)[:5]}"
             )
+    if mode.startswith("oakink2_"):
+        _, left, right = mode.split("_", 2)
+        out = []
+        for lab in labels:
+            parts = lab.split("@")
+            if len(parts) != 4:
+                raise ValueError(
+                    f"granularity={mode!r} needs labels of the form "
+                    f"chain@scene@subject@verb, written by screen_oakink2_axes.py "
+                    f"--build; got {lab!r}"
+                )
+            chain, scene, subject, verb = parts
+            fac = {"scene": scene, "subject": subject, "verb": verb,
+                   "primitive": chain.partition("->")[0]}
+            out.append(f"{fac[left]}->{fac[right]}")
+        return out
+    if mode.startswith("grab_"):
+        from caredex.data.grab import GRAB_SHAPE_CLASS, intent_class
+
+        out = []
+        for lab in labels:
+            left, _, right = lab.partition("->")
+            group = GRAB_SHAPE_CLASS[left] if "shape" in mode else left
+            out.append(f"{group}->{intent_class(right)}")
+        return out
     if mode.startswith("oakink_"):
         from caredex.data.oakink_meta import coverage, object_group
 
@@ -474,7 +516,10 @@ def main() -> int:
     ap.add_argument("--n-primitives", type=int, default=12)
     ap.add_argument(
         "--granularity",
-        choices=("fine", "category", "shape", "oakink_category", "oakink_class", "oakink_attr", "left", "right"),
+        choices=("fine", "category", "shape", "grab_shape_intentclass",
+                 "grab_object_intentclass", "oakink_category", "oakink_class",
+                 "oakink_attr", "oakink2_scene_primitive", "oakink2_subject_primitive",
+                 "oakink2_scene_verb", "oakink2_subject_verb", "left", "right"),
         default="fine",
         help="composition cell size. 'fine' uses the raw label; 'category' "
              "coarsens the left side, which OakInk needs because its fine cells "
@@ -490,7 +535,8 @@ def main() -> int:
              "Single-seed runs of this experiment produce effect sizes the same "
              "size as run-to-run variance, so any claim needs several.",
     )
-    ap.add_argument("--fresh", action="store_true")
+    ap.add_argument("--fresh", action="store_true",
+                    help="retrain everything: ignore checkpoints and rows in results.json")
     ap.add_argument(
         "--keep-checkpoints", action="store_true",
         help="keep each run's weights after scoring. Off by default: a 70-seed "
@@ -531,7 +577,21 @@ def main() -> int:
 
     out_root = Path(args.out)
     out_root.mkdir(parents=True, exist_ok=True)
+    # A sweep resumes at the row level, not only inside one model. Scored
+    # models discard their checkpoints, so a restart that began at seed 0 with
+    # an empty list retrained every finished seed from scratch and overwrote
+    # results.json with the partial rerun; two restarts of one 40-seed sweep
+    # lost seeds 0-4 twice over. Rows already in results.json are kept and
+    # their (seed, budget, kind) skipped unless --fresh.
     results = []
+    done: set[tuple[int, int, str]] = set()
+    prior = out_root / "results.json"
+    if prior.exists() and not args.fresh:
+        results = json.loads(prior.read_text(encoding="utf-8")).get("results", [])
+        done = {(r["seed"], r["budget"], r["kind"]) for r in results}
+        if done:
+            print(f"[resume] {len(done)} scored rows in {prior}, "
+                  f"seeds {sorted({k[0] for k in done})} kept; their models are not retrained")
 
     for seed in seeds:
         # The split is reseeded too, so the reported spread covers both which
@@ -568,6 +628,9 @@ def main() -> int:
                 print(f"  thin coverage: informed saw {sound['covered']}/"
                       f"{sound['held']} held compositions -- penalty biased low")
             for kind in args.kinds:
+                if (seed, budget, kind) in done:
+                    print(f"[resume] seed {seed} {kind} budget={budget}: already scored, skipped")
+                    continue
                 row = {"kind": kind, "budget": budget, "seed": seed,
                        "soundness": sound}
                 for cond, idx in (("naive", naive_idx), ("informed", informed_idx)):
@@ -583,6 +646,7 @@ def main() -> int:
                     row["penalty_all"] = (row["naive"]["mse_target_all"]
                                           - row["informed"]["mse_target_all"])
                 results.append(row)
+                results.sort(key=lambda r: (r["seed"], r["budget"], args.kinds.index(r["kind"])))
                 (out_root / "results.json").write_text(
                     json.dumps({"args": vars(args), "seeds": seeds, "results": results}, indent=2),
                     encoding="utf-8",
