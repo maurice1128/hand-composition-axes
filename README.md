@@ -1,6 +1,6 @@
 # Which Hand-Motion Composition Axes Are Worth Measuring
 
-Code, gate outputs and stored results for *Which Hand-Motion Composition Axes Are Worth Measuring* — a measurement for the premise underneath modular motion priors, run over six axes of three public hand datasets.
+Code, gate outputs and stored results for *Which Hand-Motion Composition Axes Are Worth Measuring* — a measurement for the premise underneath modular motion priors, run over eight axes of three public hand datasets.
 
 **Project page:** https://maurice1128.github.io/projects/hand-composition.html
 **Paper:** [`hand_motion_composition_axes.pdf`](https://maurice1128.github.io/assets/papers/hand_motion_composition_axes.pdf) — manuscript under review, not posted to any preprint server.
@@ -22,7 +22,7 @@ paired  = penalty_baseline - penalty_modular
 
 **A measurement, with five gates.** Four of the five exist because an earlier design returned plausible numbers it could not have earned, one gate per way the authors had been fooled. See [`GATES.md`](GATES.md): two of the five still exit non-zero, and the paper reports them that way.
 
-**Difficulty needs interaction, not informative factors.** Every axis carrying measurable compositional difficulty has positive interaction between its two factors; none carries difficulty without it; and the dataset whose factors explain the most pose variance *on their own* carries no difficulty at all. Only one of the six axes could have falsified this, so it is one-sided evidence, not a law. Sufficiency is demonstrably false: GRAB's shape axis has interaction and returns nothing.
+**Difficulty needs interaction, not informative factors.** Every axis carrying measurable compositional difficulty has positive interaction between its two factors; none carries difficulty without it; and the dataset whose factors explain the most pose variance *on their own* carries no difficulty at all. Three axes could have falsified this, across two datasets, and all three sit at the zero-truth control (see the post-submission section below); sufficiency is still false. Sufficiency is demonstrably false: GRAB's shape axis has interaction and returns nothing.
 
 A cheap statistic (`scripts/screen_axes.py`) finds the interaction without training anything. It diagnoses presence well and size badly. Over the five axes swept before it chose one, *r* = 0.843 (*p* = 0.073), already not significant. The axis it ranked fifth of six then came back the hardest measured, and the association fell to *r* = 0.463 (*p* = 0.355).
 
