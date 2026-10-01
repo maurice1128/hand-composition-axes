@@ -1,0 +1,23 @@
+data/bundles/synth_hard.npz  granularity=fine  budget=256
+ seed  target  naive leak  informed leak  status
+--------------------------------------------------------
+    0     564       0.0%          0.0%  ok
+    1     627       0.0%          0.0%  ok
+    2     624       0.0%          0.0%  ok
+    3     604       0.0%          0.0%  ok
+    4     601       0.0%          0.0%  ok
+    5     578       0.0%          0.0%  ok
+    6     595       0.0%          0.0%  ok
+    7     614       0.0%          0.0%  ok
+    8     619       0.0%          0.0%  ok
+    9     604       0.0%          0.0%  ok
+   10     609       0.0%          0.0%  ok
+   11     622       0.0%          0.0%  ok
+   12     584       0.0%          0.0%  ok
+   13     600       0.0%          0.0%  ok
+   14     568       0.0%          0.0%  ok
+   15     578       0.0%          0.0%  ok
+   16     586       0.0%          0.0%  ok
+   17     632       0.0%          0.0%  ok
+--------------------------------------------------------
+PASS: no target trajectory's fine composition appears in either training set.

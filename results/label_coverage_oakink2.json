@@ -1,0 +1,30 @@
+{
+ "what": "share of a recording's annotated frames that belong to the primitive its scene x primitive label names",
+ "recordings": 609,
+ "first_primitive_share": {
+  "mean": 0.5915577082445034,
+  "median": 0.5737179487179487,
+  "p25": 0.2163981726376533,
+  "p75": 1.0
+ },
+ "same_primitive_name_share": {
+  "mean": 0.6219326339755576,
+  "median": 0.6422998643147897,
+  "p25": 0.25431246919664857,
+  "p75": 1.0
+ },
+ "primitives_per_recording": {
+  "mean": 3.4942528735632186,
+  "median": 2.0,
+  "p25": 1.0,
+  "p75": 4.0
+ },
+ "distinct_primitives_per_recording": {
+  "mean": 2.799671592775041,
+  "median": 2.0,
+  "p25": 1.0,
+  "p75": 4.0
+ },
+ "recordings_with_one_primitive": 259,
+ "after_segmentation": "1.0 by construction: each segment is one primitive and carries that primitive's label"
+}

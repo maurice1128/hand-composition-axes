@@ -1,0 +1,81 @@
+$ C:\Users\maurice\Desktop\hand_IK\.venv\Scripts\python.exe scripts/check_informed_coverage.py --bundle data\bundles\oakink_class_attr.npz --granularity oakink2_scene_verb --held-compositions 5 --min-chains 4 --min-per-composition 5 --budgets 256 --seeds 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39
+granularity=oakink2_scene_verb: 12 cells, 64.2 trajectories per cell
+data\bundles\oakink_class_attr.npz: 770 trajectories
+holding out 5 compositions
+
+ seed  budget  swapped   held  covered  per comp  status
+--------------------------------------------------------------
+    0     256      191      5        5     25.60  ok
+
+    1     256      131      5        5     25.60  ok
+
+
+
+    4     256      187      5        5     25.60  ok
+
+    5     256      140      5        5     25.60  ok
+
+    6     256      179      5        5     21.60  ok
+
+    7     256      189      5        5     25.60  ok
+
+    8     256      181      5        5     20.80  ok
+
+    9     256      186      5        5     25.60  ok
+
+   10     256      184      5        5     24.60  ok
+
+   11     256      161      5        5     25.60  ok
+
+   12     256      147      5        5     25.60  ok
+
+   13     256      131      5        5     25.60  ok
+
+
+   15     256      180      5        5     25.60  ok
+
+   16     256      192      5        5     25.60  ok
+
+
+   18     256      166      5        5     25.60  ok
+
+   19     256      192      5        5     25.60  ok
+
+   20     256      179      5        5     25.60  ok
+
+   21     256      178      5        5     25.60  ok
+
+   22     256      177      5        5     25.60  ok
+
+
+   24     256      189      5        5     25.20  ok
+
+   25     256      145      5        5     25.60  ok
+
+   26     256      166      5        5     25.60  ok
+
+
+   28     256      192      5        5     24.40  ok
+
+
+   30     256      140      5        5     25.60  ok
+
+   31     256      136      5        5     25.60  ok
+
+   32     256      139      5        5     25.60  ok
+
+   33     256      178      5        5     25.60  ok
+
+   34     256      145      5        5     25.60  ok
+
+   35     256      134      5        5     25.60  ok
+
+   36     256      179      5        5     25.60  ok
+
+
+   38     256      189      5        5     25.60  ok
+
+   39     256      188      5        5     25.60  ok
+
+--------------------------------------------------------------
+Coverage is adequate; a zero penalty would be a real finding.

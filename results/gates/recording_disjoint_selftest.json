@@ -1,0 +1,59 @@
+{
+ "bundle": "data/bundles/oakink2_primseg.npz",
+ "granularity": "oakink2_scene_primitive",
+ "held": 5,
+ "min_chains": 4,
+ "min_per_composition": 5,
+ "recordings": 609,
+ "segments": 2128,
+ "summary": {
+  "256": {
+   "seeds": 1,
+   "infeasible_seeds": [],
+   "min_naive_pool_after": 1764,
+   "min_naive_pool_before": 2012,
+   "min_informed_extra_after": 55,
+   "coverage_fail": 0,
+   "coverage_fail_seeds": [],
+   "coverage_fail_unfiltered": 0,
+   "mean_shared_recording_before": {
+    "naive": 0.5254237288135594,
+    "informed": 0.4745762711864407
+   },
+   "max_shared_recording_after": 0.0,
+   "max_frame_leak": null
+  }
+ },
+ "rows": [
+  {
+   "seed": 200,
+   "budget": 256,
+   "target_recordings": 43,
+   "naive_pool_before": 2012,
+   "naive_pool_after": 1764,
+   "informed_extra_before": 57,
+   "informed_extra_after": 55,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 11.0,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 11.4,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.5254237288135594,
+    "informed": 0.4745762711864407
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 228
+  }
+ ]
+}

@@ -1,0 +1,56 @@
+{
+ "settings": {
+  "granularity": "oakink2_scene_primitive",
+  "held_compositions": 5,
+  "min_chains": 4,
+  "min_per_composition": 5,
+  "budget": 896,
+  "seeds": [
+   300,
+   301,
+   302,
+   303,
+   304
+  ],
+  "max_leak": 0.01
+ },
+ "primseg_b896": {
+  "bundle": "data/bundles/oakink2_primseg.npz",
+  "per_seed": [
+   [
+    300,
+    27722,
+    0.0,
+    0.0
+   ],
+   [
+    301,
+    29432,
+    0.0,
+    0.0
+   ],
+   [
+    302,
+    18646,
+    0.0,
+    0.0
+   ],
+   [
+    303,
+    14231,
+    0.0,
+    0.0
+   ],
+   [
+    304,
+    24020,
+    0.0,
+    0.0
+   ]
+  ],
+  "naive_mean": 0.0,
+  "informed_mean": 0.0,
+  "max_any_seed_any_arm": 0.0,
+  "pass": true
+ }
+}

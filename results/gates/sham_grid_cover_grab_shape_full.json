@@ -1,0 +1,1606 @@
+{
+ "bundle": "data/bundles/grab.npz",
+ "granularity": "shape",
+ "sham_seed": 12345,
+ "grids": {
+  "mapping": {
+   "airplane->fly": "figurine->lift",
+   "airplane->lift": "figurine->open",
+   "airplane->offhand": "figurine->pour",
+   "airplane->pass": "figurine->eat",
+   "alarmclock->lift": "box->lift",
+   "alarmclock->offhand": "box->offhand",
+   "alarmclock->pass": "box->pass",
+   "alarmclock->see": "box->lift",
+   "apple->eat": "sphere->offhand",
+   "apple->lift": "sphere->pass",
+   "apple->offhand": "sphere->inspect",
+   "apple->pass": "sphere->lift",
+   "banana->eat": "cylinder->inspect",
+   "banana->lift": "cylinder->lift",
+   "banana->offhand": "cylinder->switchON",
+   "banana->pass": "cylinder->inspect",
+   "banana->peel": "cylinder->drink",
+   "binoculars->lift": "flat_device->drink",
+   "binoculars->offhand": "flat_device->lift",
+   "binoculars->pass": "flat_device->brush",
+   "binoculars->see": "flat_device->toast",
+   "bowl->drink": "vessel->offhand",
+   "bowl->lift": "vessel->offhand",
+   "bowl->pass": "vessel->pass",
+   "camera->browse": "flat_device->pass",
+   "camera->lift": "flat_device->eat",
+   "camera->offhand": "flat_device->pass",
+   "camera->pass": "flat_device->offhand",
+   "camera->takepicture": "flat_device->pass",
+   "cubelarge->inspect": "box->drink",
+   "cubelarge->lift": "box->lift",
+   "cubelarge->offhand": "box->offhand",
+   "cubelarge->pass": "box->offhand",
+   "cubemedium->inspect": "box->lift",
+   "cubemedium->lift": "box->toast",
+   "cubemedium->offhand": "box->lift",
+   "cubemedium->pass": "box->offhand",
+   "cubesmall->inspect": "box->pass",
+   "cubesmall->lift": "box->wear",
+   "cubesmall->offhand": "box->lift",
+   "cubesmall->pass": "box->pass",
+   "cup->drink": "vessel->inspect",
+   "cup->lift": "vessel->pass",
+   "cup->offhand": "vessel->pass",
+   "cup->pass": "vessel->lift",
+   "cup->pour": "vessel->offhand",
+   "cylinderlarge->inspect": "cylinder->pass",
+   "cylinderlarge->lift": "cylinder->inspect",
+   "cylinderlarge->offhand": "cylinder->lift",
+   "cylinderlarge->pass": "cylinder->see",
+   "cylindermedium->inspect": "cylinder->offhand",
+   "cylindermedium->lift": "cylinder->lift",
+   "cylindermedium->offhand": "cylinder->use",
+   "cylindermedium->pass": "cylinder->inspect",
+   "cylindersmall->inspect": "cylinder->offhand",
+   "cylindersmall->lift": "cylinder->pass",
+   "cylindersmall->offhand": "cylinder->stamp",
+   "cylindersmall->pass": "cylinder->lift",
+   "doorknob->lift": "cylinder->offhand",
+   "doorknob->use": "cylinder->pass",
+   "duck->inspect": "figurine->pass",
+   "duck->lift": "figurine->play",
+   "duck->offhand": "figurine->pass",
+   "duck->pass": "figurine->lift",
+   "elephant->inspect": "figurine->call",
+   "elephant->lift": "figurine->inspect",
+   "elephant->offhand": "figurine->lift",
+   "elephant->pass": "figurine->lift",
+   "eyeglasses->clean": "ring->lift",
+   "eyeglasses->lift": "ring->lift",
+   "eyeglasses->offhand": "ring->offhand",
+   "eyeglasses->pass": "ring->offhand",
+   "eyeglasses->wear": "ring->pass",
+   "flashlight->lift": "handle_tool->offhand",
+   "flashlight->offhand": "handle_tool->lift",
+   "flashlight->pass": "handle_tool->screw",
+   "flashlight->switchON": "handle_tool->pass",
+   "flute->lift": "cylinder->lift",
+   "flute->offhand": "cylinder->inspect",
+   "flute->pass": "cylinder->offhand",
+   "flute->play": "cylinder->pass",
+   "fryingpan->cook": "handle_tool->play",
+   "fryingpan->lift": "handle_tool->offhand",
+   "fryingpan->pass": "handle_tool->lift",
+   "gamecontroller->lift": "flat_device->inspect",
+   "gamecontroller->offhand": "flat_device->play",
+   "gamecontroller->pass": "flat_device->inspect",
+   "gamecontroller->play": "flat_device->pass",
+   "hammer->lift": "handle_tool->inspect",
+   "hammer->pass": "handle_tool->offhand",
+   "hammer->use": "handle_tool->pass",
+   "hand->inspect": "figurine->offhand",
+   "hand->lift": "figurine->takepicture",
+   "hand->offhand": "figurine->pass",
+   "hand->pass": "figurine->lift",
+   "hand->shake": "figurine->offhand",
+   "headphones->lift": "ring->offhand",
+   "headphones->offhand": "ring->lift",
+   "headphones->pass": "ring->pass",
+   "headphones->use": "ring->offhand",
+   "knife->chop": "handle_tool->inspect",
+   "knife->lift": "handle_tool->offhand",
+   "knife->pass": "handle_tool->lift",
+   "knife->peel": "handle_tool->pass",
+   "lightbulb->pass": "sphere->lift",
+   "lightbulb->screw": "sphere->offhand",
+   "mouse->lift": "flat_device->squeeze",
+   "mouse->offhand": "flat_device->clean",
+   "mouse->pass": "flat_device->pass",
+   "mouse->use": "flat_device->lift",
+   "mug->drink": "vessel->offhand",
+   "mug->lift": "vessel->offhand",
+   "mug->offhand": "vessel->use",
+   "mug->pass": "vessel->lift",
+   "mug->toast": "vessel->pour",
+   "phone->call": "flat_device->inspect",
+   "phone->lift": "flat_device->pass",
+   "phone->offhand": "flat_device->inspect",
+   "phone->pass": "flat_device->offhand",
+   "piggybank->lift": "figurine->pass",
+   "piggybank->offhand": "figurine->pass",
+   "piggybank->pass": "figurine->pass",
+   "piggybank->use": "figurine->lift",
+   "pyramidlarge->inspect": "pyramid->pass",
+   "pyramidlarge->lift": "pyramid->offhand",
+   "pyramidlarge->offhand": "pyramid->pass",
+   "pyramidlarge->pass": "pyramid->lift",
+   "pyramidmedium->inspect": "pyramid->lift",
+   "pyramidmedium->lift": "pyramid->lift",
+   "pyramidmedium->offhand": "pyramid->pass",
+   "pyramidmedium->pass": "pyramid->lift",
+   "pyramidsmall->inspect": "pyramid->lift",
+   "pyramidsmall->pass": "pyramid->see",
+   "scissors->offhand": "handle_tool->inspect",
+   "scissors->pass": "handle_tool->pass",
+   "scissors->use": "handle_tool->pass",
+   "spherelarge->inspect": "sphere->use",
+   "spherelarge->lift": "sphere->pass",
+   "spherelarge->offhand": "sphere->staple",
+   "spherelarge->pass": "sphere->pass",
+   "spheremedium->inspect": "sphere->inspect",
+   "spheremedium->lift": "sphere->pass",
+   "spheremedium->offhand": "sphere->lift",
+   "spheremedium->pass": "sphere->lift",
+   "spheresmall->inspect": "sphere->cook",
+   "spheresmall->lift": "sphere->lift",
+   "spheresmall->offhand": "sphere->pass",
+   "spheresmall->pass": "sphere->pass",
+   "stamp->lift": "box->inspect",
+   "stamp->offhand": "box->offhand",
+   "stamp->pass": "box->drink",
+   "stamp->stamp": "box->lift",
+   "stanfordbunny->inspect": "figurine->offhand",
+   "stanfordbunny->lift": "figurine->shake",
+   "stanfordbunny->offhand": "figurine->offhand",
+   "stanfordbunny->pass": "figurine->pass",
+   "stapler->lift": "handle_tool->lift",
+   "stapler->offhand": "handle_tool->lift",
+   "stapler->pass": "handle_tool->chop",
+   "stapler->staple": "handle_tool->offhand",
+   "teapot->lift": "vessel->pass",
+   "teapot->pass": "vessel->browse",
+   "teapot->pour": "vessel->inspect",
+   "toothbrush->brush": "handle_tool->use",
+   "toothbrush->lift": "handle_tool->offhand",
+   "toothbrush->pass": "handle_tool->offhand",
+   "toothpaste->lift": "box->lift",
+   "toothpaste->pass": "box->lift",
+   "toothpaste->squeeze": "box->inspect",
+   "toruslarge->inspect": "ring->offhand",
+   "toruslarge->lift": "ring->pass",
+   "toruslarge->pass": "ring->offhand",
+   "torusmedium->inspect": "ring->set",
+   "torusmedium->lift": "ring->offhand",
+   "torusmedium->offhand": "ring->pass",
+   "torusmedium->pass": "ring->lift",
+   "torussmall->inspect": "ring->pass",
+   "torussmall->lift": "ring->lift",
+   "torussmall->offhand": "ring->drink",
+   "torussmall->pass": "ring->offhand",
+   "train->lift": "figurine->use",
+   "train->offhand": "figurine->peel",
+   "train->pass": "figurine->lift",
+   "train->play": "figurine->pass",
+   "watch->lift": "ring->pass",
+   "watch->offhand": "ring->peel",
+   "watch->pass": "ring->use",
+   "watch->set": "ring->pass",
+   "waterbottle->drink": "cylinder->lift",
+   "waterbottle->lift": "cylinder->pour",
+   "waterbottle->offhand": "cylinder->pass",
+   "waterbottle->open": "cylinder->lift",
+   "waterbottle->pass": "cylinder->pass",
+   "waterbottle->pour": "cylinder->offhand",
+   "waterbottle->shake": "cylinder->pass",
+   "wineglass->drink": "vessel->lift",
+   "wineglass->lift": "vessel->offhand",
+   "wineglass->offhand": "vessel->shake",
+   "wineglass->pass": "vessel->fly",
+   "wineglass->toast": "vessel->pass"
+  },
+  "attempts": 9,
+  "real": {
+   "cells": 70,
+   "fine_groups": 200,
+   "candidate_pool": 20,
+   "median_trajectories_per_cell": 8,
+   "max_trajectories_per_cell": 56
+  },
+  "sham": {
+   "cells": 76,
+   "fine_groups": 200,
+   "candidate_pool": 20,
+   "median_trajectories_per_cell": 7,
+   "max_trajectories_per_cell": 52
+  },
+  "moved": 172,
+  "n_fine_groups": 200
+ },
+ "summary": {
+  "real": {
+   "seeds": 40,
+   "coverage_fail": 0,
+   "mean_exposure": 0.3017578125,
+   "mean_covered": 5.95,
+   "max_leak": 0.0,
+   "min_naive_pool": 839
+  },
+  "sham": {
+   "seeds": 40,
+   "coverage_fail": 0,
+   "mean_exposure": 0.37744140625,
+   "mean_covered": 5.9,
+   "max_leak": 0.0,
+   "min_naive_pool": 800
+  }
+ },
+ "rows": [
+  {
+   "seed": 0,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 887,
+   "informed_extra": 81,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 13.5,
+   "coverage_ok": true,
+   "exposure": 0.31640625,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 0,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 824,
+   "informed_extra": 112,
+   "covered": 5,
+   "held": 6,
+   "per_comp": 22.4,
+   "coverage_ok": true,
+   "exposure": 0.4375,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 1,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 862,
+   "informed_extra": 90,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 15.0,
+   "coverage_ok": true,
+   "exposure": 0.3515625,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 1,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 820,
+   "informed_extra": 113,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 18.833333333333332,
+   "coverage_ok": true,
+   "exposure": 0.44140625,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 2,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 929,
+   "informed_extra": 58,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 9.666666666666666,
+   "coverage_ok": true,
+   "exposure": 0.2265625,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 2,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 867,
+   "informed_extra": 86,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 14.333333333333334,
+   "coverage_ok": true,
+   "exposure": 0.3359375,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 3,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 931,
+   "informed_extra": 58,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 9.666666666666666,
+   "coverage_ok": true,
+   "exposure": 0.2265625,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 3,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 868,
+   "informed_extra": 87,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 14.5,
+   "coverage_ok": true,
+   "exposure": 0.33984375,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 4,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 920,
+   "informed_extra": 58,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 9.666666666666666,
+   "coverage_ok": true,
+   "exposure": 0.2265625,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 4,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 881,
+   "informed_extra": 82,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 13.666666666666666,
+   "coverage_ok": true,
+   "exposure": 0.3203125,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 5,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 880,
+   "informed_extra": 80,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 13.333333333333334,
+   "coverage_ok": true,
+   "exposure": 0.3125,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 5,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 834,
+   "informed_extra": 107,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 17.833333333333332,
+   "coverage_ok": true,
+   "exposure": 0.41796875,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 6,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 863,
+   "informed_extra": 87,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 14.5,
+   "coverage_ok": true,
+   "exposure": 0.33984375,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 6,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 813,
+   "informed_extra": 111,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 18.5,
+   "coverage_ok": true,
+   "exposure": 0.43359375,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 7,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 918,
+   "informed_extra": 65,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 10.833333333333334,
+   "coverage_ok": true,
+   "exposure": 0.25390625,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 7,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 828,
+   "informed_extra": 94,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 15.666666666666666,
+   "coverage_ok": true,
+   "exposure": 0.3671875,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 8,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 881,
+   "informed_extra": 83,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 13.833333333333334,
+   "coverage_ok": true,
+   "exposure": 0.32421875,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 8,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 820,
+   "informed_extra": 111,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 18.5,
+   "coverage_ok": true,
+   "exposure": 0.43359375,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 9,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 847,
+   "informed_extra": 101,
+   "covered": 5,
+   "held": 6,
+   "per_comp": 20.2,
+   "coverage_ok": true,
+   "exposure": 0.39453125,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 9,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 864,
+   "informed_extra": 91,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 15.166666666666666,
+   "coverage_ok": true,
+   "exposure": 0.35546875,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 10,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 913,
+   "informed_extra": 67,
+   "covered": 5,
+   "held": 6,
+   "per_comp": 13.4,
+   "coverage_ok": true,
+   "exposure": 0.26171875,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 10,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 839,
+   "informed_extra": 99,
+   "covered": 5,
+   "held": 6,
+   "per_comp": 19.8,
+   "coverage_ok": true,
+   "exposure": 0.38671875,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 11,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 865,
+   "informed_extra": 86,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 14.333333333333334,
+   "coverage_ok": true,
+   "exposure": 0.3359375,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 11,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 848,
+   "informed_extra": 98,
+   "covered": 5,
+   "held": 6,
+   "per_comp": 19.6,
+   "coverage_ok": true,
+   "exposure": 0.3828125,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 12,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 912,
+   "informed_extra": 66,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 11.0,
+   "coverage_ok": true,
+   "exposure": 0.2578125,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 12,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 904,
+   "informed_extra": 72,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 12.0,
+   "coverage_ok": true,
+   "exposure": 0.28125,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 13,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 901,
+   "informed_extra": 71,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 11.833333333333334,
+   "coverage_ok": true,
+   "exposure": 0.27734375,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 13,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 902,
+   "informed_extra": 70,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 11.666666666666666,
+   "coverage_ok": true,
+   "exposure": 0.2734375,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 14,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 874,
+   "informed_extra": 85,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 14.166666666666666,
+   "coverage_ok": true,
+   "exposure": 0.33203125,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 14,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 854,
+   "informed_extra": 79,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 13.166666666666666,
+   "coverage_ok": true,
+   "exposure": 0.30859375,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 15,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 880,
+   "informed_extra": 84,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 14.0,
+   "coverage_ok": true,
+   "exposure": 0.328125,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 15,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 852,
+   "informed_extra": 98,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 16.333333333333332,
+   "coverage_ok": true,
+   "exposure": 0.3828125,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 16,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 909,
+   "informed_extra": 64,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 10.666666666666666,
+   "coverage_ok": true,
+   "exposure": 0.25,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 16,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 841,
+   "informed_extra": 96,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 16.0,
+   "coverage_ok": true,
+   "exposure": 0.375,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 17,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 846,
+   "informed_extra": 97,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 16.166666666666668,
+   "coverage_ok": true,
+   "exposure": 0.37890625,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 17,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 870,
+   "informed_extra": 85,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 14.166666666666666,
+   "coverage_ok": true,
+   "exposure": 0.33203125,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 18,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 859,
+   "informed_extra": 90,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 15.0,
+   "coverage_ok": true,
+   "exposure": 0.3515625,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 18,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 864,
+   "informed_extra": 90,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 15.0,
+   "coverage_ok": true,
+   "exposure": 0.3515625,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 19,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 843,
+   "informed_extra": 103,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 17.166666666666668,
+   "coverage_ok": true,
+   "exposure": 0.40234375,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 19,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 824,
+   "informed_extra": 111,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 18.5,
+   "coverage_ok": true,
+   "exposure": 0.43359375,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 20,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 851,
+   "informed_extra": 99,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 16.5,
+   "coverage_ok": true,
+   "exposure": 0.38671875,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 20,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 873,
+   "informed_extra": 86,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 14.333333333333334,
+   "coverage_ok": true,
+   "exposure": 0.3359375,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 21,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 908,
+   "informed_extra": 68,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 11.333333333333334,
+   "coverage_ok": true,
+   "exposure": 0.265625,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 21,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 835,
+   "informed_extra": 106,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 17.666666666666668,
+   "coverage_ok": true,
+   "exposure": 0.4140625,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 22,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 866,
+   "informed_extra": 91,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 15.166666666666666,
+   "coverage_ok": true,
+   "exposure": 0.35546875,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 22,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 858,
+   "informed_extra": 90,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 15.0,
+   "coverage_ok": true,
+   "exposure": 0.3515625,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 23,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 851,
+   "informed_extra": 96,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 16.0,
+   "coverage_ok": true,
+   "exposure": 0.375,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 23,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 807,
+   "informed_extra": 118,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 19.666666666666668,
+   "coverage_ok": true,
+   "exposure": 0.4609375,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 24,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 914,
+   "informed_extra": 67,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 11.166666666666666,
+   "coverage_ok": true,
+   "exposure": 0.26171875,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 24,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 820,
+   "informed_extra": 109,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 18.166666666666668,
+   "coverage_ok": true,
+   "exposure": 0.42578125,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 25,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 899,
+   "informed_extra": 72,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 12.0,
+   "coverage_ok": true,
+   "exposure": 0.28125,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 25,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 840,
+   "informed_extra": 102,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 17.0,
+   "coverage_ok": true,
+   "exposure": 0.3984375,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 26,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 958,
+   "informed_extra": 44,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 7.333333333333333,
+   "coverage_ok": true,
+   "exposure": 0.171875,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 26,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 865,
+   "informed_extra": 85,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 14.166666666666666,
+   "coverage_ok": true,
+   "exposure": 0.33203125,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 27,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 843,
+   "informed_extra": 102,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 17.0,
+   "coverage_ok": true,
+   "exposure": 0.3984375,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 27,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 800,
+   "informed_extra": 119,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 19.833333333333332,
+   "coverage_ok": true,
+   "exposure": 0.46484375,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 28,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 900,
+   "informed_extra": 69,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 11.5,
+   "coverage_ok": true,
+   "exposure": 0.26953125,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 28,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 882,
+   "informed_extra": 82,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 13.666666666666666,
+   "coverage_ok": true,
+   "exposure": 0.3203125,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 29,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 915,
+   "informed_extra": 66,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 11.0,
+   "coverage_ok": true,
+   "exposure": 0.2578125,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 29,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 867,
+   "informed_extra": 88,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 14.666666666666666,
+   "coverage_ok": true,
+   "exposure": 0.34375,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 30,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 929,
+   "informed_extra": 55,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 9.166666666666666,
+   "coverage_ok": true,
+   "exposure": 0.21484375,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 30,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 856,
+   "informed_extra": 95,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 15.833333333333334,
+   "coverage_ok": true,
+   "exposure": 0.37109375,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 31,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 892,
+   "informed_extra": 78,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 13.0,
+   "coverage_ok": true,
+   "exposure": 0.3046875,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 31,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 876,
+   "informed_extra": 76,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 12.666666666666666,
+   "coverage_ok": true,
+   "exposure": 0.296875,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 32,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 885,
+   "informed_extra": 78,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 13.0,
+   "coverage_ok": true,
+   "exposure": 0.3046875,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 32,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 847,
+   "informed_extra": 94,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 15.666666666666666,
+   "coverage_ok": true,
+   "exposure": 0.3671875,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 33,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 935,
+   "informed_extra": 54,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 9.0,
+   "coverage_ok": true,
+   "exposure": 0.2109375,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 33,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 831,
+   "informed_extra": 105,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 17.5,
+   "coverage_ok": true,
+   "exposure": 0.41015625,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 34,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 905,
+   "informed_extra": 69,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 11.5,
+   "coverage_ok": true,
+   "exposure": 0.26953125,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 34,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 823,
+   "informed_extra": 112,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 18.666666666666668,
+   "coverage_ok": true,
+   "exposure": 0.4375,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 35,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 871,
+   "informed_extra": 86,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 14.333333333333334,
+   "coverage_ok": true,
+   "exposure": 0.3359375,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 35,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 821,
+   "informed_extra": 111,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 18.5,
+   "coverage_ok": true,
+   "exposure": 0.43359375,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 36,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 839,
+   "informed_extra": 105,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 17.5,
+   "coverage_ok": true,
+   "exposure": 0.41015625,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 36,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 839,
+   "informed_extra": 102,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 17.0,
+   "coverage_ok": true,
+   "exposure": 0.3984375,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 37,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 916,
+   "informed_extra": 63,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 10.5,
+   "coverage_ok": true,
+   "exposure": 0.24609375,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 37,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 863,
+   "informed_extra": 82,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 13.666666666666666,
+   "coverage_ok": true,
+   "exposure": 0.3203125,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 38,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 917,
+   "informed_extra": 64,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 10.666666666666666,
+   "coverage_ok": true,
+   "exposure": 0.25,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 38,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 819,
+   "informed_extra": 108,
+   "covered": 5,
+   "held": 6,
+   "per_comp": 21.6,
+   "coverage_ok": true,
+   "exposure": 0.421875,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 39,
+   "grid": "real",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 859,
+   "informed_extra": 90,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 15.0,
+   "coverage_ok": true,
+   "exposure": 0.3515625,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 39,
+   "grid": "sham",
+   "budget": 256,
+   "feasible": true,
+   "naive_pool": 843,
+   "informed_extra": 103,
+   "covered": 6,
+   "held": 6,
+   "per_comp": 17.166666666666668,
+   "coverage_ok": true,
+   "exposure": 0.40234375,
+   "leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  }
+ ]
+}

@@ -1,0 +1,258 @@
+{
+ "source": {
+  "n_traj": 770,
+  "fine_labels": 345,
+  "fine_labels_with_2plus_clips": 319
+ },
+ "aligned": {
+  "n_traj": 334,
+  "median_len": 141.5,
+  "min_len": 80,
+  "max_len": 660,
+  "n_frames": 68026,
+  "coarse_cells": 93,
+  "fine_labels": 319,
+  "categories": 33,
+  "intents": 4,
+  "label_intent_counts": {
+   "0002": 82,
+   "0004": 91,
+   "0001": 98,
+   "0003": 63
+  },
+  "clips_used": 668,
+  "clips_unused": 102,
+  "min_naive_pool_seeds_0_39": 236,
+  "split_error": ""
+ },
+ "misaligned": {
+  "n_traj": 334,
+  "median_len": 181.0,
+  "min_len": 79,
+  "max_len": 478,
+  "n_frames": 66798,
+  "coarse_cells": 83,
+  "fine_labels": 251,
+  "categories": 33,
+  "intents": 4,
+  "label_intent_counts": {
+   "0003": 75,
+   "0004": 77,
+   "0002": 85,
+   "0001": 97
+  },
+  "clips_used": 668,
+  "clips_unused": 102,
+  "min_naive_pool_seeds_0_39": 240,
+  "split_error": ""
+ },
+ "misaligned_shortfall_vs_aligned": 0,
+ "misaligned_source_clips_in_matched_categories": 770,
+ "misaligned_clips_unused_within_matched_categories": 102,
+ "per_category": {
+  "apple": {
+   "aligned": 2,
+   "misaligned": 2,
+   "misaligned_available": 2
+  },
+  "banana": {
+   "aligned": 2,
+   "misaligned": 2,
+   "misaligned_available": 2
+  },
+  "binoculars": {
+   "aligned": 1,
+   "misaligned": 2,
+   "misaligned_available": 2
+  },
+  "bottle": {
+   "aligned": 22,
+   "misaligned": 22,
+   "misaligned_available": 23
+  },
+  "bowl": {
+   "aligned": 4,
+   "misaligned": 4,
+   "misaligned_available": 4
+  },
+  "cameras": {
+   "aligned": 9,
+   "misaligned": 9,
+   "misaligned_available": 9
+  },
+  "cup": {
+   "aligned": 3,
+   "misaligned": 3,
+   "misaligned_available": 3
+  },
+  "cylinder_bottle": {
+   "aligned": 12,
+   "misaligned": 12,
+   "misaligned_available": 13
+  },
+  "donut": {
+   "aligned": 2,
+   "misaligned": 2,
+   "misaligned_available": 2
+  },
+  "eyeglasses": {
+   "aligned": 4,
+   "misaligned": 4,
+   "misaligned_available": 4
+  },
+  "flashlight": {
+   "aligned": 2,
+   "misaligned": 2,
+   "misaligned_available": 2
+  },
+  "fryingpan": {
+   "aligned": 3,
+   "misaligned": 3,
+   "misaligned_available": 3
+  },
+  "gamecontroller": {
+   "aligned": 1,
+   "misaligned": 1,
+   "misaligned_available": 1
+  },
+  "hammer": {
+   "aligned": 2,
+   "misaligned": 2,
+   "misaligned_available": 2
+  },
+  "headphones": {
+   "aligned": 3,
+   "misaligned": 3,
+   "misaligned_available": 3
+  },
+  "knife": {
+   "aligned": 7,
+   "misaligned": 7,
+   "misaligned_available": 7
+  },
+  "lightbulb": {
+   "aligned": 2,
+   "misaligned": 2,
+   "misaligned_available": 2
+  },
+  "lotion_pump": {
+   "aligned": 41,
+   "misaligned": 41,
+   "misaligned_available": 44
+  },
+  "mouse": {
+   "aligned": 2,
+   "misaligned": 2,
+   "misaligned_available": 2
+  },
+  "mug": {
+   "aligned": 106,
+   "misaligned": 106,
+   "misaligned_available": 133
+  },
+  "pen": {
+   "aligned": 2,
+   "misaligned": 2,
+   "misaligned_available": 3
+  },
+  "phone": {
+   "aligned": 3,
+   "misaligned": 3,
+   "misaligned_available": 3
+  },
+  "pincer": {
+   "aligned": 4,
+   "misaligned": 4,
+   "misaligned_available": 4
+  },
+  "power_drill": {
+   "aligned": 4,
+   "misaligned": 4,
+   "misaligned_available": 4
+  },
+  "scissors": {
+   "aligned": 6,
+   "misaligned": 6,
+   "misaligned_available": 6
+  },
+  "screwdriver": {
+   "aligned": 2,
+   "misaligned": 2,
+   "misaligned_available": 2
+  },
+  "squeezable": {
+   "aligned": 21,
+   "misaligned": 21,
+   "misaligned_available": 22
+  },
+  "stapler": {
+   "aligned": 3,
+   "misaligned": 3,
+   "misaligned_available": 3
+  },
+  "teapot": {
+   "aligned": 4,
+   "misaligned": 4,
+   "misaligned_available": 4
+  },
+  "toothbrush": {
+   "aligned": 2,
+   "misaligned": 1,
+   "misaligned_available": 1
+  },
+  "trigger_sprayer": {
+   "aligned": 47,
+   "misaligned": 47,
+   "misaligned_available": 56
+  },
+  "wineglass": {
+   "aligned": 4,
+   "misaligned": 4,
+   "misaligned_available": 4
+  },
+  "wrench": {
+   "aligned": 2,
+   "misaligned": 2,
+   "misaligned_available": 2
+  }
+ },
+ "largest_per_category_difference": 1,
+ "categories_with_difference": {
+  "binoculars": 1,
+  "toothbrush": -1
+ },
+ "shared_source_clips_between_bundles": 589,
+ "constituent_leak_seeds_0_9": {
+  "aligned": {
+   "d_target_clips_in_held_cell": 1.0,
+   "naive.a_target_traj_exposed": 0.0,
+   "naive.a_target_traj_exposed.max": 0.0,
+   "naive.b_target_clips_exposed": 0.0,
+   "naive.b_target_clips_exposed.max": 0.0,
+   "naive.c_train_clips_in_held_cell": 0.0,
+   "naive.c_train_clips_in_held_cell.max": 0.0,
+   "informed.a_target_traj_exposed": 0.0,
+   "informed.a_target_traj_exposed.max": 0.0,
+   "informed.b_target_clips_exposed": 0.0,
+   "informed.b_target_clips_exposed.max": 0.0,
+   "informed.c_train_clips_in_held_cell": 0.41875,
+   "informed.c_train_clips_in_held_cell.max": 0.5
+  },
+  "misaligned": {
+   "d_target_clips_in_held_cell": 0.6097751266708842,
+   "naive.a_target_traj_exposed": 0.2792626793865766,
+   "naive.a_target_traj_exposed.max": 0.4,
+   "naive.b_target_clips_exposed": 0.14695852418137706,
+   "naive.b_target_clips_exposed.max": 0.21153846153846154,
+   "naive.c_train_clips_in_held_cell": 0.08359375,
+   "naive.c_train_clips_in_held_cell.max": 0.109375,
+   "informed.a_target_traj_exposed": 0.36475858642309084,
+   "informed.a_target_traj_exposed.max": 0.625,
+   "informed.b_target_clips_exposed": 0.19936148817019342,
+   "informed.b_target_clips_exposed.max": 0.34375,
+   "informed.c_train_clips_in_held_cell": 0.3078125,
+   "informed.c_train_clips_in_held_cell.max": 0.4453125
+  }
+ },
+ "failed_assertions": []
+}

@@ -1,0 +1,46 @@
+$ C:\Users\maurice\Desktop\hand_IK\.venv\Scripts\python.exe scripts/check_composition_leak.py --bundle data\bundles\oakink_class_attr.npz --granularity oakink2_scene_verb --held-compositions 3 --min-chains 4 --min-per-composition 5 --budget 256 --seeds 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39
+data\bundles\oakink_class_attr.npz  granularity=oakink2_scene_verb  budget=256
+ seed  target  naive leak  informed leak  status
+--------------------------------------------------------
+    0     102       0.0%          0.0%  ok
+    1      94       0.0%          0.0%  ok
+    2     219       0.0%          0.0%  ok
+    3     215       0.0%          0.0%  ok
+    4      56       0.0%          0.0%  ok
+    5     209       0.0%          0.0%  ok
+    6      91       0.0%          0.0%  ok
+    7      56       0.0%          0.0%  ok
+    8      91       0.0%          0.0%  ok
+    9      72       0.0%          0.0%  ok
+   10      95       0.0%          0.0%  ok
+   11     196       0.0%          0.0%  ok
+   12     116       0.0%          0.0%  ok
+   13      38       0.0%          0.0%  ok
+   14      90       0.0%          0.0%  ok
+   15      56       0.0%          0.0%  ok
+   16      95       0.0%          0.0%  ok
+   17     183       0.0%          0.0%  ok
+   18      81       0.0%          0.0%  ok
+   19      90       0.0%          0.0%  ok
+   20      73       0.0%          0.0%  ok
+   21      84       0.0%          0.0%  ok
+   22      91       0.0%          0.0%  ok
+   23     192       0.0%          0.0%  ok
+   24      76       0.0%          0.0%  ok
+   25      82       0.0%          0.0%  ok
+   26      92       0.0%          0.0%  ok
+   27     215       0.0%          0.0%  ok
+   28     114       0.0%          0.0%  ok
+   29     182       0.0%          0.0%  ok
+   30     196       0.0%          0.0%  ok
+   31      93       0.0%          0.0%  ok
+   32      73       0.0%          0.0%  ok
+   33      47       0.0%          0.0%  ok
+   34     197       0.0%          0.0%  ok
+   35     202       0.0%          0.0%  ok
+   36     114       0.0%          0.0%  ok
+   37      86       0.0%          0.0%  ok
+   38     115       0.0%          0.0%  ok
+   39     119       0.0%          0.0%  ok
+--------------------------------------------------------
+PASS: no target trajectory's fine composition appears in either training set.

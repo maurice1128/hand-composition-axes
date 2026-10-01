@@ -1,0 +1,3721 @@
+{
+ "bundle": "data/bundles/oakink2_primseg.npz",
+ "granularity": "oakink2_scene_primitive",
+ "held": 5,
+ "min_chains": 4,
+ "min_per_composition": 5,
+ "recordings": 609,
+ "segments": 2128,
+ "summary": {
+  "256": {
+   "seeds": 40,
+   "infeasible_seeds": [],
+   "min_naive_pool_after": 1368,
+   "min_naive_pool_before": 1838,
+   "min_informed_extra_after": 32,
+   "coverage_fail": 0,
+   "coverage_fail_seeds": [],
+   "coverage_fail_unfiltered": 0,
+   "mean_shared_recording_before": {
+    "naive": 0.4665529753796404,
+    "informed": 0.39639553926577575
+   },
+   "max_shared_recording_after": 0.0,
+   "max_frame_leak": 0.0
+  },
+  "192": {
+   "seeds": 40,
+   "infeasible_seeds": [],
+   "min_naive_pool_after": 1368,
+   "min_naive_pool_before": 1838,
+   "min_informed_extra_after": 32,
+   "coverage_fail": 0,
+   "coverage_fail_seeds": [],
+   "coverage_fail_unfiltered": 0,
+   "mean_shared_recording_before": {
+    "naive": 0.3561810184705272,
+    "informed": 0.3259878008152094
+   },
+   "max_shared_recording_after": 0.0,
+   "max_frame_leak": 0.0
+  },
+  "128": {
+   "seeds": 40,
+   "infeasible_seeds": [],
+   "min_naive_pool_after": 1368,
+   "min_naive_pool_before": 1838,
+   "min_informed_extra_after": 32,
+   "coverage_fail": 0,
+   "coverage_fail_seeds": [],
+   "coverage_fail_unfiltered": 0,
+   "mean_shared_recording_before": {
+    "naive": 0.2850346435758957,
+    "informed": 0.21800250003268234
+   },
+   "max_shared_recording_after": 0.0,
+   "max_frame_leak": 0.0
+  }
+ },
+ "rows": [
+  {
+   "seed": 200,
+   "budget": 256,
+   "target_recordings": 43,
+   "naive_pool_before": 2012,
+   "naive_pool_after": 1764,
+   "informed_extra_before": 57,
+   "informed_extra_after": 55,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 11.0,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 11.4,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.5254237288135594,
+    "informed": 0.4745762711864407
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 228,
+   "frame_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 200,
+   "budget": 192,
+   "target_recordings": 43,
+   "naive_pool_before": 2012,
+   "naive_pool_after": 1764,
+   "informed_extra_before": 57,
+   "informed_extra_after": 55,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 11.0,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 11.4,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.4745762711864407,
+    "informed": 0.4406779661016949
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 178,
+   "frame_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 200,
+   "budget": 128,
+   "target_recordings": 43,
+   "naive_pool_before": 2012,
+   "naive_pool_after": 1764,
+   "informed_extra_before": 57,
+   "informed_extra_after": 55,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 11.0,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 11.4,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.2542372881355932,
+    "informed": 0.3050847457627119
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 122,
+   "frame_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 201,
+   "budget": 256,
+   "target_recordings": 39,
+   "naive_pool_before": 2050,
+   "naive_pool_after": 1826,
+   "informed_extra_before": 38,
+   "informed_extra_after": 38,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 7.6,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 7.6,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.55,
+    "informed": 0.325
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 226,
+   "frame_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 201,
+   "budget": 192,
+   "target_recordings": 39,
+   "naive_pool_before": 2050,
+   "naive_pool_after": 1826,
+   "informed_extra_before": 38,
+   "informed_extra_after": 38,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 7.6,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 7.6,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.35,
+    "informed": 0.3
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 179,
+   "frame_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 201,
+   "budget": 128,
+   "target_recordings": 39,
+   "naive_pool_before": 2050,
+   "naive_pool_after": 1826,
+   "informed_extra_before": 38,
+   "informed_extra_after": 38,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 7.6,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 7.6,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.3,
+    "informed": 0.125
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 120,
+   "frame_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 202,
+   "budget": 256,
+   "target_recordings": 65,
+   "naive_pool_before": 1913,
+   "naive_pool_after": 1531,
+   "informed_extra_before": 107,
+   "informed_extra_after": 88,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 17.6,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 21.4,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.6018518518518519,
+    "informed": 0.49074074074074076
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 228,
+   "frame_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 202,
+   "budget": 192,
+   "target_recordings": 65,
+   "naive_pool_before": 1913,
+   "naive_pool_after": 1531,
+   "informed_extra_before": 107,
+   "informed_extra_after": 88,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 17.6,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 19.2,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.4722222222222222,
+    "informed": 0.3333333333333333
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 176,
+   "frame_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 202,
+   "budget": 128,
+   "target_recordings": 65,
+   "naive_pool_before": 1913,
+   "naive_pool_after": 1531,
+   "informed_extra_before": 107,
+   "informed_extra_after": 88,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 12.8,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 12.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.25925925925925924,
+    "informed": 0.25
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 121,
+   "frame_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 203,
+   "budget": 256,
+   "target_recordings": 56,
+   "naive_pool_before": 1967,
+   "naive_pool_after": 1690,
+   "informed_extra_before": 79,
+   "informed_extra_after": 74,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 14.8,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 15.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.3902439024390244,
+    "informed": 0.5487804878048781
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 230,
+   "frame_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 203,
+   "budget": 192,
+   "target_recordings": 56,
+   "naive_pool_before": 1967,
+   "naive_pool_after": 1690,
+   "informed_extra_before": 79,
+   "informed_extra_after": 74,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 14.8,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 15.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.25609756097560976,
+    "informed": 0.35365853658536583
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 177,
+   "frame_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 203,
+   "budget": 128,
+   "target_recordings": 56,
+   "naive_pool_before": 1967,
+   "naive_pool_after": 1690,
+   "informed_extra_before": 79,
+   "informed_extra_after": 74,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 12.8,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 12.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.34146341463414637,
+    "informed": 0.18292682926829268
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 123,
+   "frame_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 204,
+   "budget": 256,
+   "target_recordings": 52,
+   "naive_pool_before": 1996,
+   "naive_pool_after": 1718,
+   "informed_extra_before": 66,
+   "informed_extra_after": 47,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 9.4,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 13.2,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.48484848484848486,
+    "informed": 0.6212121212121212
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 212,
+   "frame_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 204,
+   "budget": 192,
+   "target_recordings": 52,
+   "naive_pool_before": 1996,
+   "naive_pool_after": 1718,
+   "informed_extra_before": 66,
+   "informed_extra_after": 47,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 9.4,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 13.2,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.25757575757575757,
+    "informed": 0.5303030303030303
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 169,
+   "frame_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 204,
+   "budget": 128,
+   "target_recordings": 52,
+   "naive_pool_before": 1996,
+   "naive_pool_after": 1718,
+   "informed_extra_before": 66,
+   "informed_extra_after": 47,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 9.4,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 12.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.3333333333333333,
+    "informed": 0.48484848484848486
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 120,
+   "frame_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   }
+  },
+  {
+   "seed": 205,
+   "budget": 256,
+   "target_recordings": 44,
+   "naive_pool_before": 2034,
+   "naive_pool_after": 1862,
+   "informed_extra_before": 47,
+   "informed_extra_after": 46,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 9.2,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 9.4,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.44680851063829785,
+    "informed": 0.2553191489361702
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 230
+  },
+  {
+   "seed": 205,
+   "budget": 192,
+   "target_recordings": 44,
+   "naive_pool_before": 2034,
+   "naive_pool_after": 1862,
+   "informed_extra_before": 47,
+   "informed_extra_after": 46,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 9.2,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 9.4,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.23404255319148937,
+    "informed": 0.2765957446808511
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 177
+  },
+  {
+   "seed": 205,
+   "budget": 128,
+   "target_recordings": 44,
+   "naive_pool_before": 2034,
+   "naive_pool_after": 1862,
+   "informed_extra_before": 47,
+   "informed_extra_after": 46,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 9.2,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 9.4,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.19148936170212766,
+    "informed": 0.10638297872340426
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 123
+  },
+  {
+   "seed": 206,
+   "budget": 256,
+   "target_recordings": 75,
+   "naive_pool_before": 1946,
+   "naive_pool_after": 1537,
+   "informed_extra_before": 90,
+   "informed_extra_after": 88,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 17.6,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 18.0,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.5108695652173914,
+    "informed": 0.3695652173913043
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 228
+  },
+  {
+   "seed": 206,
+   "budget": 192,
+   "target_recordings": 75,
+   "naive_pool_before": 1946,
+   "naive_pool_after": 1537,
+   "informed_extra_before": 90,
+   "informed_extra_after": 88,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 17.6,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 18.0,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.34782608695652173,
+    "informed": 0.2391304347826087
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 175
+  },
+  {
+   "seed": 206,
+   "budget": 128,
+   "target_recordings": 75,
+   "naive_pool_before": 1946,
+   "naive_pool_after": 1537,
+   "informed_extra_before": 90,
+   "informed_extra_after": 88,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 12.8,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 12.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.25,
+    "informed": 0.25
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 121
+  },
+  {
+   "seed": 207,
+   "budget": 256,
+   "target_recordings": 57,
+   "naive_pool_before": 1946,
+   "naive_pool_after": 1673,
+   "informed_extra_before": 90,
+   "informed_extra_after": 80,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 16.0,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 18.0,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.4782608695652174,
+    "informed": 0.358695652173913
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 230
+  },
+  {
+   "seed": 207,
+   "budget": 192,
+   "target_recordings": 57,
+   "naive_pool_before": 1946,
+   "naive_pool_after": 1673,
+   "informed_extra_before": 90,
+   "informed_extra_after": 80,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 16.0,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 18.0,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.32608695652173914,
+    "informed": 0.391304347826087
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 180
+  },
+  {
+   "seed": 207,
+   "budget": 128,
+   "target_recordings": 57,
+   "naive_pool_before": 1946,
+   "naive_pool_after": 1673,
+   "informed_extra_before": 90,
+   "informed_extra_after": 80,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 12.8,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 12.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.30434782608695654,
+    "informed": 0.1956521739130435
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 119
+  },
+  {
+   "seed": 208,
+   "budget": 256,
+   "target_recordings": 70,
+   "naive_pool_before": 1943,
+   "naive_pool_after": 1661,
+   "informed_extra_before": 91,
+   "informed_extra_after": 64,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 12.8,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 18.2,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.4787234042553192,
+    "informed": 0.44680851063829785
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 226
+  },
+  {
+   "seed": 208,
+   "budget": 192,
+   "target_recordings": 70,
+   "naive_pool_before": 1943,
+   "naive_pool_after": 1661,
+   "informed_extra_before": 91,
+   "informed_extra_after": 64,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 12.8,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 18.2,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.4787234042553192,
+    "informed": 0.3829787234042553
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 181
+  },
+  {
+   "seed": 208,
+   "budget": 128,
+   "target_recordings": 70,
+   "naive_pool_before": 1943,
+   "naive_pool_after": 1661,
+   "informed_extra_before": 91,
+   "informed_extra_after": 64,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 12.8,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 12.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.2978723404255319,
+    "informed": 0.2127659574468085
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 124
+  },
+  {
+   "seed": 209,
+   "budget": 256,
+   "target_recordings": 29,
+   "naive_pool_before": 2051,
+   "naive_pool_after": 1879,
+   "informed_extra_before": 39,
+   "informed_extra_after": 32,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 6.4,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 7.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.7105263157894737,
+    "informed": 0.5789473684210527
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 222
+  },
+  {
+   "seed": 209,
+   "budget": 192,
+   "target_recordings": 29,
+   "naive_pool_before": 2051,
+   "naive_pool_after": 1879,
+   "informed_extra_before": 39,
+   "informed_extra_after": 32,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 6.4,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 7.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.47368421052631576,
+    "informed": 0.47368421052631576
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 177
+  },
+  {
+   "seed": 209,
+   "budget": 128,
+   "target_recordings": 29,
+   "naive_pool_before": 2051,
+   "naive_pool_after": 1879,
+   "informed_extra_before": 39,
+   "informed_extra_after": 32,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 6.4,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 7.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.21052631578947367,
+    "informed": 0.42105263157894735
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 121
+  },
+  {
+   "seed": 210,
+   "budget": 256,
+   "target_recordings": 48,
+   "naive_pool_before": 2023,
+   "naive_pool_after": 1810,
+   "informed_extra_before": 53,
+   "informed_extra_after": 46,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 9.2,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 10.6,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.40384615384615385,
+    "informed": 0.23076923076923078
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 234
+  },
+  {
+   "seed": 210,
+   "budget": 192,
+   "target_recordings": 48,
+   "naive_pool_before": 2023,
+   "naive_pool_after": 1810,
+   "informed_extra_before": 53,
+   "informed_extra_after": 46,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 9.2,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 10.6,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.3269230769230769,
+    "informed": 0.40384615384615385
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 183
+  },
+  {
+   "seed": 210,
+   "budget": 128,
+   "target_recordings": 48,
+   "naive_pool_before": 2023,
+   "naive_pool_after": 1810,
+   "informed_extra_before": 53,
+   "informed_extra_after": 46,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 9.2,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 10.6,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.3269230769230769,
+    "informed": 0.21153846153846154
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 120
+  },
+  {
+   "seed": 211,
+   "budget": 256,
+   "target_recordings": 91,
+   "naive_pool_before": 1845,
+   "naive_pool_after": 1489,
+   "informed_extra_before": 134,
+   "informed_extra_after": 123,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 24.6,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 25.6,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.42953020134228187,
+    "informed": 0.22818791946308725
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 234
+  },
+  {
+   "seed": 211,
+   "budget": 192,
+   "target_recordings": 91,
+   "naive_pool_before": 1845,
+   "naive_pool_after": 1489,
+   "informed_extra_before": 134,
+   "informed_extra_after": 123,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 19.2,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 19.2,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.3087248322147651,
+    "informed": 0.174496644295302
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 180
+  },
+  {
+   "seed": 211,
+   "budget": 128,
+   "target_recordings": 91,
+   "naive_pool_before": 1845,
+   "naive_pool_after": 1489,
+   "informed_extra_before": 134,
+   "informed_extra_after": 123,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 12.8,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 12.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.3221476510067114,
+    "informed": 0.2214765100671141
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 121
+  },
+  {
+   "seed": 212,
+   "budget": 256,
+   "target_recordings": 66,
+   "naive_pool_before": 1978,
+   "naive_pool_after": 1658,
+   "informed_extra_before": 70,
+   "informed_extra_after": 69,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 13.8,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 14.0,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.3375,
+    "informed": 0.375
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 226
+  },
+  {
+   "seed": 212,
+   "budget": 192,
+   "target_recordings": 66,
+   "naive_pool_before": 1978,
+   "naive_pool_after": 1658,
+   "informed_extra_before": 70,
+   "informed_extra_after": 69,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 13.8,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 14.0,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.2375,
+    "informed": 0.325
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 178
+  },
+  {
+   "seed": 212,
+   "budget": 128,
+   "target_recordings": 66,
+   "naive_pool_before": 1978,
+   "naive_pool_after": 1658,
+   "informed_extra_before": 70,
+   "informed_extra_after": 69,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 12.8,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 12.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.4,
+    "informed": 0.175
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 124
+  },
+  {
+   "seed": 213,
+   "budget": 256,
+   "target_recordings": 54,
+   "naive_pool_before": 2014,
+   "naive_pool_after": 1760,
+   "informed_extra_before": 55,
+   "informed_extra_after": 55,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 11.0,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 11.0,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.3898305084745763,
+    "informed": 0.22033898305084745
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 227
+  },
+  {
+   "seed": 213,
+   "budget": 192,
+   "target_recordings": 54,
+   "naive_pool_before": 2014,
+   "naive_pool_after": 1760,
+   "informed_extra_before": 55,
+   "informed_extra_after": 55,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 11.0,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 11.0,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.23728813559322035,
+    "informed": 0.2711864406779661
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 182
+  },
+  {
+   "seed": 213,
+   "budget": 128,
+   "target_recordings": 54,
+   "naive_pool_before": 2014,
+   "naive_pool_after": 1760,
+   "informed_extra_before": 55,
+   "informed_extra_after": 55,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 11.0,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 11.0,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.2542372881355932,
+    "informed": 0.1016949152542373
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 123
+  },
+  {
+   "seed": 214,
+   "budget": 256,
+   "target_recordings": 94,
+   "naive_pool_before": 1843,
+   "naive_pool_after": 1486,
+   "informed_extra_before": 130,
+   "informed_extra_after": 98,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 19.6,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 25.6,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.4838709677419355,
+    "informed": 0.4
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 222
+  },
+  {
+   "seed": 214,
+   "budget": 192,
+   "target_recordings": 94,
+   "naive_pool_before": 1843,
+   "naive_pool_after": 1486,
+   "informed_extra_before": 130,
+   "informed_extra_after": 98,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 19.2,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 19.2,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.3032258064516129,
+    "informed": 0.2645161290322581
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 180
+  },
+  {
+   "seed": 214,
+   "budget": 128,
+   "target_recordings": 94,
+   "naive_pool_before": 1843,
+   "naive_pool_after": 1486,
+   "informed_extra_before": 130,
+   "informed_extra_after": 98,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 12.8,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 12.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.25806451612903225,
+    "informed": 0.25161290322580643
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 122
+  },
+  {
+   "seed": 215,
+   "budget": 256,
+   "target_recordings": 74,
+   "naive_pool_before": 1973,
+   "naive_pool_after": 1640,
+   "informed_extra_before": 76,
+   "informed_extra_after": 75,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 15.0,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 15.2,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.43037974683544306,
+    "informed": 0.379746835443038
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 228
+  },
+  {
+   "seed": 215,
+   "budget": 192,
+   "target_recordings": 74,
+   "naive_pool_before": 1973,
+   "naive_pool_after": 1640,
+   "informed_extra_before": 76,
+   "informed_extra_after": 75,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 15.0,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 15.2,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.379746835443038,
+    "informed": 0.26582278481012656
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 179
+  },
+  {
+   "seed": 215,
+   "budget": 128,
+   "target_recordings": 74,
+   "naive_pool_before": 1973,
+   "naive_pool_after": 1640,
+   "informed_extra_before": 76,
+   "informed_extra_after": 75,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 12.8,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 12.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.3037974683544304,
+    "informed": 0.08860759493670886
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 126
+  },
+  {
+   "seed": 216,
+   "budget": 256,
+   "target_recordings": 64,
+   "naive_pool_before": 1959,
+   "naive_pool_after": 1646,
+   "informed_extra_before": 79,
+   "informed_extra_after": 66,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 13.2,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 15.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.6111111111111112,
+    "informed": 0.45555555555555555
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 236
+  },
+  {
+   "seed": 216,
+   "budget": 192,
+   "target_recordings": 64,
+   "naive_pool_before": 1959,
+   "naive_pool_after": 1646,
+   "informed_extra_before": 79,
+   "informed_extra_after": 66,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 13.2,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 15.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.4444444444444444,
+    "informed": 0.3
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 179
+  },
+  {
+   "seed": 216,
+   "budget": 128,
+   "target_recordings": 64,
+   "naive_pool_before": 1959,
+   "naive_pool_after": 1646,
+   "informed_extra_before": 79,
+   "informed_extra_after": 66,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 12.8,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 12.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.17777777777777778,
+    "informed": 0.17777777777777778
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 122
+  },
+  {
+   "seed": 217,
+   "budget": 256,
+   "target_recordings": 53,
+   "naive_pool_before": 2020,
+   "naive_pool_after": 1835,
+   "informed_extra_before": 54,
+   "informed_extra_after": 52,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 10.4,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 10.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.3333333333333333,
+    "informed": 0.25925925925925924
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 227
+  },
+  {
+   "seed": 217,
+   "budget": 192,
+   "target_recordings": 53,
+   "naive_pool_before": 2020,
+   "naive_pool_after": 1835,
+   "informed_extra_before": 54,
+   "informed_extra_after": 52,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 10.4,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 10.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.3148148148148148,
+    "informed": 0.24074074074074073
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 181
+  },
+  {
+   "seed": 217,
+   "budget": 128,
+   "target_recordings": 53,
+   "naive_pool_before": 2020,
+   "naive_pool_after": 1835,
+   "informed_extra_before": 54,
+   "informed_extra_after": 52,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 10.4,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 10.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.18518518518518517,
+    "informed": 0.09259259259259259
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 120
+  },
+  {
+   "seed": 218,
+   "budget": 256,
+   "target_recordings": 43,
+   "naive_pool_before": 2010,
+   "naive_pool_after": 1778,
+   "informed_extra_before": 59,
+   "informed_extra_after": 54,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 10.8,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 11.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.576271186440678,
+    "informed": 0.5084745762711864
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 228
+  },
+  {
+   "seed": 218,
+   "budget": 192,
+   "target_recordings": 43,
+   "naive_pool_before": 2010,
+   "naive_pool_after": 1778,
+   "informed_extra_before": 59,
+   "informed_extra_after": 54,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 10.8,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 11.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.3898305084745763,
+    "informed": 0.4406779661016949
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 174
+  },
+  {
+   "seed": 218,
+   "budget": 128,
+   "target_recordings": 43,
+   "naive_pool_before": 2010,
+   "naive_pool_after": 1778,
+   "informed_extra_before": 59,
+   "informed_extra_after": 54,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 10.8,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 11.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.2711864406779661,
+    "informed": 0.1864406779661017
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 125
+  },
+  {
+   "seed": 219,
+   "budget": 256,
+   "target_recordings": 49,
+   "naive_pool_before": 2002,
+   "naive_pool_after": 1747,
+   "informed_extra_before": 63,
+   "informed_extra_after": 55,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 11.0,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 12.6,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.5079365079365079,
+    "informed": 0.5396825396825397
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 229
+  },
+  {
+   "seed": 219,
+   "budget": 192,
+   "target_recordings": 49,
+   "naive_pool_before": 2002,
+   "naive_pool_after": 1747,
+   "informed_extra_before": 63,
+   "informed_extra_after": 55,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 11.0,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 12.6,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.4603174603174603,
+    "informed": 0.5079365079365079
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 179
+  },
+  {
+   "seed": 219,
+   "budget": 128,
+   "target_recordings": 49,
+   "naive_pool_before": 2002,
+   "naive_pool_after": 1747,
+   "informed_extra_before": 63,
+   "informed_extra_after": 55,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 11.0,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 12.6,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.3333333333333333,
+    "informed": 0.23809523809523808
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 124
+  },
+  {
+   "seed": 220,
+   "budget": 256,
+   "target_recordings": 89,
+   "naive_pool_before": 1838,
+   "naive_pool_after": 1368,
+   "informed_extra_before": 128,
+   "informed_extra_after": 123,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 24.6,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 25.6,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.5493827160493827,
+    "informed": 0.345679012345679
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 232
+  },
+  {
+   "seed": 220,
+   "budget": 192,
+   "target_recordings": 89,
+   "naive_pool_before": 1838,
+   "naive_pool_after": 1368,
+   "informed_extra_before": 128,
+   "informed_extra_after": 123,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 19.2,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 19.2,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.35802469135802467,
+    "informed": 0.2222222222222222
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 177
+  },
+  {
+   "seed": 220,
+   "budget": 128,
+   "target_recordings": 89,
+   "naive_pool_before": 1838,
+   "naive_pool_after": 1368,
+   "informed_extra_before": 128,
+   "informed_extra_after": 123,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 12.8,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 12.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.2777777777777778,
+    "informed": 0.10493827160493827
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 123
+  },
+  {
+   "seed": 221,
+   "budget": 256,
+   "target_recordings": 55,
+   "naive_pool_before": 1963,
+   "naive_pool_after": 1679,
+   "informed_extra_before": 80,
+   "informed_extra_after": 72,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 14.4,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 16.0,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.4823529411764706,
+    "informed": 0.38823529411764707
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 225
+  },
+  {
+   "seed": 221,
+   "budget": 192,
+   "target_recordings": 55,
+   "naive_pool_before": 1963,
+   "naive_pool_after": 1679,
+   "informed_extra_before": 80,
+   "informed_extra_after": 72,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 14.4,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 16.0,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.35294117647058826,
+    "informed": 0.4235294117647059
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 178
+  },
+  {
+   "seed": 221,
+   "budget": 128,
+   "target_recordings": 55,
+   "naive_pool_before": 1963,
+   "naive_pool_after": 1679,
+   "informed_extra_before": 80,
+   "informed_extra_after": 72,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 12.8,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 12.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.3176470588235294,
+    "informed": 0.2235294117647059
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 122
+  },
+  {
+   "seed": 222,
+   "budget": 256,
+   "target_recordings": 66,
+   "naive_pool_before": 1894,
+   "naive_pool_after": 1723,
+   "informed_extra_before": 117,
+   "informed_extra_after": 87,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 17.4,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 23.4,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.3162393162393162,
+    "informed": 0.39316239316239315
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 238
+  },
+  {
+   "seed": 222,
+   "budget": 192,
+   "target_recordings": 66,
+   "naive_pool_before": 1894,
+   "naive_pool_after": 1723,
+   "informed_extra_before": 117,
+   "informed_extra_after": 87,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 17.4,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 19.2,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.24786324786324787,
+    "informed": 0.21367521367521367
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 178
+  },
+  {
+   "seed": 222,
+   "budget": 128,
+   "target_recordings": 66,
+   "naive_pool_before": 1894,
+   "naive_pool_after": 1723,
+   "informed_extra_before": 117,
+   "informed_extra_after": 87,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 12.8,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 12.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.19658119658119658,
+    "informed": 0.20512820512820512
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 123
+  },
+  {
+   "seed": 223,
+   "budget": 256,
+   "target_recordings": 58,
+   "naive_pool_before": 2005,
+   "naive_pool_after": 1766,
+   "informed_extra_before": 61,
+   "informed_extra_after": 57,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 11.4,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 12.2,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.3064516129032258,
+    "informed": 0.4032258064516129
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 229
+  },
+  {
+   "seed": 223,
+   "budget": 192,
+   "target_recordings": 58,
+   "naive_pool_before": 2005,
+   "naive_pool_after": 1766,
+   "informed_extra_before": 61,
+   "informed_extra_after": 57,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 11.4,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 12.2,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.27419354838709675,
+    "informed": 0.3064516129032258
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 173
+  },
+  {
+   "seed": 223,
+   "budget": 128,
+   "target_recordings": 58,
+   "naive_pool_before": 2005,
+   "naive_pool_after": 1766,
+   "informed_extra_before": 61,
+   "informed_extra_after": 57,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 11.4,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 12.2,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.22580645161290322,
+    "informed": 0.27419354838709675
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 123
+  },
+  {
+   "seed": 224,
+   "budget": 256,
+   "target_recordings": 43,
+   "naive_pool_before": 2030,
+   "naive_pool_after": 1799,
+   "informed_extra_before": 48,
+   "informed_extra_after": 47,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 9.4,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 9.6,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.5,
+    "informed": 0.48
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 224
+  },
+  {
+   "seed": 224,
+   "budget": 192,
+   "target_recordings": 43,
+   "naive_pool_before": 2030,
+   "naive_pool_after": 1799,
+   "informed_extra_before": 48,
+   "informed_extra_after": 47,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 9.4,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 9.6,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.42,
+    "informed": 0.46
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 173
+  },
+  {
+   "seed": 224,
+   "budget": 128,
+   "target_recordings": 43,
+   "naive_pool_before": 2030,
+   "naive_pool_after": 1799,
+   "informed_extra_before": 48,
+   "informed_extra_after": 47,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 9.4,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 9.6,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.28,
+    "informed": 0.26
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 125
+  },
+  {
+   "seed": 225,
+   "budget": 256,
+   "target_recordings": 49,
+   "naive_pool_before": 2012,
+   "naive_pool_after": 1769,
+   "informed_extra_before": 58,
+   "informed_extra_after": 52,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 10.4,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 11.6,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.4482758620689655,
+    "informed": 0.3275862068965517
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 233
+  },
+  {
+   "seed": 225,
+   "budget": 192,
+   "target_recordings": 49,
+   "naive_pool_before": 2012,
+   "naive_pool_after": 1769,
+   "informed_extra_before": 58,
+   "informed_extra_after": 52,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 10.4,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 11.6,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.29310344827586204,
+    "informed": 0.3103448275862069
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 178
+  },
+  {
+   "seed": 225,
+   "budget": 128,
+   "target_recordings": 49,
+   "naive_pool_before": 2012,
+   "naive_pool_after": 1769,
+   "informed_extra_before": 58,
+   "informed_extra_after": 52,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 10.4,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 11.6,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.3103448275862069,
+    "informed": 0.29310344827586204
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 121
+  },
+  {
+   "seed": 226,
+   "budget": 256,
+   "target_recordings": 49,
+   "naive_pool_before": 2023,
+   "naive_pool_after": 1807,
+   "informed_extra_before": 53,
+   "informed_extra_after": 48,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 9.6,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 10.6,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.4423076923076923,
+    "informed": 0.4807692307692308
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 227
+  },
+  {
+   "seed": 226,
+   "budget": 192,
+   "target_recordings": 49,
+   "naive_pool_before": 2023,
+   "naive_pool_after": 1807,
+   "informed_extra_before": 53,
+   "informed_extra_after": 48,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 9.6,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 10.6,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.34615384615384615,
+    "informed": 0.34615384615384615
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 173
+  },
+  {
+   "seed": 226,
+   "budget": 128,
+   "target_recordings": 49,
+   "naive_pool_before": 2023,
+   "naive_pool_after": 1807,
+   "informed_extra_before": 53,
+   "informed_extra_after": 48,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 9.6,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 10.6,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.11538461538461539,
+    "informed": 0.28846153846153844
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 126
+  },
+  {
+   "seed": 227,
+   "budget": 256,
+   "target_recordings": 46,
+   "naive_pool_before": 1960,
+   "naive_pool_after": 1708,
+   "informed_extra_before": 84,
+   "informed_extra_after": 82,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 16.4,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 16.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.5238095238095238,
+    "informed": 0.40476190476190477
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 217
+  },
+  {
+   "seed": 227,
+   "budget": 192,
+   "target_recordings": 46,
+   "naive_pool_before": 1960,
+   "naive_pool_after": 1708,
+   "informed_extra_before": 84,
+   "informed_extra_after": 82,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 16.4,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 16.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.5833333333333334,
+    "informed": 0.2857142857142857
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 178
+  },
+  {
+   "seed": 227,
+   "budget": 128,
+   "target_recordings": 46,
+   "naive_pool_before": 1960,
+   "naive_pool_after": 1708,
+   "informed_extra_before": 84,
+   "informed_extra_after": 82,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 12.8,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 12.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.35714285714285715,
+    "informed": 0.2857142857142857
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 125
+  },
+  {
+   "seed": 228,
+   "budget": 256,
+   "target_recordings": 60,
+   "naive_pool_before": 1990,
+   "naive_pool_after": 1743,
+   "informed_extra_before": 69,
+   "informed_extra_after": 57,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 11.4,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 13.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.391304347826087,
+    "informed": 0.4492753623188406
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 225
+  },
+  {
+   "seed": 228,
+   "budget": 192,
+   "target_recordings": 60,
+   "naive_pool_before": 1990,
+   "naive_pool_after": 1743,
+   "informed_extra_before": 69,
+   "informed_extra_after": 57,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 11.4,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 13.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.36231884057971014,
+    "informed": 0.37681159420289856
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 176
+  },
+  {
+   "seed": 228,
+   "budget": 128,
+   "target_recordings": 60,
+   "naive_pool_before": 1990,
+   "naive_pool_after": 1743,
+   "informed_extra_before": 69,
+   "informed_extra_after": 57,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 11.4,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 12.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.2753623188405797,
+    "informed": 0.3188405797101449
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 124
+  },
+  {
+   "seed": 229,
+   "budget": 256,
+   "target_recordings": 61,
+   "naive_pool_before": 2002,
+   "naive_pool_after": 1697,
+   "informed_extra_before": 60,
+   "informed_extra_after": 54,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 10.8,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 12.0,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.45454545454545453,
+    "informed": 0.3939393939393939
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 231
+  },
+  {
+   "seed": 229,
+   "budget": 192,
+   "target_recordings": 61,
+   "naive_pool_before": 2002,
+   "naive_pool_after": 1697,
+   "informed_extra_before": 60,
+   "informed_extra_after": 54,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 10.8,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 12.0,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.3484848484848485,
+    "informed": 0.25757575757575757
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 173
+  },
+  {
+   "seed": 229,
+   "budget": 128,
+   "target_recordings": 61,
+   "naive_pool_before": 2002,
+   "naive_pool_after": 1697,
+   "informed_extra_before": 60,
+   "informed_extra_after": 54,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 10.8,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 12.0,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.2727272727272727,
+    "informed": 0.16666666666666666
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 124
+  },
+  {
+   "seed": 230,
+   "budget": 256,
+   "target_recordings": 85,
+   "naive_pool_before": 1915,
+   "naive_pool_after": 1410,
+   "informed_extra_before": 102,
+   "informed_extra_after": 100,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 20.0,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 20.4,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.5405405405405406,
+    "informed": 0.42342342342342343
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 223
+  },
+  {
+   "seed": 230,
+   "budget": 192,
+   "target_recordings": 85,
+   "naive_pool_before": 1915,
+   "naive_pool_after": 1410,
+   "informed_extra_before": 102,
+   "informed_extra_after": 100,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 19.2,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 19.2,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.38738738738738737,
+    "informed": 0.26126126126126126
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 184
+  },
+  {
+   "seed": 230,
+   "budget": 128,
+   "target_recordings": 85,
+   "naive_pool_before": 1915,
+   "naive_pool_after": 1410,
+   "informed_extra_before": 102,
+   "informed_extra_after": 100,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 12.8,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 12.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.3063063063063063,
+    "informed": 0.23423423423423423
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 124
+  },
+  {
+   "seed": 231,
+   "budget": 256,
+   "target_recordings": 104,
+   "naive_pool_before": 1860,
+   "naive_pool_after": 1381,
+   "informed_extra_before": 128,
+   "informed_extra_after": 114,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 22.8,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 25.6,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.5428571428571428,
+    "informed": 0.3
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 237
+  },
+  {
+   "seed": 231,
+   "budget": 192,
+   "target_recordings": 104,
+   "naive_pool_before": 1860,
+   "naive_pool_after": 1381,
+   "informed_extra_before": 128,
+   "informed_extra_after": 114,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 19.2,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 19.2,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.4357142857142857,
+    "informed": 0.35714285714285715
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 179
+  },
+  {
+   "seed": 231,
+   "budget": 128,
+   "target_recordings": 104,
+   "naive_pool_before": 1860,
+   "naive_pool_after": 1381,
+   "informed_extra_before": 128,
+   "informed_extra_after": 114,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 12.8,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 12.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.34285714285714286,
+    "informed": 0.19285714285714287
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 116
+  },
+  {
+   "seed": 232,
+   "budget": 256,
+   "target_recordings": 79,
+   "naive_pool_before": 1938,
+   "naive_pool_after": 1559,
+   "informed_extra_before": 94,
+   "informed_extra_after": 68,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 13.6,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 18.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.4270833333333333,
+    "informed": 0.4375
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 225
+  },
+  {
+   "seed": 232,
+   "budget": 192,
+   "target_recordings": 79,
+   "naive_pool_before": 1938,
+   "naive_pool_after": 1559,
+   "informed_extra_before": 94,
+   "informed_extra_after": 68,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 13.6,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 18.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.4270833333333333,
+    "informed": 0.3645833333333333
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 177
+  },
+  {
+   "seed": 232,
+   "budget": 128,
+   "target_recordings": 79,
+   "naive_pool_before": 1938,
+   "naive_pool_after": 1559,
+   "informed_extra_before": 94,
+   "informed_extra_after": 68,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 12.8,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 12.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.3333333333333333,
+    "informed": 0.3229166666666667
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 126
+  },
+  {
+   "seed": 233,
+   "budget": 256,
+   "target_recordings": 43,
+   "naive_pool_before": 2024,
+   "naive_pool_after": 1793,
+   "informed_extra_before": 52,
+   "informed_extra_after": 50,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 10.0,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 10.4,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.5769230769230769,
+    "informed": 0.3269230769230769
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 223
+  },
+  {
+   "seed": 233,
+   "budget": 192,
+   "target_recordings": 43,
+   "naive_pool_before": 2024,
+   "naive_pool_after": 1793,
+   "informed_extra_before": 52,
+   "informed_extra_after": 50,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 10.0,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 10.4,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.4423076923076923,
+    "informed": 0.38461538461538464
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 173
+  },
+  {
+   "seed": 233,
+   "budget": 128,
+   "target_recordings": 43,
+   "naive_pool_before": 2024,
+   "naive_pool_after": 1793,
+   "informed_extra_before": 52,
+   "informed_extra_after": 50,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 10.0,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 10.4,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.3269230769230769,
+    "informed": 0.23076923076923078
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 124
+  },
+  {
+   "seed": 234,
+   "budget": 256,
+   "target_recordings": 73,
+   "naive_pool_before": 1965,
+   "naive_pool_after": 1538,
+   "informed_extra_before": 78,
+   "informed_extra_after": 78,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 15.6,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 15.6,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.5529411764705883,
+    "informed": 0.36470588235294116
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 229
+  },
+  {
+   "seed": 234,
+   "budget": 192,
+   "target_recordings": 73,
+   "naive_pool_before": 1965,
+   "naive_pool_after": 1538,
+   "informed_extra_before": 78,
+   "informed_extra_after": 78,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 15.6,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 15.6,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.43529411764705883,
+    "informed": 0.35294117647058826
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 171
+  },
+  {
+   "seed": 234,
+   "budget": 128,
+   "target_recordings": 73,
+   "naive_pool_before": 1965,
+   "naive_pool_after": 1538,
+   "informed_extra_before": 78,
+   "informed_extra_after": 78,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 12.8,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 12.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.4235294117647059,
+    "informed": 0.17647058823529413
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 122
+  },
+  {
+   "seed": 235,
+   "budget": 256,
+   "target_recordings": 43,
+   "naive_pool_before": 2041,
+   "naive_pool_after": 1852,
+   "informed_extra_before": 43,
+   "informed_extra_after": 41,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 8.2,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 8.6,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.36363636363636365,
+    "informed": 0.4090909090909091
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 223
+  },
+  {
+   "seed": 235,
+   "budget": 192,
+   "target_recordings": 43,
+   "naive_pool_before": 2041,
+   "naive_pool_after": 1852,
+   "informed_extra_before": 43,
+   "informed_extra_after": 41,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 8.2,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 8.6,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.36363636363636365,
+    "informed": 0.20454545454545456
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 176
+  },
+  {
+   "seed": 235,
+   "budget": 128,
+   "target_recordings": 43,
+   "naive_pool_before": 2041,
+   "naive_pool_after": 1852,
+   "informed_extra_before": 43,
+   "informed_extra_after": 41,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 8.2,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 8.6,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.1590909090909091,
+    "informed": 0.18181818181818182
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 124
+  },
+  {
+   "seed": 236,
+   "budget": 256,
+   "target_recordings": 49,
+   "naive_pool_before": 2020,
+   "naive_pool_after": 1820,
+   "informed_extra_before": 54,
+   "informed_extra_after": 50,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 10.0,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 10.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.42592592592592593,
+    "informed": 0.3888888888888889
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 225
+  },
+  {
+   "seed": 236,
+   "budget": 192,
+   "target_recordings": 49,
+   "naive_pool_before": 2020,
+   "naive_pool_after": 1820,
+   "informed_extra_before": 54,
+   "informed_extra_after": 50,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 10.0,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 10.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.35185185185185186,
+    "informed": 0.3333333333333333
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 180
+  },
+  {
+   "seed": 236,
+   "budget": 128,
+   "target_recordings": 49,
+   "naive_pool_before": 2020,
+   "naive_pool_after": 1820,
+   "informed_extra_before": 54,
+   "informed_extra_after": 50,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 10.0,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 10.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.3333333333333333,
+    "informed": 0.16666666666666666
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 119
+  },
+  {
+   "seed": 237,
+   "budget": 256,
+   "target_recordings": 63,
+   "naive_pool_before": 1901,
+   "naive_pool_after": 1599,
+   "informed_extra_before": 113,
+   "informed_extra_after": 97,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 19.4,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 22.6,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.39473684210526316,
+    "informed": 0.39473684210526316
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 232
+  },
+  {
+   "seed": 237,
+   "budget": 192,
+   "target_recordings": 63,
+   "naive_pool_before": 1901,
+   "naive_pool_after": 1599,
+   "informed_extra_before": 113,
+   "informed_extra_after": 97,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 19.2,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 19.2,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.2982456140350877,
+    "informed": 0.38596491228070173
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 181
+  },
+  {
+   "seed": 237,
+   "budget": 128,
+   "target_recordings": 63,
+   "naive_pool_before": 1901,
+   "naive_pool_after": 1599,
+   "informed_extra_before": 113,
+   "informed_extra_after": 97,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 12.8,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 12.8,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.42105263157894735,
+    "informed": 0.2719298245614035
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 123
+  },
+  {
+   "seed": 238,
+   "budget": 256,
+   "target_recordings": 41,
+   "naive_pool_before": 2036,
+   "naive_pool_after": 1908,
+   "informed_extra_before": 46,
+   "informed_extra_after": 46,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 9.2,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 9.2,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.2608695652173913,
+    "informed": 0.3695652173913043
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 222
+  },
+  {
+   "seed": 238,
+   "budget": 192,
+   "target_recordings": 41,
+   "naive_pool_before": 2036,
+   "naive_pool_after": 1908,
+   "informed_extra_before": 46,
+   "informed_extra_after": 46,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 9.2,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 9.2,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.1956521739130435,
+    "informed": 0.06521739130434782
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 176
+  },
+  {
+   "seed": 238,
+   "budget": 128,
+   "target_recordings": 41,
+   "naive_pool_before": 2036,
+   "naive_pool_after": 1908,
+   "informed_extra_before": 46,
+   "informed_extra_after": 46,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 9.2,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 9.2,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.10869565217391304,
+    "informed": 0.10869565217391304
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 121
+  },
+  {
+   "seed": 239,
+   "budget": 256,
+   "target_recordings": 39,
+   "naive_pool_before": 2033,
+   "naive_pool_after": 1878,
+   "informed_extra_before": 43,
+   "informed_extra_after": 43,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 8.6,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 8.6,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.4807692307692308,
+    "informed": 0.3076923076923077
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 234
+  },
+  {
+   "seed": 239,
+   "budget": 192,
+   "target_recordings": 39,
+   "naive_pool_before": 2033,
+   "naive_pool_after": 1878,
+   "informed_extra_before": 43,
+   "informed_extra_after": 43,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 8.6,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 8.6,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.25,
+    "informed": 0.21153846153846154
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 179
+  },
+  {
+   "seed": 239,
+   "budget": 128,
+   "target_recordings": 39,
+   "naive_pool_before": 2033,
+   "naive_pool_after": 1878,
+   "informed_extra_before": 43,
+   "informed_extra_after": 43,
+   "feasible": true,
+   "covered": 5,
+   "held": 5,
+   "per_comp": 8.6,
+   "coverage_ok": true,
+   "covered_unfiltered": 5,
+   "per_comp_unfiltered": 8.6,
+   "coverage_ok_unfiltered": true,
+   "shared_recording_before": {
+    "naive": 0.4423076923076923,
+    "informed": 0.1346153846153846
+   },
+   "shared_recording_after": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "label_leak": {
+    "naive": 0.0,
+    "informed": 0.0
+   },
+   "swapped": 121
+  }
+ ]
+}

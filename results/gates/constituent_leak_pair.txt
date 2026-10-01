@@ -1,0 +1,14 @@
+Constituent-level leak (scripts/check_constituent_leak.py)
+means over seeds; (max over seeds) in brackets for (a)
+(a) target trajectories with a constituent clip whose object->intent is among the arm's training clips
+(b) target clips so exposed   (c) arm's training clips lying in a held cell   (d) target clips in a held cell
+
+settings: {'granularity': 'oakink_category', 'held': 5, 'min_chains': 4, 'min_per_composition': 5, 'budget': 64, 'seeds': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]}
+
+bundle                       arm               (a) traj  (b) clips  (c) train held  (d) tgt held
+oakink_pair_aligned          naive        0.00% (  0.0)      0.00%           0.00%       100.00%
+oakink_pair_aligned          informed     0.00% (  0.0)      0.00%          41.88%       100.00%
+                             composition: meta.source_clips, re-concatenated and frame-equal; clips/traj [2]; 334 trajectories
+oakink_pair_misaligned       naive       27.93% ( 40.0)     14.70%           8.36%        60.98%
+oakink_pair_misaligned       informed    36.48% ( 62.5)     19.94%          30.78%        60.98%
+                             composition: meta.source_clips, re-concatenated and frame-equal; clips/traj [2]; 334 trajectories

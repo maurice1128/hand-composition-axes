@@ -1,0 +1,16 @@
+$ C:\Users\maurice\Desktop\hand_IK\.venv\Scripts\python.exe scripts/check_composition_leak.py --bundle data\bundles\oakink_class_attr.npz --granularity oakink2_scene_verb --held-compositions 5 --min-chains 4 --min-per-composition 5 --budget 256 --seeds 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39
+data\bundles\oakink_class_attr.npz  granularity=oakink2_scene_verb  budget=256
+ seed  target  naive leak  informed leak  status
+--------------------------------------------------------
+    0     150       0.0%          0.0%  ok
+    1     256       0.0%          0.0%  ok
+Traceback (most recent call last):
+  File "C:\Users\maurice\Desktop\hand_IK\scripts\check_composition_leak.py", line 104, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "C:\Users\maurice\Desktop\hand_IK\scripts\check_composition_leak.py", line 69, in main
+    naive_idx, informed_idx = sample_pools(
+                              ^^^^^^^^^^^^^
+  File "C:\Users\maurice\Desktop\hand_IK\scripts\experiment_paired_composition.py", line 306, in sample_pools
+    raise ValueError(f"budget {n} exceeds naive pool of {len(naive_pool)}")
+ValueError: budget 256 exceeds naive pool of 153

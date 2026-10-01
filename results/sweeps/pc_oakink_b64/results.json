@@ -1,0 +1,1114 @@
+{
+  "args": {
+    "bundle": "data\\bundles\\oakink.npz",
+    "out": "runs\\pc_oakink_b64",
+    "budgets": [
+      64
+    ],
+    "kinds": [
+      "perframe"
+    ],
+    "held_compositions": 5,
+    "min_chains": 4,
+    "min_per_composition": 5,
+    "epochs": 120,
+    "window": 32,
+    "stride": 4,
+    "batch_size": 256,
+    "lr": 0.001,
+    "latent_dim": 12,
+    "hidden": 256,
+    "n_primitives": 12,
+    "granularity": "oakink_category",
+    "seed": 0,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ],
+    "fresh": false,
+    "keep_checkpoints": false,
+    "ignore_aux": false
+  },
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+  ],
+  "results": [
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 0,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.05315389492861333,
+        "n_train": 64,
+        "seconds": 16.5,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.05143074333697996,
+        "n_train": 64,
+        "seconds": 17.0,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.0017231515916333734
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 1,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.054080496627413085,
+        "n_train": 64,
+        "seconds": 16.6,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.049105854154382865,
+        "n_train": 64,
+        "seconds": 17.3,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.0049746424730302205
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 2,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.053040596963657066,
+        "n_train": 64,
+        "seconds": 17.2,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.04591685838379767,
+        "n_train": 64,
+        "seconds": 14.3,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.007123738579859394
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 3,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.06315918990472641,
+        "n_train": 64,
+        "seconds": 15.9,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.05225488375759344,
+        "n_train": 64,
+        "seconds": 14.7,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.010904306147132968
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 4,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.06222303787438133,
+        "n_train": 64,
+        "seconds": 16.9,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.05521623142246406,
+        "n_train": 64,
+        "seconds": 18.2,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.007006806451917272
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 5,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.04206416047649619,
+        "n_train": 64,
+        "seconds": 18.2,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.037431383329163855,
+        "n_train": 64,
+        "seconds": 12.3,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.004632777147332338
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 6,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.07513684888178522,
+        "n_train": 64,
+        "seconds": 17.3,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.07870599416665136,
+        "n_train": 64,
+        "seconds": 13.3,
+        "n_parameters": 2283059
+      },
+      "penalty": -0.0035691452848661404
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 7,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.05143219473321104,
+        "n_train": 64,
+        "seconds": 21.0,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.041300288381785726,
+        "n_train": 64,
+        "seconds": 16.3,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.010131906351425315
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 8,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 4,
+        "coverage_thin": true
+      },
+      "naive": {
+        "mse_target": 0.05152347215291639,
+        "n_train": 64,
+        "seconds": 16.9,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.04097216333933695,
+        "n_train": 64,
+        "seconds": 14.8,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.010551308813579435
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 9,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.06588809609672862,
+        "n_train": 64,
+        "seconds": 15.5,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.05867764342064951,
+        "n_train": 64,
+        "seconds": 17.2,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.0072104526760791085
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 10,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.08886065166798264,
+        "n_train": 64,
+        "seconds": 16.3,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.07586984101587022,
+        "n_train": 64,
+        "seconds": 18.9,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.012990810652112425
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 11,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.043873251158359224,
+        "n_train": 64,
+        "seconds": 20.0,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.03621014154445358,
+        "n_train": 64,
+        "seconds": 12.8,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.007663109613905643
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 12,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.06854385707917726,
+        "n_train": 64,
+        "seconds": 15.5,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.06290172181411106,
+        "n_train": 64,
+        "seconds": 15.6,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.005642135265066198
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 13,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 4,
+        "coverage_thin": true
+      },
+      "naive": {
+        "mse_target": 0.06397999739667447,
+        "n_train": 64,
+        "seconds": 14.8,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.05842544332236488,
+        "n_train": 64,
+        "seconds": 15.6,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.0055545540743095895
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 14,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.07094201776716444,
+        "n_train": 64,
+        "seconds": 16.0,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.06603494396916142,
+        "n_train": 64,
+        "seconds": 16.8,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.004907073798003023
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 15,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.07201539803520873,
+        "n_train": 64,
+        "seconds": 15.1,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.06353460019623446,
+        "n_train": 64,
+        "seconds": 15.7,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.008480797838974277
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 16,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.07797945422187835,
+        "n_train": 64,
+        "seconds": 15.1,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.07086462102060229,
+        "n_train": 64,
+        "seconds": 18.3,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.007114833201276066
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 17,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.056291835759979446,
+        "n_train": 64,
+        "seconds": 15.2,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.059052342163451614,
+        "n_train": 64,
+        "seconds": 16.3,
+        "n_parameters": 2283059
+      },
+      "penalty": -0.0027605064034721682
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 18,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.06230425436954428,
+        "n_train": 64,
+        "seconds": 16.7,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.050394042589113744,
+        "n_train": 64,
+        "seconds": 16.0,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.011910211780430537
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 19,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.07600980665358394,
+        "n_train": 64,
+        "seconds": 15.9,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.06911096631429955,
+        "n_train": 64,
+        "seconds": 17.8,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.006898840339284382
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 20,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.06800468301850468,
+        "n_train": 64,
+        "seconds": 15.9,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.06324504409301451,
+        "n_train": 64,
+        "seconds": 19.3,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.004759638925490167
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 21,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.053142406322337965,
+        "n_train": 64,
+        "seconds": 15.4,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.04886597982383867,
+        "n_train": 64,
+        "seconds": 16.2,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.004276426498499297
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 22,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.07692850047144396,
+        "n_train": 64,
+        "seconds": 17.0,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.07236844156589241,
+        "n_train": 64,
+        "seconds": 14.5,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.004560058905551556
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 23,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.05171131573414288,
+        "n_train": 64,
+        "seconds": 17.7,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.05219551679512617,
+        "n_train": 64,
+        "seconds": 18.7,
+        "n_parameters": 2283059
+      },
+      "penalty": -0.0004842010609832914
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 24,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.09203655601418809,
+        "n_train": 64,
+        "seconds": 16.7,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.08842996879379646,
+        "n_train": 64,
+        "seconds": 12.8,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.00360658722039163
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 25,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.059820466218171296,
+        "n_train": 64,
+        "seconds": 15.2,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.05138072826244213,
+        "n_train": 64,
+        "seconds": 15.0,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.008439737955729165
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 26,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.06668086253521908,
+        "n_train": 64,
+        "seconds": 18.0,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.06522327998225894,
+        "n_train": 64,
+        "seconds": 17.8,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.0014575825529601488
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 27,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.051830125233483695,
+        "n_train": 64,
+        "seconds": 16.9,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.0546495447713862,
+        "n_train": 64,
+        "seconds": 15.9,
+        "n_parameters": 2283059
+      },
+      "penalty": -0.002819419537902504
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 28,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.06843513404494218,
+        "n_train": 64,
+        "seconds": 15.3,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.06610810674576886,
+        "n_train": 64,
+        "seconds": 13.9,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.0023270272991733204
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 29,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 4,
+        "coverage_thin": true
+      },
+      "naive": {
+        "mse_target": 0.06984129302651439,
+        "n_train": 64,
+        "seconds": 17.4,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.05791050413217365,
+        "n_train": 64,
+        "seconds": 17.9,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.011930788894340738
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 30,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.05891637838279655,
+        "n_train": 64,
+        "seconds": 18.3,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.04828025481901839,
+        "n_train": 64,
+        "seconds": 14.5,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.01063612356377816
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 31,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.04697011697171914,
+        "n_train": 64,
+        "seconds": 14.8,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.038577018763481165,
+        "n_train": 64,
+        "seconds": 12.3,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.008393098208237977
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 32,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.06283099620937216,
+        "n_train": 64,
+        "seconds": 18.0,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.057342510767683666,
+        "n_train": 64,
+        "seconds": 13.1,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.005488485441688493
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 33,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.07278452277868919,
+        "n_train": 64,
+        "seconds": 17.3,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.06488567157964174,
+        "n_train": 64,
+        "seconds": 17.6,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.007898851199047444
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 34,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.07942382519633753,
+        "n_train": 64,
+        "seconds": 16.4,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.06267528044871795,
+        "n_train": 64,
+        "seconds": 19.8,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.01674854474761958
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 35,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.04746710242457486,
+        "n_train": 64,
+        "seconds": 17.5,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.03973938682469379,
+        "n_train": 64,
+        "seconds": 14.3,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.0077277155998810715
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 36,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.08591646528513418,
+        "n_train": 64,
+        "seconds": 14.4,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.07496446704086236,
+        "n_train": 64,
+        "seconds": 20.1,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.010951998244271816
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 37,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.05369644647862038,
+        "n_train": 64,
+        "seconds": 18.7,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.04855736895633543,
+        "n_train": 64,
+        "seconds": 16.1,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.00513907752228495
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 38,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.05467107768671705,
+        "n_train": 64,
+        "seconds": 16.9,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.048827227424172795,
+        "n_train": 64,
+        "seconds": 12.8,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.005843850262544255
+    },
+    {
+      "kind": "perframe",
+      "budget": 64,
+      "seed": 39,
+      "soundness": {
+        "leak_naive": 0.0,
+        "leak_informed": 0.0,
+        "held": 5,
+        "covered": 5,
+        "coverage_thin": false
+      },
+      "naive": {
+        "mse_target": 0.09102522610636896,
+        "n_train": 64,
+        "seconds": 13.9,
+        "n_parameters": 2283059
+      },
+      "informed": {
+        "mse_target": 0.07940740389097865,
+        "n_train": 64,
+        "seconds": 17.9,
+        "n_parameters": 2283059
+      },
+      "penalty": 0.011617822215390303
+    }
+  ]
+}

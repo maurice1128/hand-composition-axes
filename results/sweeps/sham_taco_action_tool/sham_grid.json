@@ -1,0 +1,813 @@
+{
+ "control": "the second factor of the coarse label is permuted over fine groups, so cell structure is preserved and the pairing carries no relationship",
+ "wrapper": "scripts/experiment_paired_sham_grid.py",
+ "sham_seed": 12345,
+ "grids": {
+  "mapping": {
+   "brush|brush|bowl@brush@-@brush": "brush->brush",
+   "brush|brush|box@brush@-@brush": "measure->ruler",
+   "brush|brush|cup@brush@-@brush": "empty->cup",
+   "brush|brush|helmet@brush@-@brush": "dust->brush",
+   "brush|brush|kettle@brush@-@brush": "put_in->spoon",
+   "brush|brush|pan@brush@-@brush": "dust->brush",
+   "brush|brush|plate@brush@-@brush": "put_out->bowl",
+   "brush|brush|teapot@brush@-@brush": "smear->eraser",
+   "brush|brush|toy@brush@-@brush": "dust->brush",
+   "brush|eraser|bowl@brush@-@eraser": "skim_off->spoon",
+   "brush|eraser|box@brush@-@eraser": "empty->plate",
+   "brush|eraser|kettle@brush@-@eraser": "pour_in_some->teapot",
+   "brush|eraser|pan@brush@-@eraser": "dust->roller",
+   "brush|eraser|plate@brush@-@eraser": "pour_in_some->kettle",
+   "brush|roller|bowl@brush@-@roller": "cut->spatula",
+   "brush|roller|box@brush@-@roller": "cut->spoon",
+   "brush|roller|kettle@brush@-@roller": "put_out->spoon",
+   "brush|roller|pan@brush@-@roller": "empty->cup",
+   "brush|roller|plate@brush@-@roller": "pour_in_some->cup",
+   "cut|knife|bowl@cut@-@knife": "skim_off->spoon",
+   "cut|knife|pan@cut@-@knife": "put_out->spoon",
+   "cut|knife|plate@cut@-@knife": "empty->cup",
+   "cut|spatula|bowl@cut@-@spatula": "brush->roller",
+   "cut|spatula|pan@cut@-@spatula": "empty->box",
+   "cut|spatula|plate@cut@-@spatula": "empty->plate",
+   "cut|spoon|bowl@cut@-@spoon": "put_out->bowl",
+   "cut|spoon|pan@cut@-@spoon": "scrape_off->spoon",
+   "cut|spoon|plate@cut@-@spoon": "stir->spatula",
+   "dust|brush|bowl@dust@-@brush": "dust->brush",
+   "dust|brush|box@dust@-@brush": "empty->kettle",
+   "dust|brush|cup@dust@-@brush": "brush->brush",
+   "dust|brush|kettle@dust@-@brush": "brush->brush",
+   "dust|brush|pan@dust@-@brush": "pour_in_some->teapot",
+   "dust|brush|plate@dust@-@brush": "pour_in_some->cup",
+   "dust|brush|teapot@dust@-@brush": "measure->ruler",
+   "dust|roller|bowl@dust@-@roller": "hit->hammer",
+   "dust|roller|box@dust@-@roller": "stir-fry->spatula",
+   "dust|roller|kettle@dust@-@roller": "empty->bowl",
+   "dust|roller|pan@dust@-@roller": "smear->eraser",
+   "dust|roller|plate@dust@-@roller": "empty->teapot",
+   "empty|bowl|bowl@empty@-@bowl": "pour_in_some->cup",
+   "empty|bowl|cup@empty@-@bowl": "brush->roller",
+   "empty|bowl|kettle@empty@-@bowl": "put_in->bowl",
+   "empty|bowl|plate@empty@-@bowl": "scrape_off->spoon",
+   "empty|box|cup@empty@-@box": "pour_in_some->bowl",
+   "empty|box|plate@empty@-@box": "stir-fry->spatula",
+   "empty|cup|bowl@empty@-@cup": "empty->kettle",
+   "empty|cup|kettle@empty@-@cup": "brush->roller",
+   "empty|cup|plate@empty@-@cup": "skim_off->bowl",
+   "empty|cup|teapot@empty@-@cup": "pour_in_some->plate",
+   "empty|kettle|bowl@empty@-@kettle": "stir->spatula",
+   "empty|kettle|cup@empty@-@kettle": "put_in->spoon",
+   "empty|kettle|kettle@empty@-@kettle": "put_out->bowl",
+   "empty|kettle|plate@empty@-@kettle": "empty->teapot",
+   "empty|kettle|teapot@empty@-@kettle": "cut->knife",
+   "empty|plate|bowl@empty@-@plate": "skim_off->bowl",
+   "empty|plate|box@empty@-@plate": "screw->screwdriver",
+   "empty|plate|cup@empty@-@plate": "pour_in_some->teapot",
+   "empty|plate|plate@empty@-@plate": "empty->teapot",
+   "empty|plate|teapot@empty@-@plate": "put_out->spoon",
+   "empty|teapot|cup@empty@-@teapot": "brush->brush",
+   "empty|teapot|kettle@empty@-@teapot": "stir->spoon",
+   "empty|teapot|plate@empty@-@teapot": "pour_in_some->box",
+   "empty|teapot|teapot@empty@-@teapot": "cut->spatula",
+   "hit|hammer|box@hit@-@hammer": "smear->eraser",
+   "hit|hammer|helmet@hit@-@hammer": "put_in->spatula",
+   "hit|hammer|toy@hit@-@hammer": "dust->brush",
+   "measure|ruler|bowl@measure@-@ruler": "brush->brush",
+   "measure|ruler|box@measure@-@ruler": "cut->spoon",
+   "measure|ruler|cup@measure@-@ruler": "dust->brush",
+   "measure|ruler|plate@measure@-@ruler": "stir->spoon",
+   "measure|ruler|toy@measure@-@ruler": "put_out->spatula",
+   "pour_in_some|bowl|bowl@pour_in_some@-@bowl": "smear->glue_gun",
+   "pour_in_some|bowl|cup@pour_in_some@-@bowl": "brush->eraser",
+   "pour_in_some|bowl|kettle@pour_in_some@-@bowl": "scrape_off->knife",
+   "pour_in_some|bowl|plate@pour_in_some@-@bowl": "smear->glue_gun",
+   "pour_in_some|box|plate@pour_in_some@-@box": "cut->knife",
+   "pour_in_some|cup|bowl@pour_in_some@-@cup": "scrape_off->spoon",
+   "pour_in_some|cup|cup@pour_in_some@-@cup": "measure->ruler",
+   "pour_in_some|cup|kettle@pour_in_some@-@cup": "pour_in_some->plate",
+   "pour_in_some|cup|plate@pour_in_some@-@cup": "empty->kettle",
+   "pour_in_some|cup|teapot@pour_in_some@-@cup": "brush->brush",
+   "pour_in_some|kettle|bowl@pour_in_some@-@kettle": "pour_in_some->bowl",
+   "pour_in_some|kettle|cup@pour_in_some@-@kettle": "skim_off->bowl",
+   "pour_in_some|kettle|kettle@pour_in_some@-@kettle": "put_out->spatula",
+   "pour_in_some|kettle|plate@pour_in_some@-@kettle": "dust->brush",
+   "pour_in_some|kettle|teapot@pour_in_some@-@kettle": "empty->plate",
+   "pour_in_some|plate|bowl@pour_in_some@-@plate": "screw->screwdriver",
+   "pour_in_some|plate|box@pour_in_some@-@plate": "stir->spoon",
+   "pour_in_some|plate|cup@pour_in_some@-@plate": "put_in->bowl",
+   "pour_in_some|plate|plate@pour_in_some@-@plate": "pour_in_some->cup",
+   "pour_in_some|plate|teapot@pour_in_some@-@plate": "skim_off->spatula",
+   "pour_in_some|teapot|bowl@pour_in_some@-@teapot": "pour_in_some->plate",
+   "pour_in_some|teapot|cup@pour_in_some@-@teapot": "measure->ruler",
+   "pour_in_some|teapot|kettle@pour_in_some@-@teapot": "dust->roller",
+   "pour_in_some|teapot|plate@pour_in_some@-@teapot": "hit->hammer",
+   "pour_in_some|teapot|teapot@pour_in_some@-@teapot": "brush->brush",
+   "put_in|bowl|bowl@put_in@-@bowl": "scrape_off->knife",
+   "put_in|bowl|pan@put_in@-@bowl": "pour_in_some->kettle",
+   "put_in|bowl|plate@put_in@-@bowl": "scrape_off->spatula",
+   "put_in|spatula|bowl@put_in@-@spatula": "brush->eraser",
+   "put_in|spatula|pan@put_in@-@spatula": "pour_in_some->bowl",
+   "put_in|spatula|plate@put_in@-@spatula": "scrape_off->knife",
+   "put_in|spoon|bowl@put_in@-@spoon": "empty->kettle",
+   "put_in|spoon|pan@put_in@-@spoon": "stir->spatula",
+   "put_in|spoon|plate@put_in@-@spoon": "empty->bowl",
+   "put_out|bowl|bowl@put_out@-@bowl": "pour_in_some->plate",
+   "put_out|bowl|pan@put_out@-@bowl": "scrape_off->spatula",
+   "put_out|bowl|plate@put_out@-@bowl": "pour_in_some->teapot",
+   "put_out|spatula|bowl@put_out@-@spatula": "empty->bowl",
+   "put_out|spatula|pan@put_out@-@spatula": "pour_in_some->plate",
+   "put_out|spatula|plate@put_out@-@spatula": "empty->plate",
+   "put_out|spoon|bowl@put_out@-@spoon": "put_in->spatula",
+   "put_out|spoon|pan@put_out@-@spoon": "put_out->spatula",
+   "put_out|spoon|plate@put_out@-@spoon": "scrape_off->knife",
+   "scrape_off|knife|bowl@scrape_off@-@knife": "dust->roller",
+   "scrape_off|knife|box@scrape_off@-@knife": "pour_in_some->cup",
+   "scrape_off|knife|pan@scrape_off@-@knife": "brush->brush",
+   "scrape_off|knife|plate@scrape_off@-@knife": "pour_in_some->kettle",
+   "scrape_off|spatula|bowl@scrape_off@-@spatula": "stir-fry->spoon",
+   "scrape_off|spatula|pan@scrape_off@-@spatula": "pour_in_some->kettle",
+   "scrape_off|spatula|plate@scrape_off@-@spatula": "brush->eraser",
+   "scrape_off|spoon|bowl@scrape_off@-@spoon": "empty->teapot",
+   "scrape_off|spoon|pan@scrape_off@-@spoon": "empty->plate",
+   "scrape_off|spoon|plate@scrape_off@-@spoon": "hit->hammer",
+   "screw|screwdriver|box@screw@-@screwdriver": "empty->kettle",
+   "screw|screwdriver|toy@screw@-@screwdriver": "empty->bowl",
+   "skim_off|bowl|bowl@skim_off@-@bowl": "pour_in_some->kettle",
+   "skim_off|bowl|pan@skim_off@-@bowl": "skim_off->spoon",
+   "skim_off|bowl|plate@skim_off@-@bowl": "brush->brush",
+   "skim_off|spatula|bowl@skim_off@-@spatula": "put_in->spatula",
+   "skim_off|spatula|pan@skim_off@-@spatula": "cut->spatula",
+   "skim_off|spatula|plate@skim_off@-@spatula": "brush->roller",
+   "skim_off|spoon|bowl@skim_off@-@spoon": "skim_off->spatula",
+   "skim_off|spoon|pan@skim_off@-@spoon": "dust->roller",
+   "skim_off|spoon|plate@skim_off@-@spoon": "put_in->bowl",
+   "smear|eraser|bowl@smear@-@eraser": "pour_in_some->bowl",
+   "smear|eraser|box@smear@-@eraser": "brush->eraser",
+   "smear|eraser|plate@smear@-@eraser": "cut->spoon",
+   "smear|glue_gun|box@smear@-@glue_gun": "scrape_off->spatula",
+   "smear|glue_gun|plate@smear@-@glue_gun": "empty->box",
+   "smear|soap|plate@smear@-@soap": "pour_in_some->teapot",
+   "stir-fry|spatula|pan@stir-fry@-@spatula": "empty->cup",
+   "stir-fry|spatula|plate@stir-fry@-@spatula": "dust->roller",
+   "stir-fry|spoon|pan@stir-fry@-@spoon": "measure->ruler",
+   "stir|spatula|bowl@stir@-@spatula": "put_in->spoon",
+   "stir|spatula|pan@stir@-@spatula": "brush->eraser",
+   "stir|spatula|plate@stir@-@spatula": "brush->roller",
+   "stir|spoon|bowl@stir@-@spoon": "skim_off->spatula",
+   "stir|spoon|pan@stir@-@spoon": "cut->knife",
+   "stir|spoon|plate@stir@-@spoon": "smear->soap"
+  },
+  "attempts": 1,
+  "real": {
+   "cells": 42,
+   "fine_groups": 151,
+   "candidate_pool": 17,
+   "median_trajectories_per_cell": 49,
+   "max_trajectories_per_cell": 192
+  },
+  "sham": {
+   "cells": 42,
+   "fine_groups": 151,
+   "candidate_pool": 17,
+   "median_trajectories_per_cell": 41,
+   "max_trajectories_per_cell": 188
+  },
+  "mode": "cells",
+  "moved": 149,
+  "n_fine_groups": 151
+ },
+ "mapping": {
+  "brush|brush|bowl@brush@-@brush": "brush->brush",
+  "brush|brush|box@brush@-@brush": "measure->ruler",
+  "brush|brush|cup@brush@-@brush": "empty->cup",
+  "brush|brush|helmet@brush@-@brush": "dust->brush",
+  "brush|brush|kettle@brush@-@brush": "put_in->spoon",
+  "brush|brush|pan@brush@-@brush": "dust->brush",
+  "brush|brush|plate@brush@-@brush": "put_out->bowl",
+  "brush|brush|teapot@brush@-@brush": "smear->eraser",
+  "brush|brush|toy@brush@-@brush": "dust->brush",
+  "brush|eraser|bowl@brush@-@eraser": "skim_off->spoon",
+  "brush|eraser|box@brush@-@eraser": "empty->plate",
+  "brush|eraser|kettle@brush@-@eraser": "pour_in_some->teapot",
+  "brush|eraser|pan@brush@-@eraser": "dust->roller",
+  "brush|eraser|plate@brush@-@eraser": "pour_in_some->kettle",
+  "brush|roller|bowl@brush@-@roller": "cut->spatula",
+  "brush|roller|box@brush@-@roller": "cut->spoon",
+  "brush|roller|kettle@brush@-@roller": "put_out->spoon",
+  "brush|roller|pan@brush@-@roller": "empty->cup",
+  "brush|roller|plate@brush@-@roller": "pour_in_some->cup",
+  "cut|knife|bowl@cut@-@knife": "skim_off->spoon",
+  "cut|knife|pan@cut@-@knife": "put_out->spoon",
+  "cut|knife|plate@cut@-@knife": "empty->cup",
+  "cut|spatula|bowl@cut@-@spatula": "brush->roller",
+  "cut|spatula|pan@cut@-@spatula": "empty->box",
+  "cut|spatula|plate@cut@-@spatula": "empty->plate",
+  "cut|spoon|bowl@cut@-@spoon": "put_out->bowl",
+  "cut|spoon|pan@cut@-@spoon": "scrape_off->spoon",
+  "cut|spoon|plate@cut@-@spoon": "stir->spatula",
+  "dust|brush|bowl@dust@-@brush": "dust->brush",
+  "dust|brush|box@dust@-@brush": "empty->kettle",
+  "dust|brush|cup@dust@-@brush": "brush->brush",
+  "dust|brush|kettle@dust@-@brush": "brush->brush",
+  "dust|brush|pan@dust@-@brush": "pour_in_some->teapot",
+  "dust|brush|plate@dust@-@brush": "pour_in_some->cup",
+  "dust|brush|teapot@dust@-@brush": "measure->ruler",
+  "dust|roller|bowl@dust@-@roller": "hit->hammer",
+  "dust|roller|box@dust@-@roller": "stir-fry->spatula",
+  "dust|roller|kettle@dust@-@roller": "empty->bowl",
+  "dust|roller|pan@dust@-@roller": "smear->eraser",
+  "dust|roller|plate@dust@-@roller": "empty->teapot",
+  "empty|bowl|bowl@empty@-@bowl": "pour_in_some->cup",
+  "empty|bowl|cup@empty@-@bowl": "brush->roller",
+  "empty|bowl|kettle@empty@-@bowl": "put_in->bowl",
+  "empty|bowl|plate@empty@-@bowl": "scrape_off->spoon",
+  "empty|box|cup@empty@-@box": "pour_in_some->bowl",
+  "empty|box|plate@empty@-@box": "stir-fry->spatula",
+  "empty|cup|bowl@empty@-@cup": "empty->kettle",
+  "empty|cup|kettle@empty@-@cup": "brush->roller",
+  "empty|cup|plate@empty@-@cup": "skim_off->bowl",
+  "empty|cup|teapot@empty@-@cup": "pour_in_some->plate",
+  "empty|kettle|bowl@empty@-@kettle": "stir->spatula",
+  "empty|kettle|cup@empty@-@kettle": "put_in->spoon",
+  "empty|kettle|kettle@empty@-@kettle": "put_out->bowl",
+  "empty|kettle|plate@empty@-@kettle": "empty->teapot",
+  "empty|kettle|teapot@empty@-@kettle": "cut->knife",
+  "empty|plate|bowl@empty@-@plate": "skim_off->bowl",
+  "empty|plate|box@empty@-@plate": "screw->screwdriver",
+  "empty|plate|cup@empty@-@plate": "pour_in_some->teapot",
+  "empty|plate|plate@empty@-@plate": "empty->teapot",
+  "empty|plate|teapot@empty@-@plate": "put_out->spoon",
+  "empty|teapot|cup@empty@-@teapot": "brush->brush",
+  "empty|teapot|kettle@empty@-@teapot": "stir->spoon",
+  "empty|teapot|plate@empty@-@teapot": "pour_in_some->box",
+  "empty|teapot|teapot@empty@-@teapot": "cut->spatula",
+  "hit|hammer|box@hit@-@hammer": "smear->eraser",
+  "hit|hammer|helmet@hit@-@hammer": "put_in->spatula",
+  "hit|hammer|toy@hit@-@hammer": "dust->brush",
+  "measure|ruler|bowl@measure@-@ruler": "brush->brush",
+  "measure|ruler|box@measure@-@ruler": "cut->spoon",
+  "measure|ruler|cup@measure@-@ruler": "dust->brush",
+  "measure|ruler|plate@measure@-@ruler": "stir->spoon",
+  "measure|ruler|toy@measure@-@ruler": "put_out->spatula",
+  "pour_in_some|bowl|bowl@pour_in_some@-@bowl": "smear->glue_gun",
+  "pour_in_some|bowl|cup@pour_in_some@-@bowl": "brush->eraser",
+  "pour_in_some|bowl|kettle@pour_in_some@-@bowl": "scrape_off->knife",
+  "pour_in_some|bowl|plate@pour_in_some@-@bowl": "smear->glue_gun",
+  "pour_in_some|box|plate@pour_in_some@-@box": "cut->knife",
+  "pour_in_some|cup|bowl@pour_in_some@-@cup": "scrape_off->spoon",
+  "pour_in_some|cup|cup@pour_in_some@-@cup": "measure->ruler",
+  "pour_in_some|cup|kettle@pour_in_some@-@cup": "pour_in_some->plate",
+  "pour_in_some|cup|plate@pour_in_some@-@cup": "empty->kettle",
+  "pour_in_some|cup|teapot@pour_in_some@-@cup": "brush->brush",
+  "pour_in_some|kettle|bowl@pour_in_some@-@kettle": "pour_in_some->bowl",
+  "pour_in_some|kettle|cup@pour_in_some@-@kettle": "skim_off->bowl",
+  "pour_in_some|kettle|kettle@pour_in_some@-@kettle": "put_out->spatula",
+  "pour_in_some|kettle|plate@pour_in_some@-@kettle": "dust->brush",
+  "pour_in_some|kettle|teapot@pour_in_some@-@kettle": "empty->plate",
+  "pour_in_some|plate|bowl@pour_in_some@-@plate": "screw->screwdriver",
+  "pour_in_some|plate|box@pour_in_some@-@plate": "stir->spoon",
+  "pour_in_some|plate|cup@pour_in_some@-@plate": "put_in->bowl",
+  "pour_in_some|plate|plate@pour_in_some@-@plate": "pour_in_some->cup",
+  "pour_in_some|plate|teapot@pour_in_some@-@plate": "skim_off->spatula",
+  "pour_in_some|teapot|bowl@pour_in_some@-@teapot": "pour_in_some->plate",
+  "pour_in_some|teapot|cup@pour_in_some@-@teapot": "measure->ruler",
+  "pour_in_some|teapot|kettle@pour_in_some@-@teapot": "dust->roller",
+  "pour_in_some|teapot|plate@pour_in_some@-@teapot": "hit->hammer",
+  "pour_in_some|teapot|teapot@pour_in_some@-@teapot": "brush->brush",
+  "put_in|bowl|bowl@put_in@-@bowl": "scrape_off->knife",
+  "put_in|bowl|pan@put_in@-@bowl": "pour_in_some->kettle",
+  "put_in|bowl|plate@put_in@-@bowl": "scrape_off->spatula",
+  "put_in|spatula|bowl@put_in@-@spatula": "brush->eraser",
+  "put_in|spatula|pan@put_in@-@spatula": "pour_in_some->bowl",
+  "put_in|spatula|plate@put_in@-@spatula": "scrape_off->knife",
+  "put_in|spoon|bowl@put_in@-@spoon": "empty->kettle",
+  "put_in|spoon|pan@put_in@-@spoon": "stir->spatula",
+  "put_in|spoon|plate@put_in@-@spoon": "empty->bowl",
+  "put_out|bowl|bowl@put_out@-@bowl": "pour_in_some->plate",
+  "put_out|bowl|pan@put_out@-@bowl": "scrape_off->spatula",
+  "put_out|bowl|plate@put_out@-@bowl": "pour_in_some->teapot",
+  "put_out|spatula|bowl@put_out@-@spatula": "empty->bowl",
+  "put_out|spatula|pan@put_out@-@spatula": "pour_in_some->plate",
+  "put_out|spatula|plate@put_out@-@spatula": "empty->plate",
+  "put_out|spoon|bowl@put_out@-@spoon": "put_in->spatula",
+  "put_out|spoon|pan@put_out@-@spoon": "put_out->spatula",
+  "put_out|spoon|plate@put_out@-@spoon": "scrape_off->knife",
+  "scrape_off|knife|bowl@scrape_off@-@knife": "dust->roller",
+  "scrape_off|knife|box@scrape_off@-@knife": "pour_in_some->cup",
+  "scrape_off|knife|pan@scrape_off@-@knife": "brush->brush",
+  "scrape_off|knife|plate@scrape_off@-@knife": "pour_in_some->kettle",
+  "scrape_off|spatula|bowl@scrape_off@-@spatula": "stir-fry->spoon",
+  "scrape_off|spatula|pan@scrape_off@-@spatula": "pour_in_some->kettle",
+  "scrape_off|spatula|plate@scrape_off@-@spatula": "brush->eraser",
+  "scrape_off|spoon|bowl@scrape_off@-@spoon": "empty->teapot",
+  "scrape_off|spoon|pan@scrape_off@-@spoon": "empty->plate",
+  "scrape_off|spoon|plate@scrape_off@-@spoon": "hit->hammer",
+  "screw|screwdriver|box@screw@-@screwdriver": "empty->kettle",
+  "screw|screwdriver|toy@screw@-@screwdriver": "empty->bowl",
+  "skim_off|bowl|bowl@skim_off@-@bowl": "pour_in_some->kettle",
+  "skim_off|bowl|pan@skim_off@-@bowl": "skim_off->spoon",
+  "skim_off|bowl|plate@skim_off@-@bowl": "brush->brush",
+  "skim_off|spatula|bowl@skim_off@-@spatula": "put_in->spatula",
+  "skim_off|spatula|pan@skim_off@-@spatula": "cut->spatula",
+  "skim_off|spatula|plate@skim_off@-@spatula": "brush->roller",
+  "skim_off|spoon|bowl@skim_off@-@spoon": "skim_off->spatula",
+  "skim_off|spoon|pan@skim_off@-@spoon": "dust->roller",
+  "skim_off|spoon|plate@skim_off@-@spoon": "put_in->bowl",
+  "smear|eraser|bowl@smear@-@eraser": "pour_in_some->bowl",
+  "smear|eraser|box@smear@-@eraser": "brush->eraser",
+  "smear|eraser|plate@smear@-@eraser": "cut->spoon",
+  "smear|glue_gun|box@smear@-@glue_gun": "scrape_off->spatula",
+  "smear|glue_gun|plate@smear@-@glue_gun": "empty->box",
+  "smear|soap|plate@smear@-@soap": "pour_in_some->teapot",
+  "stir-fry|spatula|pan@stir-fry@-@spatula": "empty->cup",
+  "stir-fry|spatula|plate@stir-fry@-@spatula": "dust->roller",
+  "stir-fry|spoon|pan@stir-fry@-@spoon": "measure->ruler",
+  "stir|spatula|bowl@stir@-@spatula": "put_in->spoon",
+  "stir|spatula|pan@stir@-@spatula": "brush->eraser",
+  "stir|spatula|plate@stir@-@spatula": "brush->roller",
+  "stir|spoon|bowl@stir@-@spoon": "skim_off->spatula",
+  "stir|spoon|pan@stir@-@spoon": "cut->knife",
+  "stir|spoon|plate@stir@-@spoon": "smear->soap"
+ },
+ "seeds": [
+  {
+   "seed": 0,
+   "naive_pool": 2006,
+   "informed_extra": 151,
+   "held": [
+    "dust->roller",
+    "empty->bowl",
+    "empty->kettle",
+    "empty->plate",
+    "pour_in_some->bowl"
+   ]
+  },
+  {
+   "seed": 1,
+   "naive_pool": 1886,
+   "informed_extra": 215,
+   "held": [
+    "brush->brush",
+    "empty->cup",
+    "empty->kettle",
+    "pour_in_some->bowl",
+    "pour_in_some->teapot"
+   ]
+  },
+  {
+   "seed": 2,
+   "naive_pool": 1967,
+   "informed_extra": 174,
+   "held": [
+    "brush->eraser",
+    "dust->brush",
+    "dust->roller",
+    "empty->kettle",
+    "measure->ruler"
+   ]
+  },
+  {
+   "seed": 3,
+   "naive_pool": 1981,
+   "informed_extra": 167,
+   "held": [
+    "brush->eraser",
+    "brush->roller",
+    "dust->brush",
+    "measure->ruler",
+    "scrape_off->knife"
+   ]
+  },
+  {
+   "seed": 4,
+   "naive_pool": 1878,
+   "informed_extra": 207,
+   "held": [
+    "empty->plate",
+    "empty->teapot",
+    "pour_in_some->kettle",
+    "pour_in_some->plate",
+    "pour_in_some->teapot"
+   ]
+  },
+  {
+   "seed": 5,
+   "naive_pool": 1908,
+   "informed_extra": 196,
+   "held": [
+    "brush->brush",
+    "empty->kettle",
+    "empty->plate",
+    "pour_in_some->bowl",
+    "pour_in_some->cup"
+   ]
+  },
+  {
+   "seed": 6,
+   "naive_pool": 2080,
+   "informed_extra": 110,
+   "held": [
+    "empty->bowl",
+    "empty->kettle",
+    "pour_in_some->plate",
+    "pour_in_some->teapot",
+    "scrape_off->knife"
+   ]
+  },
+  {
+   "seed": 7,
+   "naive_pool": 1932,
+   "informed_extra": 157,
+   "held": [
+    "empty->plate",
+    "empty->teapot",
+    "measure->ruler",
+    "pour_in_some->cup",
+    "pour_in_some->plate"
+   ]
+  },
+  {
+   "seed": 8,
+   "naive_pool": 1906,
+   "informed_extra": 205,
+   "held": [
+    "brush->roller",
+    "dust->brush",
+    "dust->roller",
+    "empty->teapot",
+    "pour_in_some->teapot"
+   ]
+  },
+  {
+   "seed": 9,
+   "naive_pool": 1953,
+   "informed_extra": 171,
+   "held": [
+    "brush->eraser",
+    "dust->roller",
+    "empty->bowl",
+    "pour_in_some->cup",
+    "pour_in_some->plate"
+   ]
+  },
+  {
+   "seed": 10,
+   "naive_pool": 1893,
+   "informed_extra": 155,
+   "held": [
+    "dust->brush",
+    "measure->ruler",
+    "pour_in_some->kettle",
+    "pour_in_some->teapot",
+    "scrape_off->knife"
+   ]
+  },
+  {
+   "seed": 11,
+   "naive_pool": 1910,
+   "informed_extra": 196,
+   "held": [
+    "brush->eraser",
+    "empty->kettle",
+    "measure->ruler",
+    "pour_in_some->bowl",
+    "pour_in_some->kettle"
+   ]
+  },
+  {
+   "seed": 12,
+   "naive_pool": 2028,
+   "informed_extra": 142,
+   "held": [
+    "brush->eraser",
+    "dust->brush",
+    "empty->kettle",
+    "pour_in_some->plate",
+    "pour_in_some->teapot"
+   ]
+  },
+  {
+   "seed": 13,
+   "naive_pool": 1857,
+   "informed_extra": 182,
+   "held": [
+    "brush->eraser",
+    "pour_in_some->bowl",
+    "pour_in_some->cup",
+    "pour_in_some->kettle",
+    "pour_in_some->plate"
+   ]
+  },
+  {
+   "seed": 14,
+   "naive_pool": 1975,
+   "informed_extra": 167,
+   "held": [
+    "brush->eraser",
+    "empty->bowl",
+    "empty->teapot",
+    "pour_in_some->bowl",
+    "scrape_off->knife"
+   ]
+  },
+  {
+   "seed": 15,
+   "naive_pool": 1757,
+   "informed_extra": 254,
+   "held": [
+    "dust->roller",
+    "empty->teapot",
+    "measure->ruler",
+    "pour_in_some->cup",
+    "pour_in_some->kettle"
+   ]
+  },
+  {
+   "seed": 16,
+   "naive_pool": 1737,
+   "informed_extra": 244,
+   "held": [
+    "empty->cup",
+    "empty->kettle",
+    "pour_in_some->cup",
+    "pour_in_some->kettle",
+    "scrape_off->knife"
+   ]
+  },
+  {
+   "seed": 17,
+   "naive_pool": 1957,
+   "informed_extra": 178,
+   "held": [
+    "brush->eraser",
+    "brush->roller",
+    "empty->kettle",
+    "empty->teapot",
+    "pour_in_some->bowl"
+   ]
+  },
+  {
+   "seed": 18,
+   "naive_pool": 2033,
+   "informed_extra": 137,
+   "held": [
+    "dust->brush",
+    "empty->bowl",
+    "pour_in_some->bowl",
+    "pour_in_some->plate",
+    "pour_in_some->teapot"
+   ]
+  },
+  {
+   "seed": 19,
+   "naive_pool": 1963,
+   "informed_extra": 165,
+   "held": [
+    "empty->bowl",
+    "empty->cup",
+    "empty->kettle",
+    "pour_in_some->plate",
+    "pour_in_some->teapot"
+   ]
+  },
+  {
+   "seed": 20,
+   "naive_pool": 2039,
+   "informed_extra": 136,
+   "held": [
+    "dust->brush",
+    "empty->kettle",
+    "pour_in_some->bowl",
+    "pour_in_some->plate",
+    "pour_in_some->teapot"
+   ]
+  },
+  {
+   "seed": 21,
+   "naive_pool": 1937,
+   "informed_extra": 182,
+   "held": [
+    "dust->brush",
+    "empty->bowl",
+    "empty->kettle",
+    "empty->teapot",
+    "measure->ruler"
+   ]
+  },
+  {
+   "seed": 22,
+   "naive_pool": 1941,
+   "informed_extra": 188,
+   "held": [
+    "dust->brush",
+    "empty->bowl",
+    "empty->teapot",
+    "measure->ruler",
+    "scrape_off->knife"
+   ]
+  },
+  {
+   "seed": 23,
+   "naive_pool": 1778,
+   "informed_extra": 218,
+   "held": [
+    "brush->brush",
+    "dust->roller",
+    "empty->cup",
+    "empty->teapot",
+    "measure->ruler"
+   ]
+  },
+  {
+   "seed": 24,
+   "naive_pool": 1776,
+   "informed_extra": 270,
+   "held": [
+    "dust->roller",
+    "empty->cup",
+    "pour_in_some->bowl",
+    "pour_in_some->kettle",
+    "scrape_off->knife"
+   ]
+  },
+  {
+   "seed": 25,
+   "naive_pool": 1735,
+   "informed_extra": 273,
+   "held": [
+    "brush->brush",
+    "brush->roller",
+    "dust->brush",
+    "empty->cup",
+    "pour_in_some->cup"
+   ]
+  },
+  {
+   "seed": 26,
+   "naive_pool": 1888,
+   "informed_extra": 195,
+   "held": [
+    "dust->brush",
+    "empty->cup",
+    "empty->plate",
+    "pour_in_some->bowl",
+    "scrape_off->knife"
+   ]
+  },
+  {
+   "seed": 27,
+   "naive_pool": 1870,
+   "informed_extra": 164,
+   "held": [
+    "brush->brush",
+    "dust->brush",
+    "empty->bowl",
+    "empty->teapot",
+    "scrape_off->knife"
+   ]
+  },
+  {
+   "seed": 28,
+   "naive_pool": 2019,
+   "informed_extra": 145,
+   "held": [
+    "dust->brush",
+    "empty->plate",
+    "pour_in_some->bowl",
+    "pour_in_some->plate",
+    "scrape_off->knife"
+   ]
+  },
+  {
+   "seed": 29,
+   "naive_pool": 1878,
+   "informed_extra": 206,
+   "held": [
+    "brush->brush",
+    "dust->brush",
+    "empty->plate",
+    "pour_in_some->cup",
+    "pour_in_some->teapot"
+   ]
+  },
+  {
+   "seed": 30,
+   "naive_pool": 1886,
+   "informed_extra": 200,
+   "held": [
+    "brush->eraser",
+    "dust->brush",
+    "empty->cup",
+    "pour_in_some->bowl",
+    "scrape_off->knife"
+   ]
+  },
+  {
+   "seed": 31,
+   "naive_pool": 1926,
+   "informed_extra": 151,
+   "held": [
+    "brush->eraser",
+    "empty->kettle",
+    "empty->teapot",
+    "pour_in_some->cup",
+    "pour_in_some->plate"
+   ]
+  },
+  {
+   "seed": 32,
+   "naive_pool": 1899,
+   "informed_extra": 206,
+   "held": [
+    "brush->roller",
+    "empty->kettle",
+    "empty->teapot",
+    "pour_in_some->bowl",
+    "pour_in_some->cup"
+   ]
+  },
+  {
+   "seed": 33,
+   "naive_pool": 1885,
+   "informed_extra": 136,
+   "held": [
+    "empty->bowl",
+    "empty->cup",
+    "empty->teapot",
+    "pour_in_some->bowl",
+    "pour_in_some->plate"
+   ]
+  },
+  {
+   "seed": 34,
+   "naive_pool": 1858,
+   "informed_extra": 228,
+   "held": [
+    "brush->brush",
+    "brush->eraser",
+    "pour_in_some->kettle",
+    "pour_in_some->teapot",
+    "scrape_off->knife"
+   ]
+  },
+  {
+   "seed": 35,
+   "naive_pool": 1958,
+   "informed_extra": 157,
+   "held": [
+    "brush->eraser",
+    "dust->roller",
+    "empty->kettle",
+    "pour_in_some->cup",
+    "pour_in_some->teapot"
+   ]
+  },
+  {
+   "seed": 36,
+   "naive_pool": 1901,
+   "informed_extra": 200,
+   "held": [
+    "brush->roller",
+    "dust->roller",
+    "empty->cup",
+    "empty->kettle",
+    "pour_in_some->teapot"
+   ]
+  },
+  {
+   "seed": 37,
+   "naive_pool": 1956,
+   "informed_extra": 168,
+   "held": [
+    "brush->roller",
+    "dust->roller",
+    "empty->teapot",
+    "measure->ruler",
+    "pour_in_some->plate"
+   ]
+  },
+  {
+   "seed": 38,
+   "naive_pool": 1880,
+   "informed_extra": 217,
+   "held": [
+    "dust->brush",
+    "dust->roller",
+    "empty->cup",
+    "pour_in_some->teapot",
+    "scrape_off->knife"
+   ]
+  },
+  {
+   "seed": 39,
+   "naive_pool": 1794,
+   "informed_extra": 259,
+   "held": [
+    "dust->brush",
+    "empty->kettle",
+    "empty->plate",
+    "pour_in_some->cup",
+    "pour_in_some->kettle"
+   ]
+  }
+ ]
+}

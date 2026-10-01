@@ -1,0 +1,5 @@
+{
+ "cells": 70,
+ "cells_with_offset": 53,
+ "note": "a cell counts as planted if any of its trajectories differs from the source bundle"
+}

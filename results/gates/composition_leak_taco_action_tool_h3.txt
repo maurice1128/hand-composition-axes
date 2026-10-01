@@ -1,0 +1,19 @@
+data/bundles/taco_action_tool.npz  granularity=oakink2_scene_verb  budget=256
+ seed  target  naive leak  informed leak  status
+--------------------------------------------------------
+    0      54       0.0%          0.0%  ok
+    1      36       0.0%          0.0%  ok
+    2     166       0.0%          0.0%  ok
+    3     137       0.0%          0.0%  ok
+    4      52       0.0%          0.0%  ok
+    5     104       0.0%          0.0%  ok
+Traceback (most recent call last):
+  File "C:\Users\maurice\Desktop\hand_IK\scripts\check_composition_leak.py", line 104, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "C:\Users\maurice\Desktop\hand_IK\scripts\check_composition_leak.py", line 65, in main
+    split = build_paired_split(
+            ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maurice\Desktop\hand_IK\scripts\experiment_paired_composition.py", line 269, in build_paired_split
+    raise ValueError(
+ValueError: fine-group split left target=188 informed_extra=0; hold out fewer compositions or coarsen less

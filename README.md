@@ -1,130 +1,113 @@
-# Which Hand-Motion Composition Axes Are Worth Measuring
+# A hand-motion dataset can test compositional generalisation only when each label describes the whole trajectory it is attached to
 
-Code, gate outputs and stored results for *Which Hand-Motion Composition Axes Are Worth Measuring* — a measurement for the premise underneath modular motion priors, run over eight axes of three public hand datasets.
+Code, gate outputs, pre-registrations and every seed of every sweep behind the manuscript of this title (Mu-Hua Wang,
+National Yang Ming Chiao Tung University; prepared for *Transactions on Machine Learning Research*, not yet submitted,
+not posted to any preprint server).
 
 **Project page:** https://maurice1128.github.io/projects/hand-composition.html
-**Paper:** [`hand_motion_composition_axes.pdf`](https://maurice1128.github.io/assets/papers/hand_motion_composition_axes.pdf) — manuscript under review, not posted to any preprint server.
 
 ---
 
-## What is measured
+## The finding
 
-A modular motion prior decomposes hand motion into a bank of reusable primitives. That family of models rests on one premise: novel recombinations of those primitives stay usable. The premise is almost never measured.
+Compositional generalisation is usually tested by holding out combinations of labels: every action and every tool
+occurs in training, some of their pairings do not, and the model is scored on those pairings. The split is made on
+labels, so it holds out the motion only if each label describes the whole trajectory it is attached to. Public
+hand-motion datasets label whole recordings, and a correct label often describes only part of one.
 
-An *axis* pairs two factors, object category crossed with intent for instance. The instrument is a **paired split**: the same target trajectories are scored under two priors differing only in whether their training data contained the target's composition. The gap is the compositional penalty.
+- **Controlled manipulation (OakInk-Image).** Two clips are joined into one trajectory labelled by the first. When
+  the label describes both clips the paired penalty is +17.0 % of the naive error; when it describes only the first,
+  with trajectories, categories and training volume held fixed, it is +3.9 %, not distinguishable from a zero-truth
+  control. The windows the label does describe lose 82 % of their penalty above the control, so the change lies in
+  the training sets.
+- **Calibration.** A synthetic dataset whose true penalty is zero returns +2.6 %; permuted label grids, planted
+  interactions and per-seed distributions give each real dataset its own reference.
+- **Out-of-sample prediction (TACO).** A penalty predicted before the data were opened appears: +10.6 % over 40
+  seeds, while single seeds range from -3.8 % to +27.4 %.
 
-```
-penalty = MSE_naive(T) - MSE_informed(T)      per seed, same targets in both arms
-paired  = penalty_baseline - penalty_modular
-```
+The prior is a LAMP-style motion VAE ([arXiv:2607.06323](https://arxiv.org/abs/2607.06323)); its design is adopted,
+not proposed. The error is a reconstruction error, not a generation error.
 
-## What the paper claims
+## Earlier version of this repository
 
-**A measurement, with five gates.** Four of the five exist because an earlier design returned plausible numbers it could not have earned, one gate per way the authors had been fooled. See [`GATES.md`](GATES.md): two of the five still exit non-zero, and the paper reports them that way.
-
-**Difficulty needs interaction, not informative factors.** Every axis carrying measurable compositional difficulty has positive interaction between its two factors; none carries difficulty without it; and the dataset whose factors explain the most pose variance *on their own* carries no difficulty at all. Three axes could have falsified this, across two datasets, and all three sit at the zero-truth control (see the post-submission section below); sufficiency is still false. Sufficiency is demonstrably false: GRAB's shape axis has interaction and returns nothing.
-
-A cheap statistic (`scripts/screen_axes.py`) finds the interaction without training anything. It diagnoses presence well and size badly. Over the five axes swept before it chose one, *r* = 0.843 (*p* = 0.073), already not significant. The axis it ranked fifth of six then came back the hardest measured, and the association fell to *r* = 0.463 (*p* = 0.355).
-
-**A null on hardware, and why that null is weak.** Sixteen of seventeen defined comparisons on a Shadow Hand fail to separate novel compositions from familiar ones, and the seventeenth runs backwards. The retargeting has no collision term, the banks were trained on the one dataset the instrument itself finds null, and the equivalence test fails its own sensitivity check.
-
-## What the paper does not claim
-
-**No positive architecture result at matched information rate.** The two arms differ elevenfold in realized per-frame information, 0.207 against 2.275 on the confirmatory axis. Re-swept with the baseline's rate raised to match, the raw penalty loses most of the advantage. A scale-normalized penalty appears to keep it, and the negative control disposes of that: on `pc_easy`, a bundle whose compositional penalty is **zero by construction**, the normalized metric returns +0.099 against the real axis's +0.111, 18 of 20 wins, *p* = 0.0004. Normalization divides by each arm's own reconstruction error, and on the control the matched baseline reconstructs 4.04x better against 1.41x on real data, so it inverts the confound instead of removing it.
-
-The paper therefore states: **we claim no modular advantage at matched rate.** What survives is that where difficulty exists, a modular bank pays a smaller compositional penalty than a parameter-matched monolithic latent. What does not survive is attributing that to modular structure rather than to channel bandwidth.
-
-**The task-level question was never answered.** Sampling both priors unconditionally gives the architectures no channel through which to differ on grasp retention. The experiment that would answer it, each prior as the action space for a policy trying to grasp, was not run.
-
-**No dataset design rule.** Every axis returning a penalty belongs to one dataset, and across eleven screened axes no measured collection property predicts which.
-
----
+Until 2026-09-13 this repository accompanied *Which Hand-Motion Composition Axes Are Worth Measuring*. Its central
+claim, that compositional difficulty appears only where the two factors interact, was refuted by a later
+pre-registered sweep (OakInk-Image category x subject: no interaction, +10.3 % penalty) and is withdrawn. The files of
+that version are still here (`results/sweeps`, `results/*.png`, `GATES.md`, `scripts/screen_axes.py`) so its numbers
+stay reproducible; nothing in the current manuscript rests on them.
 
 ## Layout
 
 ```
 src/caredex/
-  hand_model.py        27-DOF spec, limits, normalization, DIP/PIP coupling.
-                       Single source of truth for the action layout.
-  kinematics.py        stick-figure FK + capsule self-intersection (cheap proxy)
+  hand_model.py        27-DOF spec, limits, normalization, DIP/PIP coupling
   mano.py              chumpy-free MANO loader
-  mesh_collision.py    LBS + triangle-triangle self-intersection (the real check)
-  data/                oakink.py, oakink2.py, grab.py, dexycb.py, synthetic.py,
-                       pipeline.py (windowing), base.py (bundles + registry)
-  models/              eigengrasp.py (PCA floor), latent_prior.py (monolithic,
-                       LAMP-style), modular_prior.py (the primitive bank)
+  data/                oakink.py, oakink2.py, grab.py, taco.py, synthetic.py, pipeline.py (windowing),
+                       base.py (bundles + registry), mano_retarget.py (convention inference)
+  models/              latent_prior.py (the LAMP-style prior used throughout)
   train/               checkpoint.py (RNG state included), trainer.py
-  validate/            ergonomics.py
 
-scripts/               one entry point per step; every check_*.py is a gate
-  experiment_paired_composition.py    the experiment behind every reported penalty
-  screen_axes.py                      the interaction screen, no training required
-  check_*.py                          the five gates, plus the reporting gate
-  task_confirm.sh, task_comparison.sh the invocations behind the two main sweeps
+scripts/
+  experiment_paired_composition.py      the paired split and penalty behind every reported number
+  experiment_paired_sham_grid.py        permuted-grid controls (--sham-mode factor | cells)
+  experiment_paired_window_classes.py   penalty by window class for the joined-clip bundles
+  build_oakink_alignment_v4.py          the aligned / misaligned joined-clip bundles
+  build_taco_bundle.py                  TACO loader and bundle (right hand, conventions inferred)
+  build_grab_diagnostics.py             planted-interaction and contact-segment GRAB bundles
+  check_composition_leak.py, check_informed_coverage.py, check_frame_leak*.py, check_constituent_leak.py
+                                        the four gates
+  axis_diagnostics.py                   re-derives every seed's split and checks it against the stored record
+  marginal_loss_and_volume.py           training volume and factor loss per axis
+  verify_tmlr_draft.py                  recomputes every number in the manuscript and checks it against the text
+  plot_tmlr_figures.py, plot_tmlr_teaser.py, make_web_video_label_alignment.py   figures and video
 
 results/
-  axis_screen.json          the eleven screened axes
-  dexpilot_transfer.json    the retargeting-baseline comparison
-  equivalence.json          TOST, with its failed sensitivity check
-  identity_pooled.json      primitive identity pooled over 13 runs
-  sweeps/<name>/results.json  every seed of every sweep the paper reports
-  gates/                    the gate outputs, including the two that exit 1
-  *.png                     the four figures in the paper
+  sweeps/<name>/results.json            every seed of every sweep (79 sweeps); sham_grid.json and
+                                        window_classes.json sidecars where they exist
+  ALL_SWEEPS.md                         every sweep with its settings, mean penalty and where the manuscript uses it
+  preregistration/PREREG_*.md           settings and readings written down before each sweep was trained
+  gates/                                gate transcripts as they came out
+  DIAGNOSTICS_RESULTS.md                the running record of each sweep read against its pre-registration
+  axis_diagnostics_tmlr.json, marginal_loss_volume.json, constituent_leak_pair.json, planted_cells.json,
+  motion_contamination_oakink2.json, label_coverage_oakink2.json, taco_build.json
+                                        the analysis artefacts the manuscript's numbers come from
+  figures_tmlr/                         the three manuscript figures
 ```
 
-`experiment_data_efficiency.py` is superseded and kept only so pre-2026-08 runs stay reproducible: its unpaired gap metric measures test-set difficulty rather than composition. Use `experiment_paired_composition.py`.
+The scripts read `runs/<name>/results.json`; in this repository the same files are under `results/sweeps/<name>/`.
 
-## Running it
-
-Windows, `uv`-managed venv. torch comes from the cu128 index, since the development GPU is Blackwell (sm_120) and default PyPI wheels do not build for it; `pyproject.toml` pins the index.
+## Reproducing the numbers
 
 ```bash
-.venv/Scripts/python.exe scripts/screen_axes.py                    # minutes, no training
-.venv/Scripts/python.exe scripts/experiment_paired_composition.py --help
+.venv/Scripts/python.exe scripts/verify_tmlr_draft.py      # needs the manuscript and the bundles
 ```
 
-**Dataset paths are hard-coded defaults pointing at `D:\datasets\`** in `data/grab.py`, `data/grab_contact.py` and `data/oakink_meta.py`. They are overridable arguments rather than requirements, but they are not configured for any other machine. OakInk annotations are read from inside `anno_v2.1.zip` without extracting it; extracting takes hours on Windows and buys nothing.
+Every statistic (means, SDs, Welch tests, intervals, seed counts) is recomputed from `results/sweeps/*/results.json`.
+The descriptive checks (dataset sizes, medians, convention counts) read the trajectory bundles, which are not
+distributed: they are rebuilt from the original datasets by the `build_*` scripts. Dataset paths default to
+`D:\datasets\`; OakInk annotations are read from inside `anno_v2.1.zip` without extracting it.
 
-Before any sweep, run `scripts/check_primitive_collapse.py`. A result of `primitives_used == 1` means the modular model is monolithic in disguise and the comparison is void.
+Windows, `uv`-managed venv; torch comes from the cu128 index (the development GPU is Blackwell, sm_120).
 
 ## Conventions that will bite you
 
 - Angles are degrees in native units, radians only inside FK.
-- Models consume values normalized by the joint-limit box, **not** by dataset statistics, so a prior trained on one dataset stays meaningful on another.
-- Splits are by trajectory, never by frame. Consecutive frames at 30 fps are near-duplicates, and a frame-level split inflates validation.
-- Validation is scored at the final beta, never the warmup value. Scoring at the current beta compares a different objective each epoch and pins the best checkpoint to epoch 0. This was a real bug.
-- `bounded_output=True` makes joint-limit satisfaction architectural, so zero limit violations is not evidence the model learned anatomy. The checks with teeth are DIP/PIP coupling and smoothness.
-- Dataset conventions are inferred from the data, never assumed. The first version of `data/oakink.py` hard-coded a flexion sign, got it backwards, and pinned 41% of DOF values at their limits.
-- The `category` granularity keys on the first character of an object id, which records which sub-collection an object came from rather than what it is. It is deprecated and kept only for reproducibility. New evidence uses `--granularity oakink_category`, read from OakInk's own `metaV2.zip`.
+- Models consume values normalized by the joint-limit box, not by dataset statistics.
+- Splits are by trajectory, never by frame, and whole fine labels stay on one side.
+- Validation is scored at the final beta, never the warmup value.
+- Dataset conventions are inferred from the data, never assumed; on TACO the inference contradicts the dataset's own
+  loader (MANO's mean pose is not added).
+- Run the frame-leak and constituent-leak checks on any bundle built by joining or cutting recordings: a label-level
+  check does not detect reused clips.
 
 ## Citation
 
 ```bibtex
-@unpublished{wang2026composition,
+@unpublished{wang2026labels,
   author = {Wang, Mu-Hua},
-  title  = {Which Hand-Motion Composition Axes Are Worth Measuring},
-  note   = {Manuscript under review},
+  title  = {A hand-motion dataset can test compositional generalisation only when each label describes
+            the whole trajectory it is attached to},
+  note   = {Manuscript},
   year   = {2026}
 }
 ```
-
-## Post-submission sweeps (2026-09-12)
-
-Two axes with non-positive interaction excess were swept after the first
-submission under protocols written before the sweeps started
-(`results/preregistration/`): GRAB shape × intent class and OakInk2 scene ×
-verb, forty seeds each, leak gate 0.0% on both arms. Both are significant
-against zero (*p* = 0.021, 0.015) and both are indistinguishable from the
-zero-truth `pc_easy` control (Welch *p* = 0.60, 0.96), as is OakInk2's
-transition axis (*p* = 0.79); the OakInk-Image axes with interaction sit ten
-standard errors above that control. So "carries difficulty" is read against the
-control, not against zero, and the necessity direction holds on three axes
-across two datasets. The pre-registration declared the test against zero; the
-comparison against the control was adopted after both results were seen, and
-the record says so. Four further non-positive-excess axes cannot be split
-leak-free at all (`scripts/screen_oakink2_axes.py` documents why).
-
-`experiment_paired_composition.py` now resumes a sweep row by row (scored
-models discard their checkpoints, so a restart used to retrain finished seeds
-and overwrite `results.json`), and it accepts the `grab_*_intentclass` and
-`oakink2_*` granularities the screen scores.

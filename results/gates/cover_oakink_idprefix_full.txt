@@ -1,0 +1,151 @@
+granularity=category: 20 cells, 38.5 trajectories per cell
+data/bundles/oakink.npz: 770 trajectories
+holding out 5 compositions
+
+ seed  budget  swapped   held  covered  per comp  status
+--------------------------------------------------------------
+    0     256      185      5        5     13.60  ok
+
+    1     256      184      5        5     21.80  ok
+
+    2     256      186      5        5     23.20  ok
+
+    3     256      188      5        5     25.20  ok
+
+    4     256      172      5        5     12.20  ok
+
+    5     256      185      5        5     22.60  ok
+
+    6     256      181      5        5      9.20  ok
+
+    7     256      188      5        5     19.40  ok
+
+    8     256      181      5        4     19.75  TOO THIN
+
+    9     256      177      5        5     17.40  ok
+
+   10     256      193      5        5     25.40  ok
+
+   11     256      189      5        5     17.40  ok
+
+   12     256      175      5        5     14.20  ok
+
+   13     256      179      5        5     16.40  ok
+
+   14     256      186      5        5     22.40  ok
+
+   15     256      183      5        5     25.60  ok
+
+   16     256      177      5        5     19.00  ok
+
+   17     256      185      5        5     23.20  ok
+
+   18     256      183      5        4     28.00  TOO THIN
+
+   19     256      173      5        5      9.60  ok
+
+   20     256      180      5        5     16.80  ok
+
+   21     256      182      5        5     17.20  ok
+
+   22     256      187      5        5     18.00  ok
+
+   23     256      191      5        5     25.00  ok
+
+   24     256      188      5        5     22.20  ok
+
+   25     256      190      5        5     24.00  ok
+
+   26     256      188      5        5     20.80  ok
+
+   27     256      184      5        5     17.80  ok
+
+   28     256      186      5        4     19.50  TOO THIN
+
+   29     256      195      5        5     21.80  ok
+
+   30     256      197      5        5     25.20  ok
+
+   31     256      190      5        5     18.40  ok
+
+   32     256      187      5        5     22.20  ok
+
+   33     256      176      5        5     15.60  ok
+
+   34     256      182      5        5     18.60  ok
+
+   35     256      185      5        5     20.00  ok
+
+   36     256      183      5        5     14.40  ok
+
+   37     256      182      5        5     19.40  ok
+
+   38     256      189      5        5     19.60  ok
+
+   39     256      172      5        5     15.40  ok
+
+   40     256      185      5        5     25.60  ok
+
+   41     256      173      5        5     11.20  ok
+
+   42     256      184      5        5     19.40  ok
+
+   43     256      179      5        5     17.40  ok
+
+   44     256      199      5        5     25.20  ok
+
+   45     256      184      5        5     18.80  ok
+
+   46     256      187      5        5     20.80  ok
+
+   47     256      185      5        5     25.60  ok
+
+   48     256      183      5        5     18.20  ok
+
+   49     256      180      5        5     17.60  ok
+
+   50     256      191      5        5     23.80  ok
+
+   51     256      181      5        5      6.80  ok
+
+   52     256      182      5        5     14.40  ok
+
+   53     256      189      5        5     23.80  ok
+
+   54     256      184      5        5     14.80  ok
+
+   55     256      193      5        5     25.60  ok
+
+   56     256      186      5        5     23.40  ok
+
+   57     256      190      5        5     20.00  ok
+
+   58     256      176      5        5      7.80  ok
+
+   59     256      199      5        4     30.75  TOO THIN
+
+   60     256      190      5        5     19.40  ok
+
+   61     256      184      5        5     18.80  ok
+
+   62     256      182      5        5     15.20  ok
+
+   63     256      176      5        5      8.80  ok
+
+   64     256      180      5        5     15.80  ok
+
+   65     256      187      5        5     14.80  ok
+
+   66     256      190      5        5     25.60  ok
+
+   67     256      179      5        5     21.00  ok
+
+   68     256      175      5        5     11.20  ok
+
+   69     256      190      5        5     23.60  ok
+
+--------------------------------------------------------------
+ARTEFACT RISK: 4 of 70 rows fail, and depth is adequate (6.80 examples per covered composition) but breadth is not, some rows reaching only 4 of the held compositions.
+The informed model is barely more informed than the naive one there, so
+a zero penalty says nothing about compositional generalisation. Fix by
+holding out FEWER compositions and swapping in MORE trajectories each.

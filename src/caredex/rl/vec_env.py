@@ -41,14 +41,15 @@ DEFAULT_HAND_DIR = Path(r"D:\datasets\mujoco_menagerie\shadow_hand")
 
 
 def parse_difficulty(spec: str) -> dict:
-    """``"medium"`` from the offline table, or ``"m0.20g2.0"`` for mass and shake."""
+    """``"medium"`` from the offline table, or ``"m0.20g2.0"`` for mass and shake, with an optional size scale, ``"m0.20g1.5s1.2"``."""
     if spec in DIFFICULTY:
         return DIFFICULTY[spec]
     import re
-    m = re.fullmatch(r"m([0-9.]+)g([0-9.]+)", spec)
+    m = re.fullmatch(r"m([0-9.]+)g([0-9.]+)(?:s([0-9.]+))?", spec)
     if not m:
         raise ValueError(f"unknown difficulty {spec!r}")
-    return {"mass": float(m.group(1)), "shake_g": float(m.group(2)), "size_scale": 1.0}
+    return {"mass": float(m.group(1)), "shake_g": float(m.group(2)),
+            "size_scale": float(m.group(3)) if m.group(3) else 1.0}
 
 
 def _sensor_block(shape: str, size: tuple[float, ...]) -> str:
@@ -88,6 +89,8 @@ class _BatchedDecoder:
         self.horizon = getattr(stepper, "horizon", rewindow)
         self.target = torch.zeros(batch, self.n_channels)
         self.t_in = np.zeros(batch, dtype=np.int64)
+        # brick interface: K logits select one of K fixed keyframes (arg-max)
+        self.bricks = getattr(stepper, "bricks", None)
 
     def reset(self, idx: np.ndarray, initial_pose: np.ndarray) -> None:
         p = torch.as_tensor(initial_pose, dtype=torch.float32)
@@ -107,6 +110,8 @@ class _BatchedDecoder:
         fresh = torch.as_tensor(self.fresh)
         m, c = self.model, self.cfg
         if self.kind in ("keyframe", "linear"):
+            if self.bricks is not None:
+                a = self.bricks[a.argmax(dim=1)]
             if fresh.any():
                 tgt = self.anchor[fresh].clone()
                 tgt[:, :N_ARTICULATED] = a[fresh][:, :N_ARTICULATED]
@@ -171,13 +176,14 @@ class RetainVecEnv(VecEnv):
                  place_per_pose: bool = True, perturb_mode: str = "pulse",
                  ramp_frames: int = 45, reward_mode: str = "sparse",
                  pose_residual_deg: float = 0.0, macro_every: int = 1,
-                 residual_mode: str = "rate", residual_rate_deg: float = 3.0):
+                 residual_mode: str = "rate", residual_rate_deg: float = 3.0,
+                 rolling_friction: float | None = None):
         import mujoco
         from mujoco import rollout
 
         self.mj = mujoco
         skw = dict(stepper_kw or {})
-        if arm in ("keyframe", "linear"):
+        if arm in ("keyframe", "linear", "brick", "brickkf"):
             skw.setdefault("horizon", max(1, int(macro_every)))
         stepper = load_stepper(run_dir, arm, device="cpu", **skw)
         self.dec = _BatchedDecoder(stepper, num_envs, rewindow=getattr(stepper, "horizon", 32))
@@ -230,6 +236,12 @@ class RetainVecEnv(VecEnv):
         assets = _asset_dict(hand_dir)
         centre = _closed_fingertip_centre(mujoco, hand_dir, assets)
         xml = scene_xml("right_hand.xml", geom_type, size, mass=diff["mass"], centre=centre)
+        if rolling_friction is not None:
+            # Opt-in: round objects roll off the palm without rolling friction
+            # (the offline scene uses condim 4). Default leaves the scene as is.
+            assert 'friction="1.0 0.02 0.001"' in xml and 'condim="4"' in xml
+            xml = xml.replace('friction="1.0 0.02 0.001"', f'friction="1.0 0.02 {float(rolling_friction)}"')
+            xml = xml.replace('condim="4"', 'condim="6"')
         tail, site = _sensor_block(geom_type, size)
         xml = xml.replace('<freejoint name="obj_free"/>', '<freejoint name="obj_free"/>\n      ' + site)
         xml = xml.replace("</mujoco>", tail)

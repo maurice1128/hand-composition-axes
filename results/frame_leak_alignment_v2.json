@@ -1,0 +1,134 @@
+{
+ "settings": {
+  "granularity": "oakink_category",
+  "held_compositions": 5,
+  "min_chains": 4,
+  "min_per_composition": 5,
+  "budget": 64,
+  "seeds": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "max_leak": 0.01
+ },
+ "oakink": {
+  "bundle": "data/bundles/oakink.npz",
+  "per_seed": [
+   [
+    0,
+    4828,
+    0.0,
+    0.0
+   ],
+   [
+    1,
+    3811,
+    0.0,
+    0.0
+   ],
+   [
+    2,
+    2049,
+    0.0,
+    0.0
+   ],
+   [
+    3,
+    3236,
+    0.0,
+    0.0
+   ],
+   [
+    4,
+    7699,
+    0.0,
+    0.0
+   ]
+  ],
+  "naive_mean": 0.0,
+  "informed_mean": 0.0,
+  "max_any_seed_any_arm": 0.0,
+  "pass": true
+ },
+ "oakink_long3_aligned": {
+  "bundle": "data/bundles/oakink_long3_aligned.npz",
+  "per_seed": [
+   [
+    0,
+    8405,
+    0.0,
+    0.0
+   ],
+   [
+    1,
+    8594,
+    0.0,
+    0.0
+   ],
+   [
+    2,
+    8659,
+    0.0,
+    0.0
+   ],
+   [
+    3,
+    6765,
+    0.0,
+    0.0
+   ],
+   [
+    4,
+    6530,
+    0.0,
+    0.0
+   ]
+  ],
+  "naive_mean": 0.0,
+  "informed_mean": 0.0,
+  "max_any_seed_any_arm": 0.0,
+  "pass": true
+ },
+ "oakink_long3_misaligned": {
+  "bundle": "data/bundles/oakink_long3_misaligned.npz",
+  "per_seed": [
+   [
+    0,
+    7190,
+    0.0,
+    0.0
+   ],
+   [
+    1,
+    5443,
+    0.0,
+    0.0
+   ],
+   [
+    2,
+    7277,
+    0.0,
+    0.0
+   ],
+   [
+    3,
+    5085,
+    0.0,
+    0.0
+   ],
+   [
+    4,
+    6226,
+    0.0,
+    0.0
+   ]
+  ],
+  "naive_mean": 0.0,
+  "informed_mean": 0.0,
+  "max_any_seed_any_arm": 0.0,
+  "pass": true
+ }
+}

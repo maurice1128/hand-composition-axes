@@ -1,0 +1,56 @@
+{
+ "settings": {
+  "granularity": "oakink2_scene_verb",
+  "held_compositions": 5,
+  "min_chains": 4,
+  "min_per_composition": 5,
+  "budget": 256,
+  "seeds": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "max_leak": 0.01
+ },
+ "taco_action_tool": {
+  "bundle": "data/bundles/taco_action_tool.npz",
+  "per_seed": [
+   [
+    0,
+    28389,
+    0.0,
+    0.0
+   ],
+   [
+    1,
+    22428,
+    0.0,
+    0.0
+   ],
+   [
+    2,
+    38279,
+    0.0,
+    0.0
+   ],
+   [
+    3,
+    45792,
+    0.0,
+    0.0
+   ],
+   [
+    4,
+    11304,
+    0.0,
+    0.0
+   ]
+  ],
+  "naive_mean": 0.0,
+  "informed_mean": 0.0,
+  "max_any_seed_any_arm": 0.0,
+  "pass": true
+ }
+}

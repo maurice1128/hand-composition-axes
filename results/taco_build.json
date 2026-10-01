@@ -1,0 +1,316 @@
+{
+ "built": "2026-09-21 00:36",
+ "build_minutes": 16.4,
+ "source_zip": "D:\\datasets\\taco\\Hand_Poses.zip",
+ "sequences": {
+  "found": 2317,
+  "kept": 2317,
+  "dropped": {
+   "no_hand_file": {
+    "n": 0,
+    "examples": []
+   },
+   "unreadable": {
+    "n": 0,
+    "examples": []
+   },
+   "bad_shape": {
+    "n": 0,
+    "examples": []
+   },
+   "non_finite": {
+    "n": 0,
+    "examples": []
+   },
+   "too_short": {
+    "n": 0,
+    "examples": []
+   }
+  }
+ },
+ "frames": {
+  "total": 363198,
+  "fps": 30.0,
+  "median": 148.0,
+  "min": 68,
+  "max": 497,
+  "median_s": 4.933333333333334,
+  "min_s": 2.2666666666666666,
+  "max_s": 16.566666666666666,
+  "fraction_longer_than_10s": 0.014242555028053518,
+  "prereg_premise_median_le_10s": true
+ },
+ "format_as_found": {
+  "n_zip_members": 11737,
+  "member_kinds": [
+   "integrated"
+  ],
+  "n_unmatched_members": 0,
+  "unmatched_examples": [],
+  "example_members": [
+   "Hand_Poses/(dust, roller, pan)/20230927_032/left_hand.pkl",
+   "Hand_Poses/(dust, roller, pan)/20230927_032/right_hand.pkl",
+   "Hand_Poses/(dust, roller, pan)/20230927_032/right_hand_shape.pkl",
+   "Hand_Poses/(dust, roller, pan)/20230927_032/left_hand_shape.pkl"
+  ],
+  "n_sequences_found": 2317,
+  "n_triplet_dirs": 151,
+  "frame_key_type": "str",
+  "frame_key_examples": [
+   "'00001'",
+   "'00002'",
+   "'00003'"
+  ],
+  "frame_value_keys": [
+   "hand_pose",
+   "hand_trans"
+  ],
+  "value_type": "numpy.ndarray",
+  "pose_width": 48,
+  "pickled_as": {
+   "class": "torch.Tensor via torch._utils._rebuild_tensor_v2",
+   "storage_types": [
+    "FloatStorage"
+   ],
+   "saved_from_device": [
+    "cpu"
+   ],
+   "decoder": [
+    "legacy torch.save storage, read directly"
+   ]
+  }
+ },
+ "pose_mean": {
+  "documented_by_taco_loader": "add (manopth flat_hand_mean=False)",
+  "clip_fraction_flat": 0.058370875349493076,
+  "conventions_flat": "finger z+1 abd y+1; thumb z-1 abd y-1",
+  "clip_fraction_add": 0.15990451489270316,
+  "conventions_add": "finger z+1 abd x+1; thumb z+1 abd y-1",
+  "inferred": "flat",
+  "chosen": "flat",
+  "mode": "infer",
+  "agrees_with_documentation": false
+ },
+ "conventions": {
+  "flexion_axis": "z",
+  "flexion_sign": 1.0,
+  "flexion_axis_dominance": 0.5377492446437545,
+  "pip_in_range_positive": 1.0,
+  "pip_in_range_negative": 0.1673694513736309,
+  "abduction_axis": "y",
+  "abduction_sign": 1.0,
+  "finger_abd_in_range_chosen": 0.7678332479804404,
+  "thumb_flexion_axis": "z",
+  "thumb_flexion_sign": -1.0,
+  "thumb_axis_dominance": 0.6461821321513246,
+  "thumb_ip_in_range_positive": 0.8372127599821585,
+  "thumb_ip_in_range_negative": 0.8514529265028993,
+  "thumb_abduction_axis": "y",
+  "thumb_abduction_sign": -1.0,
+  "thumb_abd_in_range_chosen": 0.9102541864217314
+ },
+ "projection_residual_deg": {
+  "mean": 9.757837335850223,
+  "p95": 37.92413404923163,
+  "max": 79.95026253838478
+ },
+ "limit_clip_fraction_before_clamp": 0.058370875349493076,
+ "dof_health": {
+  "n_dof": 27,
+  "n_unusable": 1,
+  "unusable": [
+   {
+    "dof": "pinky_mcp_abd",
+    "at_lo": 0.0,
+    "at_hi": 0.87,
+    "pinned": 0.87,
+    "sd": 0.1509,
+    "range_used": 0.7372593879699707
+   }
+  ],
+  "expected_dead_not_counted": [
+   "wrist_rx_flex_ext",
+   "wrist_ry_dev",
+   "wrist_rz_pro_sup"
+  ],
+  "post_clamp_fraction_at_a_limit": 0.06579698493200219,
+  "thresholds": {
+   "pinned_fraction": 0.25,
+   "dead_sd": 0.01
+  }
+ },
+ "handedness_flag": {
+  "what": "mean |d pose| of the right hand over the left, per sequence; weak flag only",
+  "n": 2317,
+  "median": 0.9038099663820343,
+  "fraction_right_moves_less_than_half_of_left": 0.02330599913681485
+ },
+ "vocabulary": {
+  "actions": 15,
+  "tools": 17,
+  "objects": 9,
+  "triplets": 151,
+  "action_counts": {
+   "brush": 416,
+   "dust": 323,
+   "scrape_off": 264,
+   "cut": 256,
+   "pour_in_some": 172,
+   "skim_off": 156,
+   "empty": 155,
+   "put_in": 154,
+   "put_out": 140,
+   "stir": 87,
+   "measure": 61,
+   "smear": 54,
+   "stir-fry": 39,
+   "hit": 23,
+   "screw": 17
+  },
+  "tool_counts": {
+   "roller": 377,
+   "spatula": 347,
+   "spoon": 329,
+   "knife": 288,
+   "brush": 247,
+   "bowl": 235,
+   "eraser": 158,
+   "kettle": 98,
+   "ruler": 61,
+   "teapot": 46,
+   "cup": 36,
+   "box": 28,
+   "hammer": 23,
+   "screwdriver": 17,
+   "plate": 16,
+   "glue_gun": 9,
+   "soap": 2
+  },
+  "object_counts": {
+   "plate": 926,
+   "pan": 456,
+   "bowl": 446,
+   "kettle": 157,
+   "box": 131,
+   "cup": 85,
+   "teapot": 64,
+   "toy": 28,
+   "helmet": 24
+  }
+ },
+ "axes": {
+  "action_x_tool": {
+   "bundle": "data/bundles/taco_action_tool.npz",
+   "granularity": "oakink2_scene_verb",
+   "workaround_check": {
+    "labels_checked": 2317,
+    "mismatches": 0,
+    "example": [
+     "brush|brush|bowl@brush@-@brush",
+     "brush->brush"
+    ]
+   },
+   "cells": 42,
+   "grid": [
+    15,
+    17
+   ],
+   "occupancy": 0.16470588235294117,
+   "fine_groups": 151,
+   "trajectories_per_cell_median": 49.0,
+   "fine_groups_per_cell_max": 9,
+   "min_chains": 4,
+   "candidate_pool": 17,
+   "candidate_pool_cells": [
+    "brush->brush (9 triplets, 116 traj)",
+    "brush->eraser (5 triplets, 115 traj)",
+    "brush->roller (5 triplets, 185 traj)",
+    "dust->brush (7 triplets, 131 traj)",
+    "dust->roller (5 triplets, 192 traj)",
+    "empty->bowl (4 triplets, 54 traj)",
+    "empty->cup (4 triplets, 16 traj)",
+    "empty->kettle (5 triplets, 44 traj)",
+    "empty->plate (5 triplets, 8 traj)",
+    "empty->teapot (4 triplets, 20 traj)",
+    "measure->ruler (5 triplets, 61 traj)",
+    "pour_in_some->bowl (4 triplets, 49 traj)",
+    "pour_in_some->cup (5 triplets, 20 traj)",
+    "pour_in_some->kettle (5 triplets, 54 traj)",
+    "pour_in_some->plate (5 triplets, 8 traj)",
+    "pour_in_some->teapot (5 triplets, 26 traj)",
+    "scrape_off->knife (4 triplets, 164 traj)"
+   ],
+   "trajectories_in_candidate_cells": 1263
+  },
+  "action_x_object": {
+   "bundle": "data/bundles/taco_action_object.npz",
+   "granularity": "oakink2_scene_verb",
+   "workaround_check": {
+    "labels_checked": 2317,
+    "mismatches": 0,
+    "example": [
+     "brush|brush|bowl@brush@-@bowl",
+     "brush->bowl"
+    ]
+   },
+   "cells": 62,
+   "grid": [
+    15,
+    9
+   ],
+   "occupancy": 0.45925925925925926,
+   "fine_groups": 151,
+   "trajectories_per_cell_median": 29.0,
+   "fine_groups_per_cell_max": 6,
+   "min_chains": 4,
+   "candidate_pool": 10,
+   "candidate_pool_cells": [
+    "empty->bowl (4 triplets, 28 traj)",
+    "empty->cup (5 triplets, 11 traj)",
+    "empty->kettle (4 triplets, 36 traj)",
+    "empty->plate (6 triplets, 69 traj)",
+    "empty->teapot (4 triplets, 9 traj)",
+    "pour_in_some->bowl (5 triplets, 28 traj)",
+    "pour_in_some->cup (5 triplets, 19 traj)",
+    "pour_in_some->kettle (4 triplets, 38 traj)",
+    "pour_in_some->plate (6 triplets, 75 traj)",
+    "pour_in_some->teapot (4 triplets, 10 traj)"
+   ],
+   "trajectories_in_candidate_cells": 323
+  },
+  "tool_x_object": {
+   "bundle": "data/bundles/taco_tool_object.npz",
+   "granularity": "oakink2_scene_verb",
+   "workaround_check": {
+    "labels_checked": 2317,
+    "mismatches": 0,
+    "example": [
+     "brush|brush|bowl@brush@-@bowl",
+     "brush->bowl"
+    ]
+   },
+   "cells": 69,
+   "grid": [
+    17,
+    9
+   ],
+   "occupancy": 0.45098039215686275,
+   "fine_groups": 151,
+   "trajectories_per_cell_median": 18.0,
+   "fine_groups_per_cell_max": 7,
+   "min_chains": 4,
+   "candidate_pool": 8,
+   "candidate_pool_cells": [
+    "bowl->bowl (5 triplets, 33 traj)",
+    "bowl->plate (5 triplets, 110 traj)",
+    "spatula->bowl (6 triplets, 133 traj)",
+    "spatula->pan (7 triplets, 112 traj)",
+    "spatula->plate (7 triplets, 102 traj)",
+    "spoon->bowl (6 triplets, 77 traj)",
+    "spoon->pan (7 triplets, 112 traj)",
+    "spoon->plate (6 triplets, 140 traj)"
+   ],
+   "trajectories_in_candidate_cells": 819
+  }
+ }
+}

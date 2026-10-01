@@ -1,0 +1,95 @@
+{
+ "settings": {
+  "granularity": "shape",
+  "held_compositions": 6,
+  "min_chains": 5,
+  "min_per_composition": 5,
+  "budget": 256,
+  "seeds": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "max_leak": 0.01
+ },
+ "grab_planted": {
+  "bundle": "data/bundles/grab_planted.npz",
+  "per_seed": [
+   [
+    0,
+    24017,
+    0.0,
+    0.0
+   ],
+   [
+    1,
+    29430,
+    0.0,
+    0.0
+   ],
+   [
+    2,
+    16353,
+    0.0,
+    0.0
+   ],
+   [
+    3,
+    22189,
+    0.0,
+    0.0
+   ],
+   [
+    4,
+    21844,
+    0.0,
+    0.0
+   ]
+  ],
+  "naive_mean": 0.0,
+  "informed_mean": 0.0,
+  "max_any_seed_any_arm": 0.0,
+  "pass": true
+ },
+ "grab": {
+  "bundle": "data/bundles/grab.npz",
+  "per_seed": [
+   [
+    0,
+    24017,
+    0.0,
+    0.0
+   ],
+   [
+    1,
+    29430,
+    0.0,
+    0.0
+   ],
+   [
+    2,
+    16353,
+    0.0,
+    0.0
+   ],
+   [
+    3,
+    22189,
+    0.0,
+    0.0
+   ],
+   [
+    4,
+    21844,
+    0.0,
+    0.0
+   ]
+  ],
+  "naive_mean": 0.0,
+  "informed_mean": 0.0,
+  "max_any_seed_any_arm": 0.0,
+  "pass": true
+ }
+}

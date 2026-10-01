@@ -1,0 +1,9 @@
+frame leak seed 0: naive 0.00%  informed 0.00%
+frame leak seed 1: naive 0.00%  informed 0.00%
+frame leak seed 2: naive 0.00%  informed 0.00%
+frame leak seed 3: naive 0.00%  informed 0.00%
+frame leak seed 4: naive 0.00%  informed 0.00%
+minimum naive pool over 40 seeds: 132
+label leak gate exit 0
+coverage: 4 of 40 rows fail
+GATE PASS

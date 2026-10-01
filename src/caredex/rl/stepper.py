@@ -246,6 +246,32 @@ class LinearKeyframeStepper(_Base):
         return (1 - w) * self._anchor + w * self._target
 
 
+class BrickStepper:
+    """Smart-primitive interface (MotionBricks' missing layer here): the action
+    is K logits and the keyframe is the arg-max *brick*, one of K fixed target
+    poses, handed to an inner keyframe interface (linear or learned
+    in-betweener). The batched decoder in ``vec_env`` does the mapping; this
+    wrapper carries the library and the action spec."""
+
+    def __init__(self, inner, bricks: np.ndarray):
+        from caredex.hand_model import N_ARTICULATED
+        bricks = np.asarray(bricks, dtype=np.float32)
+        assert bricks.ndim == 2 and bricks.shape[1] == N_ARTICULATED, bricks.shape
+        self.inner = inner
+        self.bricks = torch.as_tensor(bricks)
+        self.model = inner.model
+        self.n_channels = inner.n_channels
+        self.horizon = inner.horizon
+        if hasattr(inner, "cfg"):
+            self.cfg = inner.cfg
+
+    @property
+    def spec(self) -> StepperSpec:
+        K = int(self.bricks.shape[0])
+        low = np.full(K, -1.0, dtype=np.float32)
+        return StepperSpec(self.inner.spec.kind, K, low, -low)
+
+
 # -- loading ------------------------------------------------------------------
 
 def load_stepper(run_dir, arm: str, device: str | torch.device = "cpu",
@@ -266,6 +292,12 @@ def load_stepper(run_dir, arm: str, device: str | torch.device = "cpu",
     from caredex.models.modular_prior import ModularConfig
     from caredex.train.checkpoint import CheckpointManager
 
+    if arm in ("brick", "brickkf"):
+        kw = dict(kw)
+        bricks = np.load(kw.pop("bricks"))
+        inner = load_stepper(run_dir, "linear" if arm == "brick" else "keyframe", device=device,
+                             untrained=untrained, untrained_seed=untrained_seed, **kw)
+        return BrickStepper(inner, bricks)
     if arm == "linear":
         return LinearKeyframeStepper(device=device, **{k: v for k, v in kw.items() if k == "horizon"})
     run_dir = Path(run_dir)

@@ -1,0 +1,45 @@
+granularity=oakink_category: 100 cells, 7.7 trajectories per cell
+data/bundles/oakink.npz: 770 trajectories
+holding out 5 compositions
+
+ seed  budget  swapped   held  covered  per comp  status
+--------------------------------------------------------------
+   53     256      183      5        5     14.20  ok
+
+   54     256      176      5        5      9.40  ok
+
+   55     256      174      5        5      9.60  ok
+
+   56     256      170      5        5     14.00  ok
+
+   57     256      180      5        5     15.20  ok
+
+   58     256      188      5        5     15.20  ok
+
+   59     256      187      5        4     20.75  TOO THIN
+
+   60     256      175      5        5      8.00  ok
+
+   61     256      168      5        5      8.40  ok
+
+   62     256      173      5        5     15.80  ok
+
+   63     256      181      5        5     12.00  ok
+
+   64     256      177      5        5      7.00  ok
+
+   65     256      184      5        5     12.40  ok
+
+   66     256      176      5        5     10.00  ok
+
+   67     256      175      5        5     12.80  ok
+
+   68     256      172      5        5      9.80  ok
+
+   69     256      186      5        5     12.80  ok
+
+--------------------------------------------------------------
+ARTEFACT RISK: 1 of 17 rows fail, and depth is adequate (7.00 examples per covered composition) but breadth is not, some rows reaching only 4 of the held compositions.
+The informed model is barely more informed than the naive one there, so
+a zero penalty says nothing about compositional generalisation. Fix by
+holding out FEWER compositions and swapping in MORE trajectories each.

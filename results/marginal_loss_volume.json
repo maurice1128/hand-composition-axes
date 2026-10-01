@@ -1,0 +1,150 @@
+{
+ "axes": [
+  {
+   "dataset": "OakInk-Image",
+   "axis": "functional class x intent",
+   "bundle": "data\\bundles\\oakink.npz",
+   "n_seeds": 40,
+   "expected_windows_per_arm": 4590.711688311689,
+   "expected_frames_per_arm": 25866.97142857143,
+   "marginal_loss_mean": 0.5098112674965984,
+   "marginal_loss_min": 0.2688321323424681,
+   "marginal_loss_max": 0.769782522585206,
+   "loss_penalty_r": 0.33559793238676255,
+   "loss_penalty_p": 0.0342572374998667
+  },
+  {
+   "dataset": "OakInk-Image",
+   "axis": "category x intent",
+   "bundle": "data/bundles/oakink.npz",
+   "n_seeds": 69,
+   "expected_windows_per_arm": 4590.711688311689,
+   "expected_frames_per_arm": 25866.97142857143,
+   "marginal_loss_mean": 0.31325782471865543,
+   "marginal_loss_min": 0.18235556201557304,
+   "marginal_loss_max": 0.5318011793616196,
+   "loss_penalty_r": 0.11361911930236981,
+   "loss_penalty_p": 0.35259681010769084
+  },
+  {
+   "dataset": "OakInk-Image",
+   "axis": "affordance x intent",
+   "bundle": "data/bundles/oakink.npz",
+   "n_seeds": 130,
+   "expected_windows_per_arm": 4590.711688311689,
+   "expected_frames_per_arm": 25866.97142857143,
+   "marginal_loss_mean": 0.3147292887830902,
+   "marginal_loss_min": 0.17630095904483697,
+   "marginal_loss_max": 0.539920342937194,
+   "loss_penalty_r": 0.23486685461435686,
+   "loss_penalty_p": 0.007150266428111499
+  },
+  {
+   "dataset": "OakInk-Image",
+   "axis": "category x subject",
+   "bundle": "data\\bundles\\oakink_category_subject.npz",
+   "n_seeds": 40,
+   "expected_windows_per_arm": 4590.711688311689,
+   "expected_frames_per_arm": 25866.97142857143,
+   "marginal_loss_mean": 0.387680608570974,
+   "marginal_loss_min": 0.24491612753363823,
+   "marginal_loss_max": 0.5717568275860276,
+   "loss_penalty_r": 0.31549606629288646,
+   "loss_penalty_p": 0.04735946708232102
+  },
+  {
+   "dataset": "GRAB",
+   "axis": "shape x fine intent",
+   "bundle": "data\\bundles\\grab.npz",
+   "n_seeds": 40,
+   "expected_windows_per_arm": 17603.664122137405,
+   "expected_frames_per_arm": 77979.35877862596,
+   "marginal_loss_mean": 0.30923865024998715,
+   "marginal_loss_min": 0.22899016274046602,
+   "marginal_loss_max": 0.4410892033204905,
+   "loss_penalty_r": -0.1136933808356,
+   "loss_penalty_p": 0.4848465632385038
+  },
+  {
+   "dataset": "GRAB",
+   "axis": "shape x intent class",
+   "bundle": "data\\bundles\\grab.npz",
+   "n_seeds": 40,
+   "expected_windows_per_arm": 17603.664122137405,
+   "expected_frames_per_arm": 77979.35877862596,
+   "marginal_loss_mean": 0.3001301475337696,
+   "marginal_loss_min": 0.19234852269039673,
+   "marginal_loss_max": 0.4770965007133931,
+   "loss_penalty_r": 0.020565873274515003,
+   "loss_penalty_p": 0.8997646294114312
+  },
+  {
+   "dataset": "OakInk2",
+   "axis": "scene x verb",
+   "bundle": "data\\bundles\\oakink2_scene_verb.npz",
+   "n_seeds": 40,
+   "expected_windows_per_arm": 57918.63382594417,
+   "expected_frames_per_arm": 239224.6436781609,
+   "marginal_loss_mean": 0.48981289758639973,
+   "marginal_loss_min": 0.34809097185883464,
+   "marginal_loss_max": 0.59650695517324,
+   "loss_penalty_r": 0.01834512033414712,
+   "loss_penalty_p": 0.9105419927784777
+  },
+  {
+   "dataset": "OakInk2",
+   "axis": "scene x primitive",
+   "bundle": "data\\bundles\\oakink2_scene_primitive.npz",
+   "n_seeds": 40,
+   "expected_windows_per_arm": 57918.63382594417,
+   "expected_frames_per_arm": 239224.6436781609,
+   "marginal_loss_mean": 0.5216350470839709,
+   "marginal_loss_min": 0.3867551531659824,
+   "marginal_loss_max": 0.6378795066413662,
+   "loss_penalty_r": -0.16847824206459075,
+   "loss_penalty_p": 0.2987056201378926
+  },
+  {
+   "dataset": "OakInk2",
+   "axis": "annotated transitions",
+   "bundle": "data\\bundles\\oakink2.npz",
+   "n_seeds": 40,
+   "expected_windows_per_arm": 57918.63382594417,
+   "expected_frames_per_arm": 239224.6436781609
+  },
+  {
+   "dataset": "TACO",
+   "axis": "action x tool",
+   "bundle": "data\\bundles\\taco_action_tool.npz",
+   "n_seeds": 40,
+   "expected_windows_per_arm": 8143.606387570134,
+   "expected_frames_per_arm": 40128.9115235218,
+   "marginal_loss_mean": 0.5284422795230512,
+   "marginal_loss_min": 0.38741099165715454,
+   "marginal_loss_max": 0.7255270959693365,
+   "loss_penalty_r": 0.2530588391740015,
+   "loss_penalty_p": 0.11514116357554421
+  }
+ ],
+ "extra": {
+  "grab_contact_segment": {
+   "budget": 256,
+   "expected_windows_per_arm": 11367.692929292929,
+   "expected_frames_per_arm": 53012.94545454546
+  },
+  "oakink_pair": {
+   "budget": 64,
+   "expected_windows_per_arm": 2786.874251497006,
+   "expected_frames_per_arm": 13034.922155688622
+  },
+  "oakink_pair_misaligned": {
+   "budget": 64,
+   "expected_windows_per_arm": 2728.431137724551,
+   "expected_frames_per_arm": 12799.616766467067
+  },
+  "oakink_b64": {
+   "budget": 64,
+   "expected_windows_per_arm": 1147.6779220779222
+  }
+ }
+}

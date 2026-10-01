@@ -1,0 +1,92 @@
+$ C:\Users\maurice\Desktop\hand_IK\.venv\Scripts\python.exe scripts/check_informed_coverage.py --bundle data\bundles\oakink_object_subject.npz --granularity oakink2_scene_verb --held-compositions 4 --min-chains 4 --min-per-composition 5 --budgets 256 --seeds 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39
+granularity=oakink2_scene_verb: 280 cells, 2.8 trajectories per cell
+data\bundles\oakink_object_subject.npz: 770 trajectories
+holding out 4 compositions
+
+ seed  budget  swapped   held  covered  per comp  status
+--------------------------------------------------------------
+    0     256      170      4        4      2.00  TOO THIN
+
+    1     256      171      4        4      2.00  TOO THIN
+
+    2     256      177      4        4      2.00  TOO THIN
+
+    3     256      173      4        4      2.00  TOO THIN
+
+    4     256      172      4        4      2.00  TOO THIN
+
+    5     256      159      4        4      2.00  TOO THIN
+
+    6     256      176      4        4      2.00  TOO THIN
+
+    7     256      177      4        3      3.00  TOO THIN
+
+    8     256      167      4        3      2.67  TOO THIN
+
+    9     256      177      4        4      2.00  TOO THIN
+
+   10     256      176      4        4      2.00  TOO THIN
+
+   11     256      167      4        3      2.67  TOO THIN
+
+   12     256      175      4        4      2.00  TOO THIN
+
+   13     256      171      4        4      2.00  TOO THIN
+
+   14     256      163      4        4      2.00  TOO THIN
+
+   15     256      183      4        4      2.00  TOO THIN
+
+   16     256      179      4        4      2.00  TOO THIN
+
+   17     256      180      4        4      2.00  TOO THIN
+
+   18     256      169      4        3      2.67  TOO THIN
+
+   19     256      177      4        4      2.25  TOO THIN
+
+   20     256      168      4        4      2.00  TOO THIN
+
+   21     256      178      4        4      2.25  TOO THIN
+
+   22     256      174      4        4      2.00  TOO THIN
+
+   23     256      156      4        4      2.25  TOO THIN
+
+   24     256      169      4        4      2.00  TOO THIN
+
+   25     256      171      4        4      2.00  TOO THIN
+
+   26     256      168      4        3      2.67  TOO THIN
+
+   27     256      176      4        4      2.00  TOO THIN
+
+   28     256      165      4        4      2.00  TOO THIN
+
+   29     256      169      4        4      2.00  TOO THIN
+
+   30     256      164      4        3      2.67  TOO THIN
+
+   31     256      175      4        4      2.00  TOO THIN
+
+   32     256      160      4        4      2.00  TOO THIN
+
+   33     256      172      4        4      2.00  TOO THIN
+
+   34     256      172      4        4      2.00  TOO THIN
+
+   35     256      165      4        3      2.67  TOO THIN
+
+   36     256      183      4        4      2.25  TOO THIN
+
+   37     256      175      4        3      2.67  TOO THIN
+
+   38     256      165      4        4      2.00  TOO THIN
+
+   39     256      172      4        3      2.67  TOO THIN
+
+--------------------------------------------------------------
+ARTEFACT RISK: 40 of 40 rows fail, and the informed model sees only 2.00 example(s) per held composition on average.
+The informed model is barely more informed than the naive one there, so
+a zero penalty says nothing about compositional generalisation. Fix by
+holding out FEWER compositions and swapping in MORE trajectories each.

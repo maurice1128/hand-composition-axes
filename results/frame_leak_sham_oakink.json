@@ -1,0 +1,56 @@
+{
+ "settings": {
+  "granularity": "oakink_category",
+  "held_compositions": 5,
+  "min_chains": 4,
+  "min_per_composition": 5,
+  "budget": 256,
+  "seeds": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "max_leak": 0.01
+ },
+ "sham_oakink": {
+  "bundle": "data/bundles/oakink.npz",
+  "per_seed": [
+   [
+    0,
+    4828,
+    0.0,
+    0.0
+   ],
+   [
+    1,
+    3811,
+    0.0,
+    0.0
+   ],
+   [
+    2,
+    2049,
+    0.0,
+    0.0
+   ],
+   [
+    3,
+    3236,
+    0.0,
+    0.0
+   ],
+   [
+    4,
+    7699,
+    0.0,
+    0.0
+   ]
+  ],
+  "naive_mean": 0.0,
+  "informed_mean": 0.0,
+  "max_any_seed_any_arm": 0.0,
+  "pass": true
+ }
+}

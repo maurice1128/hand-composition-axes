@@ -1,0 +1,28 @@
+granularity=oakink2_scene_verb: 42 cells, 55.2 trajectories per cell
+data/bundles/taco_action_tool.npz: 2317 trajectories
+holding out 3 compositions
+
+ seed  budget  swapped   held  covered  per comp  status
+--------------------------------------------------------------
+    0     256      225      3        3     11.67  ok
+
+    1     256      231      3        2     18.00  TOO THIN
+
+    2     256      233      3        3     42.67  ok
+
+    3     256      241      3        3     42.67  ok
+
+    4     256      234      3        3     14.33  ok
+
+    5     256      237      3        3     31.00  ok
+
+Traceback (most recent call last):
+  File "C:\Users\maurice\Desktop\hand_IK\scripts\check_informed_coverage.py", line 146, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "C:\Users\maurice\Desktop\hand_IK\scripts\check_informed_coverage.py", line 83, in main
+    split = build_paired_split(
+            ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maurice\Desktop\hand_IK\scripts\experiment_paired_composition.py", line 269, in build_paired_split
+    raise ValueError(
+ValueError: fine-group split left target=188 informed_extra=0; hold out fewer compositions or coarsen less

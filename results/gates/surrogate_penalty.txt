@@ -1,0 +1,61 @@
+======================================================================================================================
+TRAINING-FREE SURROGATE OF THE PAIRED COMPOSITIONAL PENALTY
+nearest-centroid vs additive group means on 32-frame windows, stride 16, seeds [0, 1, 2, 3, 4]
+======================================================================================================================
+axis                                          dataset           cells   cov   surr%     sd   meas%     err
+----------------------------------------------------------------------------------------------------------------------
+
+STAGE 1 - DESCRIPTIVE (axes known when the surrogate was defined)
+oakink_official_category+oakink_category_rest OakInk-Image        100  1.00    0.08   7.40   15.20  -15.12
+oakink_official_attr+oakink_attr_more         OakInk-Image         36  0.98   10.90   6.71   12.20   -1.31
+oakink_n70_v2                                 OakInk-Image         20  1.00    5.02   5.46   14.30   -9.27
+oakink_class_v1                               OakInk-Image         17  0.95   15.98   7.97   17.92   -1.94
+grab_shape_v2                                 GRAB                 70  1.00   -6.41   7.41    0.71   -7.12
+grab_shapeclass                               GRAB                 36  1.00   -1.81   2.35    2.27   -4.08
+oakink2_scene_primitive                       OakInk2              62  0.96   13.24  10.71    2.30  +10.94
+oakink2_scene_verb                            OakInk2              55  1.00   -0.52  12.48    2.95   -3.48
+oakink2_paired_v2                             OakInk2             391  1.00   10.87   6.33    3.44   +7.43
+
+STAGE 2 - HELD OUT (measured after the definition was fixed)
+oakink_category_subject                       OakInk-Image        103  1.00   12.91   7.63   10.30   +2.61
+pc_oakink_dofdamage                           OakInk-Image        100  1.00   -1.03   7.74   13.70  -14.74
+pc_oakink_sparse                              OakInk-Image         49  0.98   18.83   6.75   19.64   -0.81
+oakink2_primseg_s4                            OakInk2              79  1.00   17.74   6.75    8.97   +8.77
+grab_grasp_s32                                GRAB                 70  1.00   -5.56  10.46    2.22   -7.78
+grab_planted_s32                              GRAB                 70  1.00   30.83   5.35   13.15  +17.69
+pc_easy_rerun                                 synthetic (zero-truth control)    81  1.00    0.41   0.84    2.59   -2.18
+pc_hard_rerun                                 synthetic (planted)    81  1.00    1.05   1.22    9.12   -8.07
+
+----------------------------------------------------------------------------------------------------------------------
+stage1_descriptive     n=9   pearson r=+0.410 (p=0.2727)  spearman rho=+0.600 (p=0.0876)  MAE=6.74pp  max=15.12pp
+stage2_heldout         n=8   pearson r=+0.593 (p=0.1214)  spearman rho=+0.524 (p=0.1827)  MAE=7.83pp  max=17.69pp
+pooled                 n=17  pearson r=+0.502 (p=0.0399)  spearman rho=+0.551 (p=0.0217)  MAE=7.25pp  max=17.69pp
+
+======================================================================================================================
+DISPERSION -- why. within = leave-one-trajectory-out spread of windows about their own group's
+centroid; between = spread of group centroids about the global mean. Both in normalised MSE units.
+======================================================================================================================
+axis                                             cell w   cell b  cell b/w  left b/w  right b/w   surr%   meas%
+----------------------------------------------------------------------------------------------------------------------
+oakink_official_category+oakink_category_rest    0.0974   0.0159     0.164     0.078      0.031    0.08   15.20
+oakink_official_attr+oakink_attr_more            0.0937   0.0103     0.110     0.042      0.031   10.90   12.20
+oakink_n70_v2                                    0.0958   0.0069     0.072     0.020      0.031    5.02   14.30
+oakink_class_v1                                  0.0963   0.0058     0.060     0.018      0.031   15.98   17.92
+grab_shape_v2                                    0.1423   0.0112     0.078     0.029      0.041   -6.41    0.71
+grab_shapeclass                                  0.1446   0.0066     0.046     0.029      0.011   -1.81    2.27
+oakink2_scene_primitive                          0.0972   0.0213     0.219     0.065      0.190   13.24    2.30
+oakink2_scene_verb                               0.0965   0.0207     0.215     0.065      0.173   -0.52    2.95
+oakink2_paired_v2                                0.1031   0.0212     0.206     0.095      0.095   10.87    3.44
+oakink_category_subject                          0.1024   0.0140     0.137     0.078      0.054   12.91   10.30
+pc_oakink_dofdamage                              0.1286   0.0196     0.152     0.072      0.028   -1.03   13.70
+pc_oakink_sparse                                 0.0918   0.0124     0.135     0.063      0.033   18.83   19.64
+oakink2_primseg_s4                               0.0851   0.0294     0.346     0.063      0.296   17.74    8.97
+grab_grasp_s32                                   0.1454   0.0207     0.143     0.050      0.073   -5.56    2.22
+grab_planted_s32                                 0.1317   0.0384     0.292     0.043      0.042   30.83   13.15
+pc_easy_rerun                                    0.1880   0.0079     0.042     0.013      0.012    0.41    2.59
+pc_hard_rerun                                    0.2077   0.0080     0.039     0.012      0.011    1.05    9.12
+
+CAVEATS. Five seeds per axis, not the sweeps' 12-130. The predictor is a group mean and is
+therefore linear; the measured prior is a VAE and is not. Windows here are stride 16, the sweeps'
+were stride 4 on every axis but grab_*_s32 and oakink2_paired_v2. Stage 1 is description -- those
+nine numbers were known when the surrogate was written. Only stage 2 is a test.

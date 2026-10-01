@@ -1,0 +1,20 @@
+Constituent-level leak (scripts/check_constituent_leak.py)
+means over seeds; (max over seeds) in brackets for (a)
+(a) target trajectories with a constituent clip whose object->intent is among the arm's training clips
+(b) target clips so exposed   (c) arm's training clips lying in a held cell   (d) target clips in a held cell
+
+settings: {'granularity': 'oakink_category', 'held': 5, 'min_chains': 4, 'min_per_composition': 5, 'budget': 64, 'seeds': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]}
+
+bundle                       arm               (a) traj  (b) clips  (c) train held  (d) tgt held
+oakink_long3_aligned         naive        0.00% (  0.0)      0.00%           0.00%       100.00%
+oakink_long3_aligned         informed    87.62% ( 97.3)     48.98%          44.06%       100.00%
+                             composition: meta.source_clips, re-concatenated and frame-equal; clips/traj [3]; 210 trajectories
+oakink_long3_misaligned      naive       50.37% ( 68.2)     21.40%          13.65%        49.93%
+oakink_long3_misaligned      informed    70.94% ( 89.7)     33.64%          28.23%        49.93%
+                             composition: meta.source_clips, re-concatenated and frame-equal; clips/traj [3]; 210 trajectories
+oakink_long3_misaligned_cm   naive       67.76% ( 83.3)     33.21%          16.61%        50.47%
+oakink_long3_misaligned_cm   informed    79.55% ( 95.7)     43.58%          28.59%        50.47%
+                             composition: meta.source_clips, re-concatenated and frame-equal; clips/traj [3]; 210 trajectories
+oakink                       naive        0.00% (  0.0)      0.00%           0.00%       100.00%
+oakink                       informed     0.00% (  0.0)      0.00%          49.22%       100.00%
+                             composition: identity (frame-equal to oakink.npz); clips/traj [1]; 770 trajectories

@@ -55,10 +55,33 @@ def parse_sequences(spec: str) -> list[tuple[str, ...]]:
 
 class StagedRetainVecEnv(RetainVecEnv):
     def __init__(self, *args, sequences: str = "Hx-R,Hy-R,Hx-Hy,Hy-Hx",
-                 stage_frames: int = 40, max_stages: int = 3, **kw):
+                 stage_frames: int = 40, max_stages: int = 3,
+                 release_reward: str = "binary", release_scale_m: float = 0.05,
+                 time_norm_frames: int | None = None, **kw):
         kw.setdefault("perturb_mode", "tilt")
         kw.setdefault("ramp_frames", 25)
+        if release_reward not in ("binary", "graded"):
+            raise ValueError(release_reward)
+        # "binary": +1 per release frame once the object is 5 cm from its
+        #           episode start. Holding pays every frame and this pays
+        #           nothing until the object has already slid, so "never let
+        #           go" is a local optimum (stage E).
+        # "graded": min((d - d_R) / release_scale_m, 1) per release frame,
+        #           d the displacement from the episode start and d_R its value
+        #           on the release stage's first frame, so opening the hand is
+        #           rewarded as soon as the object starts to move. Success is
+        #           scored identically in both modes.
+        self.release_reward = release_reward
+        self.release_scale_m = float(release_scale_m)
+        # The base observation ends with t / episode_frames, and episode_frames
+        # grows with max_stages. A policy trained with max_stages = 3 (150
+        # frames) and evaluated with max_stages = 5 would see that feature
+        # rescaled from the first frame. With time_norm_frames = 150 the
+        # feature is t / 150 whatever max_stages is: identical to training for
+        # the first 150 frames, above 1 only beyond them.
+        self.time_norm_frames = None if time_norm_frames is None else int(time_norm_frames)
         super().__init__(*args, **kw)
+        self.r_ref = np.full(self.num_envs, np.nan)
         self.sequences = parse_sequences(sequences)
         self.stage_frames = int(stage_frames)
         self.max_stages = int(max_stages)
@@ -99,6 +122,8 @@ class StagedRetainVecEnv(RetainVecEnv):
             self.skill[i, :len(seq)] = [SKILL_ID[s] for s in seq]
         self.stage_ok[idx] = False
         self.sign[idx] = self.rng.choice([-1.0, 1.0], size=len(idx))
+        if hasattr(self, "r_ref"):
+            self.r_ref[idx] = np.nan
 
     def set_sequences(self, spec: str) -> None:
         """Switch the sequence pool (used for held-out evaluation)."""
@@ -130,6 +155,8 @@ class StagedRetainVecEnv(RetainVecEnv):
 
     def _obs(self) -> np.ndarray:
         base = super()._obs()
+        if self.time_norm_frames:
+            base[:, -1] = (self.t / self.time_norm_frames).astype(np.float32)
         sk = self._current_skill()
         onehot = np.zeros((self.num_envs, len(SKILLS)), dtype=np.float32)
         valid = sk >= 0
@@ -177,7 +204,13 @@ class StagedRetainVecEnv(RetainVecEnv):
         sk = self._current_skill()
         in_h = (sk == SKILL_ID["Hx"]) | (sk == SKILL_ID["Hy"])
         in_r = sk == SKILL_ID["R"]
-        rewards = np.where(in_h, held, np.where(in_r, released, held)).astype(np.float32)
+        if self.release_reward == "graded":
+            enter = in_r & np.isnan(self.r_ref)
+            self.r_ref[enter] = drop[enter]
+            rel = np.where(in_r, np.clip((drop - np.nan_to_num(self.r_ref)) / self.release_scale_m, 0.0, 1.0), 0.0)
+            rewards = np.where(in_h, held.astype(float), np.where(in_r, rel, held.astype(float))).astype(np.float32)
+        else:
+            rewards = np.where(in_h, held, np.where(in_r, released, held)).astype(np.float32)
 
         # Record each stage's outcome at its last frame.
         # t just advanced; a stage boundary means stage idx-1 has just ended,

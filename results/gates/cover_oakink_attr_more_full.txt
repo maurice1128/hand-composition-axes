@@ -1,0 +1,131 @@
+granularity=oakink_attr: 36 cells, 21.4 trajectories per cell
+data/bundles/oakink.npz: 770 trajectories
+holding out 5 compositions
+
+ seed  budget  swapped   held  covered  per comp  status
+--------------------------------------------------------------
+   70     256      170      5        5      7.20  ok
+
+   71     256      173      5        5      8.40  ok
+
+   72     256      188      5        5     14.80  ok
+
+   73     256      190      5        5     14.00  ok
+
+   74     256      174      5        5      9.60  ok
+
+   75     256      176      5        5     12.20  ok
+
+   76     256      169      5        5      5.40  ok
+
+   77     256      178      5        5     13.80  ok
+
+   78     256      170      5        5     17.40  ok
+
+   79     256      181      5        5     19.40  ok
+
+   80     256      184      5        5     15.80  ok
+
+   81     256      176      5        5     15.60  ok
+
+   82     256      187      5        5     12.00  ok
+
+   83     256      173      5        5     15.60  ok
+
+   84     256      170      5        5     11.20  ok
+
+   85     256      191      5        5     16.60  ok
+
+   86     256      175      5        5      9.40  ok
+
+   87     256      186      5        5     19.80  ok
+
+   88     256      174      5        5      8.40  ok
+
+   89     256      190      5        5     17.80  ok
+
+   90     256      182      5        5     14.20  ok
+
+   91     256      191      5        4     21.00  TOO THIN
+
+   92     256      187      5        5     15.20  ok
+
+   93     256      162      5        5     11.00  ok
+
+   94     256      190      5        5     15.20  ok
+
+   95     256      186      5        5     15.40  ok
+
+   96     256      183      5        5      7.60  ok
+
+   97     256      189      5        5     21.20  ok
+
+   98     256      173      5        5      5.60  ok
+
+   99     256      180      5        5      6.80  ok
+
+  100     256      190      5        5     20.20  ok
+
+  101     256      182      5        5     12.60  ok
+
+  102     256      178      5        5     15.40  ok
+
+  103     256      176      5        5     13.40  ok
+
+  104     256      183      5        5      7.40  ok
+
+  105     256      183      5        5     10.60  ok
+
+  106     256      185      5        5     15.00  ok
+
+  107     256      169      5        4     15.50  TOO THIN
+
+  108     256      180      5        5     20.00  ok
+
+  109     256      170      5        4      8.00  TOO THIN
+
+  110     256      169      5        5      8.60  ok
+
+  111     256      173      5        5     13.40  ok
+
+  112     256      183      5        5     13.20  ok
+
+  113     256      181      5        5     14.60  ok
+
+  114     256      181      5        5     18.80  ok
+
+  115     256      181      5        5     11.40  ok
+
+  116     256      174      5        5      8.80  ok
+
+  117     256      176      5        5     15.60  ok
+
+  118     256      179      5        5      8.40  ok
+
+  119     256      180      5        4      7.50  TOO THIN
+
+  120     256      180      5        5     15.40  ok
+
+  121     256      173      5        5     13.20  ok
+
+  122     256      178      5        5     10.60  ok
+
+  123     256      193      5        5     25.60  ok
+
+  124     256      184      5        5     10.40  ok
+
+  125     256      184      5        5     12.00  ok
+
+  126     256      189      5        5     25.40  ok
+
+  127     256      184      5        5     13.60  ok
+
+  128     256      181      5        5     10.60  ok
+
+  129     256      176      5        5      7.40  ok
+
+--------------------------------------------------------------
+ARTEFACT RISK: 4 of 60 rows fail, and depth is adequate (5.40 examples per covered composition) but breadth is not, some rows reaching only 4 of the held compositions.
+The informed model is barely more informed than the naive one there, so
+a zero penalty says nothing about compositional generalisation. Fix by
+holding out FEWER compositions and swapping in MORE trajectories each.

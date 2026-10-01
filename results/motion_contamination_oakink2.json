@@ -1,0 +1,309 @@
+{
+ "run": "oakink2_scene_primitive",
+ "seeds": 40,
+ "budget": 256,
+ "naive_label_contamination": 0.0,
+ "naive_motion_contaminated_recordings": {
+  "mean": 0.11591796875,
+  "min": 0.02734375,
+  "max": 0.25
+ },
+ "naive_motion_contaminated_frames": {
+  "mean": 0.04915236169153566,
+  "min": 0.007297624985131376,
+  "max": 0.11386665118745554
+ },
+ "target_frame_purity_first_span": {
+  "mean": 0.4020956998578343,
+  "min": 0.18337322762010036,
+  "max": 0.8549252224395785
+ },
+ "target_frames_any_held_primitive": {
+  "mean": 0.47392920141686845,
+  "min": 0.23442826905365885,
+  "max": 0.8696493552933258
+ },
+ "after_segmentation": "0 and 1 by construction: a segment is one primitive under its own label",
+ "per_seed": [
+  {
+   "seed": 0,
+   "contaminated_recordings": 0.1328125,
+   "contaminated_frames": 0.04354232762750055,
+   "target_frame_purity_first_span": 0.5793964922473583,
+   "target_frames_any_held_primitive": 0.5840444460583173
+  },
+  {
+   "seed": 1,
+   "contaminated_recordings": 0.078125,
+   "contaminated_frames": 0.026898261186425514,
+   "target_frame_purity_first_span": 0.41786570743405277,
+   "target_frames_any_held_primitive": 0.4276578737010392
+  },
+  {
+   "seed": 2,
+   "contaminated_recordings": 0.11328125,
+   "contaminated_frames": 0.054841737864639764,
+   "target_frame_purity_first_span": 0.5164379375081862,
+   "target_frames_any_held_primitive": 0.5389373189934947
+  },
+  {
+   "seed": 3,
+   "contaminated_recordings": 0.13671875,
+   "contaminated_frames": 0.05567524675226804,
+   "target_frame_purity_first_span": 0.400058253297286,
+   "target_frames_any_held_primitive": 0.4808137537528567
+  },
+  {
+   "seed": 4,
+   "contaminated_recordings": 0.04296875,
+   "contaminated_frames": 0.007297624985131376,
+   "target_frame_purity_first_span": 0.27096976897171304,
+   "target_frames_any_held_primitive": 0.31273748392227707
+  },
+  {
+   "seed": 5,
+   "contaminated_recordings": 0.140625,
+   "contaminated_frames": 0.04564846118644524,
+   "target_frame_purity_first_span": 0.22340253296775037,
+   "target_frames_any_held_primitive": 0.3549183966575271
+  },
+  {
+   "seed": 6,
+   "contaminated_recordings": 0.02734375,
+   "contaminated_frames": 0.012380162612582749,
+   "target_frame_purity_first_span": 0.45382940277069916,
+   "target_frames_any_held_primitive": 0.4884090873990332
+  },
+  {
+   "seed": 7,
+   "contaminated_recordings": 0.08984375,
+   "contaminated_frames": 0.014270030676201246,
+   "target_frame_purity_first_span": 0.18337322762010036,
+   "target_frames_any_held_primitive": 0.2584115977065424
+  },
+  {
+   "seed": 8,
+   "contaminated_recordings": 0.07421875,
+   "contaminated_frames": 0.047374137704157535,
+   "target_frame_purity_first_span": 0.521518592219751,
+   "target_frames_any_held_primitive": 0.5649537633149947
+  },
+  {
+   "seed": 9,
+   "contaminated_recordings": 0.10546875,
+   "contaminated_frames": 0.0531878086043424,
+   "target_frame_purity_first_span": 0.3351142319238793,
+   "target_frames_any_held_primitive": 0.3908410929629064
+  },
+  {
+   "seed": 10,
+   "contaminated_recordings": 0.13671875,
+   "contaminated_frames": 0.04260148961061129,
+   "target_frame_purity_first_span": 0.34131788957546344,
+   "target_frames_any_held_primitive": 0.3968553773797313
+  },
+  {
+   "seed": 11,
+   "contaminated_recordings": 0.125,
+   "contaminated_frames": 0.02495562027521026,
+   "target_frame_purity_first_span": 0.2098366483010454,
+   "target_frames_any_held_primitive": 0.23442826905365885
+  },
+  {
+   "seed": 12,
+   "contaminated_recordings": 0.0859375,
+   "contaminated_frames": 0.0367346149008833,
+   "target_frame_purity_first_span": 0.40672604980912563,
+   "target_frames_any_held_primitive": 0.4075986184330122
+  },
+  {
+   "seed": 13,
+   "contaminated_recordings": 0.1484375,
+   "contaminated_frames": 0.08788753259980556,
+   "target_frame_purity_first_span": 0.6664307982607269,
+   "target_frames_any_held_primitive": 0.6943453113462958
+  },
+  {
+   "seed": 14,
+   "contaminated_recordings": 0.14453125,
+   "contaminated_frames": 0.05351709265654171,
+   "target_frame_purity_first_span": 0.3099975521907892,
+   "target_frames_any_held_primitive": 0.4496275833129349
+  },
+  {
+   "seed": 15,
+   "contaminated_recordings": 0.07421875,
+   "contaminated_frames": 0.03514159578341418,
+   "target_frame_purity_first_span": 0.6401943999558182,
+   "target_frames_any_held_primitive": 0.6401943999558182
+  },
+  {
+   "seed": 16,
+   "contaminated_recordings": 0.09765625,
+   "contaminated_frames": 0.026875889056099247,
+   "target_frame_purity_first_span": 0.41923947696714875,
+   "target_frames_any_held_primitive": 0.4425449336968073
+  },
+  {
+   "seed": 17,
+   "contaminated_recordings": 0.10546875,
+   "contaminated_frames": 0.06777172115533561,
+   "target_frame_purity_first_span": 0.39352700542727365,
+   "target_frames_any_held_primitive": 0.6358759944733919
+  },
+  {
+   "seed": 18,
+   "contaminated_recordings": 0.16796875,
+   "contaminated_frames": 0.0696369807438591,
+   "target_frame_purity_first_span": 0.23225691629259032,
+   "target_frames_any_held_primitive": 0.35828933404523194
+  },
+  {
+   "seed": 19,
+   "contaminated_recordings": 0.0625,
+   "contaminated_frames": 0.012948328848672714,
+   "target_frame_purity_first_span": 0.31106004274129806,
+   "target_frames_any_held_primitive": 0.3387540618870576
+  },
+  {
+   "seed": 20,
+   "contaminated_recordings": 0.0703125,
+   "contaminated_frames": 0.027088367009729476,
+   "target_frame_purity_first_span": 0.30816190286103634,
+   "target_frames_any_held_primitive": 0.43844676765521656
+  },
+  {
+   "seed": 21,
+   "contaminated_recordings": 0.18359375,
+   "contaminated_frames": 0.07306852765242942,
+   "target_frame_purity_first_span": 0.2627962701001761,
+   "target_frames_any_held_primitive": 0.39260178796539547
+  },
+  {
+   "seed": 22,
+   "contaminated_recordings": 0.09765625,
+   "contaminated_frames": 0.02554260475070963,
+   "target_frame_purity_first_span": 0.2028462893635763,
+   "target_frames_any_held_primitive": 0.2462563312045805
+  },
+  {
+   "seed": 23,
+   "contaminated_recordings": 0.05859375,
+   "contaminated_frames": 0.020868566617678556,
+   "target_frame_purity_first_span": 0.8549252224395785,
+   "target_frames_any_held_primitive": 0.8696493552933258
+  },
+  {
+   "seed": 24,
+   "contaminated_recordings": 0.1328125,
+   "contaminated_frames": 0.05788767271516564,
+   "target_frame_purity_first_span": 0.6614084000359745,
+   "target_frames_any_held_primitive": 0.6787660760859789
+  },
+  {
+   "seed": 25,
+   "contaminated_recordings": 0.25,
+   "contaminated_frames": 0.11386665118745554,
+   "target_frame_purity_first_span": 0.48735042483756214,
+   "target_frames_any_held_primitive": 0.5886205274453885
+  },
+  {
+   "seed": 26,
+   "contaminated_recordings": 0.19140625,
+   "contaminated_frames": 0.07567517355279062,
+   "target_frame_purity_first_span": 0.34280956029455584,
+   "target_frames_any_held_primitive": 0.46899076320606137
+  },
+  {
+   "seed": 27,
+   "contaminated_recordings": 0.09765625,
+   "contaminated_frames": 0.03611763313817777,
+   "target_frame_purity_first_span": 0.47070558440272214,
+   "target_frames_any_held_primitive": 0.5822238571570056
+  },
+  {
+   "seed": 28,
+   "contaminated_recordings": 0.17578125,
+   "contaminated_frames": 0.10298607085018943,
+   "target_frame_purity_first_span": 0.2560005316926816,
+   "target_frames_any_held_primitive": 0.38048782803539555
+  },
+  {
+   "seed": 29,
+   "contaminated_recordings": 0.09765625,
+   "contaminated_frames": 0.04509155169142438,
+   "target_frame_purity_first_span": 0.46284317545786247,
+   "target_frames_any_held_primitive": 0.5201672039392115
+  },
+  {
+   "seed": 30,
+   "contaminated_recordings": 0.0859375,
+   "contaminated_frames": 0.09094784693194784,
+   "target_frame_purity_first_span": 0.44212904845593776,
+   "target_frames_any_held_primitive": 0.6080944012051218
+  },
+  {
+   "seed": 31,
+   "contaminated_recordings": 0.16015625,
+   "contaminated_frames": 0.05370927581418659,
+   "target_frame_purity_first_span": 0.3497908969101466,
+   "target_frames_any_held_primitive": 0.4227739656502497
+  },
+  {
+   "seed": 32,
+   "contaminated_recordings": 0.17578125,
+   "contaminated_frames": 0.07749390548313703,
+   "target_frame_purity_first_span": 0.5975337098075372,
+   "target_frames_any_held_primitive": 0.6289270485190734
+  },
+  {
+   "seed": 33,
+   "contaminated_recordings": 0.13671875,
+   "contaminated_frames": 0.05304973406482547,
+   "target_frame_purity_first_span": 0.4364446619698355,
+   "target_frames_any_held_primitive": 0.4364446619698355
+  },
+  {
+   "seed": 34,
+   "contaminated_recordings": 0.08984375,
+   "contaminated_frames": 0.022098520323681738,
+   "target_frame_purity_first_span": 0.32241010392930586,
+   "target_frames_any_held_primitive": 0.3860806980492414
+  },
+  {
+   "seed": 35,
+   "contaminated_recordings": 0.1328125,
+   "contaminated_frames": 0.05497128358141711,
+   "target_frame_purity_first_span": 0.25286672312375547,
+   "target_frames_any_held_primitive": 0.5138739481052543
+  },
+  {
+   "seed": 36,
+   "contaminated_recordings": 0.08984375,
+   "contaminated_frames": 0.014687702957130629,
+   "target_frame_purity_first_span": 0.3027083783700318,
+   "target_frames_any_held_primitive": 0.3557024180846793
+  },
+  {
+   "seed": 37,
+   "contaminated_recordings": 0.08203125,
+   "contaminated_frames": 0.04003976314148367,
+   "target_frame_purity_first_span": 0.328009902644249,
+   "target_frames_any_held_primitive": 0.328009902644249
+  },
+  {
+   "seed": 38,
+   "contaminated_recordings": 0.06640625,
+   "contaminated_frames": 0.07505489881661388,
+   "target_frame_purity_first_span": 0.5948102542261416,
+   "target_frames_any_held_primitive": 0.6847508157909571
+  },
+  {
+   "seed": 39,
+   "contaminated_recordings": 0.171875,
+   "contaminated_frames": 0.08666205255112457,
+   "target_frame_purity_first_span": 0.31472402690864965,
+   "target_frames_any_held_primitive": 0.42606100061558627
+  }
+ ]
+}
