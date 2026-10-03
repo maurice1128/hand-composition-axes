@@ -81,8 +81,8 @@ fig, ax = plt.subplots(figsize=(3.6, 2.6))
 ax.axhspan(c64.mean() - ci(c64), c64.mean() + ci(c64), color="0.9", zorder=0)
 ax.axhline(0, color="0.3", lw=0.6)
 labels = ["First clip\n(labelled)", "Across\nthe join", "Second\nclip"]
-for j, (v, col, name) in enumerate((("aligned", "C0", "Label describes both"),
-                                    ("misaligned", "C3", "Label describes the first"))):
+for j, (v, col, name) in enumerate((("aligned", "C0", "Aligned"),
+                                    ("misaligned", "C3", "Misaligned"))):
     m = [W[v][c].mean() for c in ("first", "straddle", "second")]
     e = [ci(W[v][c]) for c in ("first", "straddle", "second")]
     ax.bar(np.arange(3) + (j - 0.5) * 0.36, m, 0.36, yerr=e, color=col, alpha=0.8, capsize=2,

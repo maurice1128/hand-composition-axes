@@ -1,4 +1,4 @@
-# A hand-motion dataset can test compositional generalisation only when each label describes the whole trajectory it is attached to
+# Partial labels hide compositional difficulty in hand-motion data
 
 Code, gate outputs, pre-registrations and every seed of every sweep behind the manuscript of this title (Mu-Hua Wang,
 National Yang Ming Chiao Tung University; prepared for *Transactions on Machine Learning Research*, not yet submitted,
@@ -12,14 +12,14 @@ not posted to any preprint server).
 
 Compositional generalisation is usually tested by holding out combinations of labels: every action and every tool
 occurs in training, some of their pairings do not, and the model is scored on those pairings. The split is made on
-labels, so it holds out the motion only if each label describes the whole trajectory it is attached to. Public
-hand-motion datasets label whole recordings, and a correct label often describes only part of one.
+labels. In public hand-motion datasets a correct label often describes only part of a recording, and then holding
+out the label does not hold out the motion: it stays in training under other labels, and the difficulty is hidden.
 
 - **Controlled manipulation (OakInk-Image).** Two clips are joined into one trajectory labelled by the first. When
   the label describes both clips the paired penalty is +17.0 % of the naive error; when it describes only the first,
-  with trajectories, categories and training volume held fixed, it is +3.9 %, not distinguishable from a zero-truth
-  control. The windows the label does describe lose 82 % of their penalty above the control, so the change lies in
-  the training sets.
+  with trajectories, categories and training volume held fixed, it is +3.9 %, at most 2.9 points above a zero-truth
+  control. The windows the label does describe lose 82 % of their penalty above the control (95 % CI 65 % to 97 %),
+  so the change lies mostly in the training sets.
 - **Calibration.** A synthetic dataset whose true penalty is zero returns +2.6 %; permuted label grids, planted
   interactions and per-seed distributions give each real dataset its own reference.
 - **Out-of-sample prediction (TACO).** A penalty predicted before the data were opened appears: +10.6 % over 40
@@ -105,8 +105,7 @@ Windows, `uv`-managed venv; torch comes from the cu128 index (the development GP
 ```bibtex
 @unpublished{wang2026labels,
   author = {Wang, Mu-Hua},
-  title  = {A hand-motion dataset can test compositional generalisation only when each label describes
-            the whole trajectory it is attached to},
+  title  = {Partial labels hide compositional difficulty in hand-motion data},
   note   = {Manuscript},
   year   = {2026}
 }

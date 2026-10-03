@@ -105,9 +105,9 @@ def draw_scene(ax, t, recs, title, sub, value, note, leak):
 
 
 def draw_end(ax, t):
-    ax.text(0.5, 0.66, "A hand-motion dataset can test compositional generalisation", ha="center",
-            fontsize=21, weight="bold", color=INK, alpha=seg(t, 0, 0.8))
-    ax.text(0.5, 0.58, "only when each label describes the whole trajectory it is attached to.", ha="center", fontsize=21,
+    ax.text(0.5, 0.66, "Partial labels hide compositional difficulty", ha="center",
+            fontsize=24, weight="bold", color=INK, alpha=seg(t, 0, 0.8))
+    ax.text(0.5, 0.58, "in hand-motion data.", ha="center", fontsize=24,
             weight="bold", color=INK, alpha=seg(t, 0.2, 1.0))
     ax.text(0.5, 0.44, "OakInk-Image, same data volume:   label describes both halves  +17.0 %"
             "     only the first half  +3.9 %", ha="center", fontsize=14, color=INK, alpha=seg(t, 1.2, 1.8))

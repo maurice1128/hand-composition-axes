@@ -108,7 +108,7 @@ def pct(x, nd=0):
 print("Datasets and settings")
 for name, n_str, med_str in (("oakink", "770 trajectories at 30 fps, median 72 frames", None),
                              ("grab", "1,048 trajectories at 30 fps, median 254 frames", None),
-                             ("oakink2", "609 trajectories, motion capture subsampled by 4 to 30 fps, median 613 frames", None),
+                             ("oakink2", "609 trajectories, subsampled to 7.5 fps, median 613 frames", None),
                              ("taco_action_tool", "2,317 trajectories at 30 fps, median 148 frames", None)):
     z = bundle(name)
     L = z["lengths"]
@@ -121,20 +121,11 @@ for name, n_str, med_str in (("oakink", "770 trajectories at 30 fps, median 72 f
 gm = meta("grab")
 check("GRAB subject archives", "from subject archives s1 to s7 and s10")
 assert sorted(gm["subjects"], key=lambda x: int(x[1:])) == ["s1", "s2", "s3", "s4", "s5", "s6", "s7", "s10"]
-# The OakInk2 loader labels its bundle 7.5 fps, assuming 30 fps motion capture subsampled by 4. The annotation's image
-# frame ids step by 4 against the motion-capture frame index, so motion capture is 120 Hz and the bundle is 30 fps
-# (Appendix C). Only durations depend on this.
-assert float(bundle("oakink2")["fps"]) == 7.5
-TRUE_FPS = {"oakink2": 30.0}
-for name, sec in (("oakink", 2.4), ("taco_action_tool", 4.9), ("grab", 8.5), ("oakink2", 20)):
+for name, sec in (("oakink", 2.4), ("taco_action_tool", 4.9), ("grab", 8.5), ("oakink2", 82)):
     z = bundle(name)
-    med_s = np.median(z["lengths"]) / TRUE_FPS.get(name, float(z["fps"]))
+    med_s = np.median(z["lengths"]) / float(z["fps"])
     assert round(med_s, 1 if sec < 10 else 0) == sec, (name, med_s)
-check("median durations in the Introduction", "median of 2.4 s. A TACO trajectory is described by its authors as one tool-use action and lasts a median of 4.9 s. A GRAB trajectory is a whole interaction of 8.5 s including approach and release, and an OakInk2 recording lasts a median of 20 s")
-for name in ("oakink", "grab", "taco_action_tool", "oakink2"):
-    assert TRUE_FPS.get(name, float(bundle(name)["fps"])) == 30.0, name
-check("window duration", f"A window spans {32 / 30:.2f} s on every dataset")
-check("window duration, Introduction", f"A prior trains and scores on windows of {32 / 30:.2f} s")
+check("median durations in the Introduction", "median of 2.4 s. A TACO trajectory is described by its authors as one tool-use action and lasts a median of 4.9 s. A GRAB trajectory is a whole interaction of 8.5 s including approach and release, and an OakInk2 recording lasts a median of 82 s")
 npar = {r["naive"]["n_parameters"] for r in rows(["taco_action_tool"])}
 assert len(npar) == 1
 check("prior parameter count", f"({next(iter(npar)):,} parameters)")
@@ -163,7 +154,7 @@ pp = json.loads((ROOT / "runs" / "planted_cells.json").read_text(encoding="utf-8
 check("planted GRAB cells", f"{pp['cells_with_offset']} of {pp['cells']} cells receive a non-zero offset")
 TB = json.loads((ROOT / "runs" / "taco_build.json").read_text(encoding="utf-8"))
 v = TB["vocabulary"]
-check("TACO vocabulary", f"the {v['triplets']} triplets of the released data combine {v['actions']} actions, {v['tools']} tools and {v['objects']} objects")
+check("TACO vocabulary", f"its {v['triplets']} triplets combine {v['actions']} actions, {v['tools']} tools and {v['objects']} objects")
 check("TACO triplets in Methods", f"shuffled over the {v['triplets']} triplets")
 from experiment_paired_composition import coarsen_labels  # noqa: E402
 from experiment_data_efficiency import transitions_of  # noqa: E402
@@ -197,7 +188,7 @@ print("\nCalibration")
 c256, c64, hard = rel(["pc_easy_rerun"]), rel(["pc_easy_rerun"], 64), rel(["pc_hard_rerun"])
 check("control 256", f"returns +{c256.mean():.2f} % of the naive error over {len(c256)} seeds at a budget of 256 (SD {c256.std(ddof=1):.2f})")
 check("control 64", f"+{c64.mean():.2f} % at a budget of 64 (SD {c64.std(ddof=1):.2f}, {len(c64)} seeds)")
-check("abstract control", f"calibrated with a synthetic dataset whose true penalty is zero (+{c256.mean():.1f} % of the naive error)")
+check("abstract control", f"the synthetic control returns +{c256.mean():.1f} % of the naive error")
 check("discussion control", f"The design returns +{c256.mean():.1f} % when the true value is zero")
 p, d, lo, hi = welch(hard, c256)
 check("planted synthetic", f"returns +{hard.mean():.2f} % over {len(hard)} seeds, +{d:.1f} points above the zero-truth control (95 % CI {lo:.1f} to {hi:.1f}, p = {sci(p)})")
@@ -304,17 +295,16 @@ check("original 12-seed sweeps in the caption", f"the original 12-seed sweeps re
 gb64 = rel(["grab_shape_b64"], 64)
 assert len(gb64) == 40
 _p, _d, _lo, _hi = welch(gb64, c64)
-check("GRAB at matched volume", f"returns +{gb64.mean():.2f} % (SD {gb64.std(ddof=1):.2f}, {len(gb64)} seeds), not distinguishable from the zero-truth control at that budget (difference +{_d:.1f}, 95 % CI {_lo:.1f} to {_hi:.1f})")
+check("GRAB at matched volume", f"returned +{gb64.mean():.2f} %, not distinguishable from the zero-truth control at that budget (difference +{_d:.1f}, 95 % CI {_lo:.1f} to {_hi:.1f})")
 assert _p > 0.05
-check("transitions value, Section 4.2", f"OakInk2's transitions axis carries +{tr4.mean():.1f} % at the largest volume in the table")
+check("transitions value, Section 4.2", f"OakInk2's transitions axis carried +{tr4.mean():.1f} % at the largest volume in the table")
 wv = {k: VOL[k]["expected_windows_per_arm"] for k in VOL}
 check("volume ordering", f"(4,591 and 8,144, against 17,604 on GRAB and 57,919 on OakInk2)")
 assert (f"{wv['category x intent']:,.0f}", f"{wv['action x tool']:,.0f}", f"{wv['shape x fine intent']:,.0f}",
         f"{wv['scene x primitive']:,.0f}") == ("4,591", "8,144", "17,604", "57,919")
-check("GRAB volume-matched budget", f"GRAB at a budget of 64, about {round(wv['shape x fine intent'] / 4, -2):,.0f} windows per arm and so matched to OakInk-Image")
-check("unmodified clips volume at 64", f"which have about {round(wv['category x intent'] / 4, -1):,.0f} windows per arm")
+check("GRAB volume-matched budget", f"GRAB swept at a budget of 64, about {round(wv['shape x fine intent'] / 4, -2):,.0f} windows per arm")
 ob64, w256, w64 = rel(["pc_oakink_b64"], 64), rel(["oakink2_scene_primitive"]), rel(["oakink2_scene_primitive_b64"], 64)
-check("volume signs", f"the penalty is +{w64.mean():.2f} % at a budget of 64 against +{w256.mean():.2f} % at 256 (Appendix B). Volume does not act in one direction, however. On OakInk-Image a budget of 64 gives +{ob64.mean():.2f} % against +{cat.mean():.2f} % at 256")
+check("volume signs", f"the penalty was +{w64.mean():.2f} % at a budget of 64 against +{w256.mean():.2f} % at 256 (Appendix B). Volume does not act in one direction, however. On OakInk-Image a budget of 64 gave +{ob64.mean():.2f} % against +{cat.mean():.2f} % at 256")
 
 
 def absdiff(k):
@@ -334,7 +324,7 @@ def rng(keys):
 
 
 oi = ["functional class x intent", "category x intent", "affordance x intent", "category x subject"]
-check("marginal loss", f"the naive arm loses {rng(oi)} of a held factor's trajectories on OakInk-Image, {rng(['action x tool'])} on TACO, {rng(['shape x fine intent', 'shape x intent class'])} on GRAB and {rng(['scene x verb', 'scene x primitive'])} on OakInk2")
+check("marginal loss", f"the naive arm lost {rng(oi)} of a held factor's trajectories on OakInk-Image, {rng(['action x tool'])} on TACO, {rng(['shape x fine intent', 'shape x intent class'])} on GRAB and {rng(['scene x verb', 'scene x primitive'])} on OakInk2")
 rs = sorted(VOL[k]["loss_penalty_r"] for k in oi)
 check("marginal loss correlation", f"on OakInk-Image (r = {rs[0]:+.2f} to {rs[-1]:+.2f}) and on TACO (r = {VOL['action x tool']['loss_penalty_r']:+.2f}, p = {VOL['action x tool']['loss_penalty_p']:.2f})")
 dof, sparse = rel(["pc_oakink_dofdamage"]), rel(["pc_oakink_sparse"])
@@ -346,7 +336,7 @@ assert stats.ttest_1samp(gc, 0).pvalue < 0.05, "claim: a test against zero would
 # ------------------------------------------------------------------------------------------ Tables 3 and 4
 print("\nTables 3 and 4")
 base, al, mis = rel(["pc_oakink_b64"], 64), rel(["pc_oakink_pair_aligned"], 64), rel(["pc_oakink_pair_misaligned"], 64)
-for name, x in (("Unmodified clips", base), ("Aligned: label describes both clips", al), ("Misaligned: label describes the first clip", mis)):
+for name, x in (("Unmodified clips", base), ("Two clips, label describes both", al), ("Two clips, label describes the first", mis)):
     check(f"  T3 {name}", f"| {name} | +{x.mean():.2f} | {x.std(ddof=1):.2f} | {int((x > 0).sum())}/{len(x)} | {pfmt(welch(x, c64)[0])} |")
 check("T3 caption control", f"budget (+{c64.mean():.2f} %, {len(c64)} seeds)")
 p, d, lo, hi = welch(mis, al)
@@ -354,13 +344,12 @@ check("mis vs al", f"is {-d:.1f} points below the aligned version (95 % CI {-hi:
 p, d, lo, hi = welch(mis, base)
 check("mis vs base", f"and {-d:.1f} below the unmodified clips (95 % CI {-hi:.1f} to {-lo:.1f}, p = {sci(p)})")
 p, d, lo, hi = welch(mis, c64)
-assert p > 0.05
-check("mis vs control, results", f"It lies at most {hi:.1f} points above the control (difference +{d:.1f}, 95 % CI {lo:.1f} to {hi:.1f}; Table 3)")
-check("mis vs control, abstract", f"reduces the penalty from +{al.mean():.1f} % to +{mis.mean():.1f} %, at most {hi:.1f} points above the control")
+check("mis vs control, results", f"not distinguishable from the control (difference +{d:.1f}, 95 % CI {lo:.1f} to {hi:.1f}; Table 3)")
+check("mis vs control, abstract", f"not distinguishable from the control (difference +{d:.1f}, 95 % CI {lo:.1f} to {hi:.1f})")
 p, d, lo, hi = welch(al, base)
 check("al vs base", f"(difference +{d:.1f}, 95 % CI {lo:.1f} to {hi:.1f}, p = {p:.4f})")
 check("abstract al/mis", f"reduces the penalty from +{al.mean():.1f} % to +{mis.mean():.1f} %")
-check("discussion aligned", f"reduces a penalty of\n+{al.mean():.1f} % to near the control")
+check("discussion aligned", f"reduced a penalty of +{al.mean():.1f} % to a level")
 fa, fm = gate_fails("cover_oakink_pair_aligned.txt"), gate_fails("cover_oakink_pair_misaligned.txt")
 a2 = np.array([v for k, v in by_seed("pc_oakink_pair_aligned").items() if k not in fa])
 m2 = np.array([v for k, v in by_seed("pc_oakink_pair_misaligned").items() if k not in fm])
@@ -380,7 +369,7 @@ check("naive contamination", f"{100 * M_['naive.c_train_clips_in_held_cell']:.1f
 check("naive-seen targets", f"{100 * M_['naive.a_target_traj_exposed']:.1f} % of target trajectories contain a clip whose object and intent the naive arm has seen")
 check("informed dilution", f"falls from {100 * A_['informed.c_train_clips_in_held_cell']:.1f} % in the aligned version to {100 * M_['informed.c_train_clips_in_held_cell']:.1f} %")
 assert A_["naive.c_train_clips_in_held_cell"] == 0 and A_["naive.a_target_traj_exposed"] == 0 and A_["d_target_clips_in_held_cell"] == 1
-check("purity", f"In the aligned version both\nnaive-arm figures are 0 %. In the misaligned version {100 * M_['d_target_clips_in_held_cell']:.0f} % of target clips belong to a held-out cell, against 100 % in\nthe aligned version")
+check("purity", f"and {100 * M_['d_target_clips_in_held_cell']:.0f} % of target clips belong to a held-out cell against 100 %")
 
 W = {}
 for v_ in ("aligned", "misaligned"):
@@ -393,20 +382,13 @@ for v_ in ("aligned", "misaligned"):
 A, M = W["aligned"], W["misaligned"]
 ta, tm = rel(["pc_oakink_pair_aligned_wc"], 64), rel(["pc_oakink_pair_misaligned_wc"], 64)
 check("wc reproduction", f"reproduced the totals of Table 3 (+{ta.mean():.2f} % and +{tm.mean():.2f} %)")
-for name, D in (("Aligned", A), ("Misaligned", M)):
+for name, D in (("Label describes both", A), ("Label describes the first", M)):
     check(f"  T4 {name}", f"| {name} | +{D['first'].mean():.2f} (SD {D['first'].std(ddof=1):.2f}) | +{D['straddle'].mean():.2f} (SD {D['straddle'].std(ddof=1):.2f}) | +{D['second'].mean():.2f} (SD {D['second'].std(ddof=1):.2f}) |")
 check("A1 vs A2", f"(paired difference +{(A['first'] - A['second']).mean():.1f}, p = {stats.ttest_rel(A['first'], A['second']).pvalue:.3f})")
 p, d, lo, hi = welch(M["first"], A["first"])
 loss = (A["first"].mean() - M["first"].mean()) / (A["first"].mean() - c64.mean())
 check("M1 vs A1", f"read {-d:.1f} points below the aligned version's (95 % CI {-hi:.1f} to {-lo:.1f}, p = {sci(p)}), a loss of {100 * loss:.0f} % of their penalty above the control")
-_rng = np.random.default_rng(0)
-_boot = []
-for _ in range(100000):
-    a_, m_, c_ = (x[_rng.integers(0, len(x), len(x))].mean() for x in (A["first"], M["first"], c64))
-    _boot.append((a_ - m_) / (a_ - c_))
-blo, bhi = np.percentile(_boot, [2.5, 97.5]); print(f"      bootstrap bounds {100 * blo:.2f} {100 * bhi:.2f}")
-check("82 % in the abstract", f"lose {100 * loss:.0f} % of their penalty above the\ncontrol (95 % CI {100 * blo:.0f} % to {100 * bhi:.0f} %)")
-check("82 % bootstrap CI, results", f"(bootstrap 95 % CI {100 * blo:.0f} % to {100 * bhi:.0f} %)")
+check("82 % in the abstract", f"lose {100 * loss:.0f} % of their penalty above the control")
 p, d, lo, hi = welch(M["first"], c64)
 check("M1 vs control", f"They remain +{d:.1f} points above the control (95 % CI {lo:.1f} to {hi:.1f}, p = {p:.3f})")
 check("M2 vs M1", f"are a further {(M['first'] - M['second']).mean():.1f} points lower (paired p = {stats.ttest_rel(M['second'], M['first']).pvalue:.4f})")
@@ -424,18 +406,13 @@ check("TACO gate-passing", f"and +{tk.mean():.2f} % without the {len(tfail)} see
 check("TACO above its permuted grid", f"It is also {-welch(sht, taco)[1]:.1f} points above TACO's permuted grid")
 q1, q3 = np.percentile(taco, [25, 75])
 check("TACO per-seed spread", f"They range from {taco.min():.2f} % to +{taco.max():.2f} %, with an interquartile range of +{q1:.2f} % to +{q3:.2f} %; {int((taco <= c256.mean()).sum())} of {len(taco)} fall at or below the mean of the zero-truth control, and {int((taco > 20).sum())} exceed +20 %")
-assert "most of TACO's SD" not in FLAT, "council 2: the SD-attribution sentence was deleted"
+check("TACO SDs", f"per-seed SD of {c256.std(ddof=1):.2f}, which contains the fill and training components on synthetic data, suggests that most of TACO's SD of {taco.std(ddof=1):.2f}")
+check("TACO range, abstract", f"single seeds range from {taco.min():.1f} % to +{taco.max():.1f} %")
 check("TACO range, discussion", f"any value from {taco.min():.1f} % to +{taco.max():.1f} %")
 check("TACO, abstract", f"appears (+{taco.mean():.1f} %)")
 pr = sorted([welch(taco, c256)[0], welch(shc, cat)[0], welch(sht, taco)[0], welch(mis, al)[0]])
 assert max(pr) * 4 < 1e-5
 check("Bonferroni", "All four remain below p = 10⁻⁵ after a Bonferroni correction for four tests")
-RE = {(c["a"], c["b"]): c["p"] for c in
-      json.loads((ROOT / "runs" / "cell_random_effects.json").read_text(encoding="utf-8"))["contrasts"]}
-re4 = [RE[("action x tool", "control_256")], RE[("permuted category x intent", "category x intent")],
-       RE[("permuted action x tool", "action x tool")], RE[("pair misaligned", "pair aligned")]]
-assert max(re4) < 0.002, re4
-check("random effects", "refitting the four with a random effect for each held-out cell leaves\nall four below p = 0.002")
 
 # ------------------------------------------------------------------------------------------ OakInk2 and appendices
 print("\nOakInk2 and appendices")

@@ -47,10 +47,7 @@ for m in re.finditer(r"@(\w+)\{([^,]+),(.*?)\n\}", bib, re.S):
                  "c": "\u0327", "=": "\u0304", ".": "\u0307", "u": "\u0306"}
         val = re.sub(r"\\([\"'`^~v=.uc])\s*\{?\s*([A-Za-z])\s*\}?",
                      lambda m: unicodedata.normalize("NFC", m.group(2) + marks[m.group(1)]), val)
-        # LaTeX quotes -> typographic; "--" -> en dash (page ranges, "Encoder–Decoder", "ECCV 2018 – Workshops").
-        val = val.replace("``", "“").replace("''", "”").replace("`", "‘")
-        val = re.sub(r"(?<=\w)'(?=\w)", "’", val)
-        val = val.replace("\\&", "&").replace("--", "–")
+        val = val.replace("\\&", "&").replace("--", "-")
         fields[f.group(1).lower()] = re.sub(r"[{}]", "", val)
     entries[m.group(2).strip()] = fields
 order: list[str] = []
@@ -79,23 +76,9 @@ def fmt_ref(k):
     venue = e.get("journal") or e.get("booktitle") or ""
     if not venue and e.get("eprint"):
         venue = "arXiv:" + e["eprint"]
-    year = e.get("year", "")
-    if venue.endswith(year):  # "Computer Vision – ECCV 2020, 2020" would repeat the year
-        year = ""
-    # Locator: series abbreviation (PMLR, LNCS) + volume(number):pages, so a bare "80:2873–2882" reads as PMLR 80.
-    series = {"Proceedings of Machine Learning Research": "PMLR", "Lecture Notes in Computer Science": "LNCS"}.get(
-        e.get("series", ""), "")
     vol = e.get("volume", "")
-    if vol and e.get("number"):
-        vol += f"({e['number']})"
-    pages = e.get("pages", "")
-    loc = (f"{series} " if series and vol else "") + (vol + (f":{pages}" if pages else "") if vol else pages)
-    if vol and not pages and not series:
-        loc = f"vol. {vol}"  # a bare "29" after the year reads as nothing
-    # Persistent identifier: DOI, else URL, else arXiv id (unless arXiv is already the venue).
-    ident = (f"doi:{e['doi']}" if e.get("doi") else e.get("url") or
-             (f"arXiv:{e['eprint']}" if e.get("eprint") and not venue.startswith("arXiv:") else ""))
-    tail = ", ".join(x for x in (venue, year, loc, e.get("note", ""), ident) if x)
+    pages = e.get("pages", "").replace("--", "-")
+    tail = ", ".join(x for x in (venue, e.get("year", ""), (vol + (f":{pages}" if pages else "")) if vol else pages) if x)
     who = who.rstrip(".")
     title = e.get("title", k).rstrip(".")
     return f"{who}. {title}. {tail}."
