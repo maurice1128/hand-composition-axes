@@ -52,12 +52,13 @@ def main() -> int:
     fig, ax = plt.subplots(figsize=(3.4, 1.9))
     bins = np.linspace(0.0, 0.32, 33)
     ax.hist(a10, bins=bins, weights=np.full(len(a10), 1 / len(a10)), color="#8A9297", alpha=0.75,
-            label="A: best whole policy")
+            label="A: best flat policy")
     ax.hist(b10, bins=bins, weights=np.full(len(b10), 1 / len(b10)), color="#2446E0", alpha=0.75,
-            label="B: best policy per stage")
-    ax.axvline(c, color="#B0413E", lw=1.6, ls="--", label="C: separately trained skills")
+            label="B: best flat per stage")
+    ax.axvline(c, color="#B0413E", lw=1.6, ls="--", label="C: separate skills")
     ax.set_xlabel("test success, grasp $\\times$ carry")
     ax.set_ylabel("share of pools")
+    ax.set_ylim(0, 0.8)
     ax.spines[["top", "right"]].set_visible(False)
     ax.legend(frameon=False, fontsize=7, loc="upper right")
     fig.tight_layout(pad=0.3)
