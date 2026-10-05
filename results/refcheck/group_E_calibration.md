@@ -160,12 +160,17 @@ Scratch copies: `...\scratchpad\refcheck\{ojala10a,engstrom20a,petigura_arxiv,ad
   and Kim, Been}` with `author = {Adebayo, Julius and Muelly, Michael and Abelson, Hal and Kim, Been}`.
 
 ### welch1947generalization
-- Full text opened: FULL TEXT NOT ACCESSIBLE WITHOUT LIBRARY LOGIN. Tried
-  https://academic.oup.com/biomet/article/34/1-2/28/210402 and the Crossref-listed PDF
-  http://academic.oup.com/biomet/article-pdf/34/1-2/28/553093/34-1-2-28.pdf (both return a
-  Cloudflare challenge), https://www.jstor.org/stable/2332510 (bot challenge), and Semantic Scholar
-  (openAccessPdf status "CLOSED"). Library search:
-  https://nycu.primo.exlibrisgroup.com/discovery/search?query=any,contains,The%20Generalization%20of%20Student%27s%20Problem%20when%20Several%20Different%20Population%20Variances%20are%20Involved&vid=886UST_NYCU:886UST_NYCU&search_scope=MyInst_and_CI&tab=Everything
+- Full text opened: YES, 2026-10-05, all 8 pages (pp. 28-35), through the NYCU library (Primo -> LibKey -> OpenAthens
+  -> Oxford Academic, https://academic.oup.com/biomet/article/34/1-2/28/210174, PDF 34-1-2-28.pdf) in the author's
+  logged-in Chrome. Earlier attempts without the library (OUP, JSTOR, Semantic Scholar, Internet Archive) found no
+  open copy. First page: "THE GENERALIZATION OF 'STUDENT'S' PROBLEM WHEN SEVERAL DIFFERENT POPULATION VARIANCES ARE
+  INVOLVED, By B. L. Welch, B.A., Ph.D.", page [28]; last page 35 ends with the references; running head "Biometrika 34".
+- Claim check: "Two-sided Welch tests [@welch1947generalization] on per-seed values compare penalties" - SUPPORTED. Sec. 1
+  sets up "samples of n1 and n2 ... from two normal populations with ... standard deviations sigma1 and sigma2" and asks
+  for h with Pr[(y - eta) < h(s1^2, ..., P)] = P (eq. 2); Sec. 4 gives the criterion v = (y - eta)/sqrt(lambda1 s1^2 +
+  lambda2 s2^2) "follows approximately the 'Student' t-distribution with degrees of freedom" f = (lambda1 sigma1^2 +
+  lambda2 sigma2^2)^2 / (lambda1^2 sigma1^4/f1 + lambda2^2 sigma2^4/f2) (eqs. 25-26, p. 32), with the sample estimate
+  in eq. 29. That is the unequal-variances t-test the manuscript uses.
 - Bib fields: OK against the publisher record
   (https://api.crossref.org/works/10.1093/biomet/34.1-2.28): author B. L. Welch, Biometrika 34(1-2):
   28-35, 1947, DOI 10.1093/biomet/34.1-2.28. Crossref's title string is an OCR artefact

@@ -11,8 +11,8 @@ record; plus a format check of the rendered list and the in-text citations. Grou
 | | count |
 |---|---|
 | cited references | 38 |
-| full text opened | 37 |
-| full text NOT accessible without library login | 1: Welch 1947 (Biometrika 34:28-35). Bib fields checked against Crossref. Open it at https://nycu.primo.exlibrisgroup.com/discovery/search?query=any,contains,The%20generalization%20of%20Student%27s%20problem%20when%20several%20different%20population%20variances%20are%20involved&vid=886UST_NYCU:886UST_NYCU&search_scope=MyInst_and_CI&tab=Everything |
+| full text opened | 38 (Welch 1947 on 2026-10-05 through the NYCU library, Oxford Academic PDF, all 8 pages) |
+| full text NOT accessible | 0 |
 | bib entries with a wrong field | 2 (author names: Abelson, Leonardis) |
 | bib entries missing a field | 8 (DOIs, LNCS volumes) |
 | citing sentences checked | 54 |
